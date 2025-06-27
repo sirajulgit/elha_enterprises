@@ -1036,14 +1036,14 @@
                     var reader = new FileReader();
 
                     reader.onload = function(e) {
-                        $('#thumbnail_show_image_1_about_badge').attr('src', e.target.result);
+                        $('#thumbnail_show_image_1_service_icon').attr('src', e.target.result);
                     }
                     reader.readAsDataURL(input.files[0]);
                     $("#jquery_form_error_msg").text("");
 
                 } else {
 
-                    $('#thumbnail_show_image_1_about_badge').attr('src', '/asset/images/default_image.png');
+                    $('#thumbnail_show_image_1_service_icon').attr('src', '/asset/images/default_image.png');
 
                 }
 
@@ -1060,14 +1060,14 @@
                     var reader = new FileReader();
 
                     reader.onload = function(e) {
-                        $('#thumbnail_show_image_2_about_badge').attr('src', e.target.result);
+                        $('#thumbnail_show_image_2_service_icon').attr('src', e.target.result);
                     }
                     reader.readAsDataURL(input.files[0]);
                     $("#jquery_form_error_msg").text("");
 
                 } else {
 
-                    $('#thumbnail_show_image_2_about_badge').attr('src', '/asset/images/default_image.png');
+                    $('#thumbnail_show_image_2_service_icon').attr('src', '/asset/images/default_image.png');
 
                 }
 
@@ -1085,14 +1085,14 @@
                     var reader = new FileReader();
 
                     reader.onload = function(e) {
-                        $('#thumbnail_show_image_3_about_badge').attr('src', e.target.result);
+                        $('#thumbnail_show_image_3_service_icon').attr('src', e.target.result);
                     }
                     reader.readAsDataURL(input.files[0]);
                     $("#jquery_form_error_msg").text("");
 
                 } else {
 
-                    $('#thumbnail_show_image_3_about_badge').attr('src', '/asset/images/default_image.png');
+                    $('#thumbnail_show_image_3_service_icon').attr('src', '/asset/images/default_image.png');
 
                 }
 
@@ -1109,68 +1109,20 @@
                     var reader = new FileReader();
 
                     reader.onload = function(e) {
-                        $('#thumbnail_show_image_4_about_badge').attr('src', e.target.result);
+                        $('#thumbnail_show_image_4_service_icon').attr('src', e.target.result);
                     }
                     reader.readAsDataURL(input.files[0]);
                     $("#jquery_form_error_msg").text("");
 
                 } else {
 
-                    $('#thumbnail_show_image_4_about_badge').attr('src', '/asset/images/default_image.png');
+                    $('#thumbnail_show_image_4_service_icon').attr('src', '/asset/images/default_image.png');
 
                 }
 
 
             })
-            $('#about_signature_image').on('change', function() {
-
-                var input = this;
-                var url = $(this).val();
-                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
-                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
-                        ext == 'webp')) {
-
-                    var reader = new FileReader();
-
-                    reader.onload = function(e) {
-                        $('#thumbnail_show_about_signature_image').attr('src', e.target.result);
-                    }
-                    reader.readAsDataURL(input.files[0]);
-                    $("#jquery_form_error_msg").text("");
-
-                } else {
-
-                    $('#thumbnail_show_about_signature_image').attr('src',
-                        '/asset/images/default_image.png');
-
-                }
-
-
-            })
-            $('#about_profile_image').on('change', function() {
-
-                var input = this;
-                var url = $(this).val();
-                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
-                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
-                        ext == 'webp')) {
-
-                    var reader = new FileReader();
-
-                    reader.onload = function(e) {
-                        $('#thumbnail_show_about_profile_image').attr('src', e.target.result);
-                    }
-                    reader.readAsDataURL(input.files[0]);
-                    $("#jquery_form_error_msg").text("");
-
-                } else {
-
-                    $('#thumbnail_show_about_profile_image').attr('src', '/asset/images/default_image.png');
-
-                }
-
-
-            })
+          
 
 
 
