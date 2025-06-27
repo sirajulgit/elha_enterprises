@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row">
 
-                  {{-- /////////////// Service /////////////////// --}}
+                {{-- /////////////// Service /////////////////// --}}
                 <div class="col-lg-12 mb-5">
                     <div class="card">
 
@@ -20,18 +20,18 @@
                             @csrf
 
 
-                            <input type="hidden" name="id" value="{{ $items['about']['id'] }}" />
+                            <input type="hidden" name="id" value="{{ $items['services']['id'] }}" />
 
                             <div class="card-body row">
 
                                 <div class="form-group col-md-12">
                                     <label for="head_title">Head Title</label>
-                                    <textarea id="head_title1" name="head_title" class="form-control" rows="5">{{ $items['about']['head_title'] }}</textarea>
+                                    <textarea id="head_title1" name="head_title" class="form-control" rows="5">{{ $items['services']['head_title'] }}</textarea>
                                 </div>
 
                                 <div class="form-group col-md-12">
                                     <label for="content">Details</label>
-                                    <textarea id="content1" name="content" class="form-control" rows="5">{{ $items['about']['content'] }}</textarea>
+                                    <textarea id="content1" name="content" class="form-control" rows="5">{{ $items['services']['content'] }}</textarea>
                                 </div>
 
 
@@ -41,36 +41,38 @@
                                     <div class="admin_upload">
                                         <label class="admin-upload-wrap">
                                             <input type="file" class="form-control mt-3 uploadFile" name="image_1"
-                                                id="image_1_about" accept="image/png, image/jpg, image/jpeg, image/webp">
+                                                id="image_1_service" accept="image/png, image/jpg, image/jpeg, image/webp">
                                         </label>
 
                                         <div class="profile_image">
-                                            @if ($items['about']['image_1'])
-                                                <img class="profile_img" id="thumbnail_show_image_1_about"
-                                                    src="{{ $items['about']['image_1'] }}" width="148px" height="221px">
+                                            @if ($items['services']['image_1'])
+                                                <img class="profile_img" id="thumbnail_show_image_1_service"
+                                                    src="{{ $items['services']['image_1'] }}" width="148px" height="221px">
                                             @else
-                                                <img class="profile_img" id="thumbnail_show_image_1_about"
+                                                <img class="profile_img" id="thumbnail_show_image_1_service"
                                                     src="{{ asset('asset/images/default_image.png') }}" width="148px"
                                                     height="221px">
                                             @endif
                                         </div>
                                     </div>
                                 </div>
-                                 <div class="form-group col-md-6">
+                                <div class="form-group col-md-6">
                                     <label for="image">Icon 1</label>
 
                                     <div class="admin_upload">
                                         <label class="admin-upload-wrap">
-                                            <input type="file" class="form-control mt-3 uploadFile" name="image_1"
-                                                id="image_1_about" accept="image/png, image/jpg, image/jpeg, image/webp">
+                                            <input type="file" class="form-control mt-3 uploadFile"
+                                                name="about_badge_icon1" id="about_badge_icon1"
+                                                accept="image/png, image/jpg, image/jpeg, image/webp">
                                         </label>
 
                                         <div class="profile_image">
-                                            @if ($items['about']['image_1'])
-                                                <img class="profile_img" id="thumbnail_show_image_1_about"
-                                                    src="{{ $items['about']['image_1'] }}" width="148px" height="221px">
+                                            @if ($items['services']['about_badge_icon1'])
+                                                <img class="profile_img" id="thumbnail_show_image_1_service_icon"
+                                                    src="{{ $items['services']['about_badge_icon1'] }}" width="148px"
+                                                    height="221px">
                                             @else
-                                                <img class="profile_img" id="thumbnail_show_image_1_about"
+                                                <img class="profile_img" id="thumbnail_show_image_1_service_icon"
                                                     src="{{ asset('asset/images/default_image.png') }}" width="148px"
                                                     height="221px">
                                             @endif
@@ -80,13 +82,13 @@
 
                                 <div class="form-group col-md-12">
                                     <label for="image_1_text_1">Image 1 Text 1</label>
-                                    <textarea id="image_1_text_1_1" name="image_1_text_1" class="form-control" rows="5">{{ $items['about']['image_1_text_1'] }}</textarea>
+                                    <textarea id="image_1_text_1_1" name="image_1_text_1" class="form-control" rows="5">{{ $items['services']['image_1_text_1'] }}</textarea>
 
                                 </div>
 
                                 <div class="form-group col-md-12">
                                     <label for="image_1_text_2">Image 1 Text 2</label>
-                                    <textarea id="image_1_text_2_1" name="image_1_text_2" class="form-control" rows="5">{{ $items['about']['image_1_text_2'] }}</textarea>
+                                    <textarea id="image_1_text_2_1" name="image_1_text_2" class="form-control" rows="5">{{ $items['services']['image_1_text_2'] }}</textarea>
                                 </div>
 
                                 <div class="form-group col-md-6">
@@ -95,18 +97,19 @@
                                     <div class="admin_upload">
                                         <label class="admin-upload-wrap">
                                             <input type="file" class="form-control mt-3 uploadFile" name="image_2"
-                                                id="image_2_about" accept="image/png, image/jpg, image/jpeg, image/webp">
+                                                id="image_2_service" accept="image/png, image/jpg, image/jpeg, image/webp">
 
-                                            
+
                                         </label>
 
                                         <div class="profile_image">
 
-                                            @if ($items['about']['image_2'])
-                                                <img class="profile_img" id="thumbnail_show_image_2_about"
-                                                    src="{{ $items['about']['image_2'] }}" width="148px" height="221px">
+                                            @if ($items['services']['image_2'])
+                                                <img class="profile_img" id="thumbnail_show_image_2_service"
+                                                    src="{{ $items['services']['image_2'] }}" width="148px"
+                                                    height="221px">
                                             @else
-                                                <img class="profile_img" id="thumbnail_show_image_2_about"
+                                                <img class="profile_img" id="thumbnail_show_image_2_service"
                                                     src="{{ asset('asset/images/default_image.png') }}" width="148px"
                                                     height="221px">
                                             @endif
@@ -118,16 +121,18 @@
 
                                     <div class="admin_upload">
                                         <label class="admin-upload-wrap">
-                                            <input type="file" class="form-control mt-3 uploadFile" name="image_1"
-                                                id="image_1_about" accept="image/png, image/jpg, image/jpeg, image/webp">
+                                            <input type="file" class="form-control mt-3 uploadFile"
+                                                name="about_badge_icon2" id="about_badge_icon2"
+                                                accept="image/png, image/jpg, image/jpeg, image/webp">
                                         </label>
 
                                         <div class="profile_image">
-                                            @if ($items['about']['image_1'])
-                                                <img class="profile_img" id="thumbnail_show_image_1_about"
-                                                    src="{{ $items['about']['image_1'] }}" width="148px" height="221px">
+                                            @if ($items['services']['about_badge_icon2'])
+                                                <img class="profile_img" id="thumbnail_show_image_2_service_icon"
+                                                    src="{{ $items['services']['about_badge_icon2'] }}" width="148px"
+                                                    height="221px">
                                             @else
-                                                <img class="profile_img" id="thumbnail_show_image_1_about"
+                                                <img class="profile_img" id="thumbnail_show_image_2_service_icon"
                                                     src="{{ asset('asset/images/default_image.png') }}" width="148px"
                                                     height="221px">
                                             @endif
@@ -136,35 +141,37 @@
                                 </div>
 
                                 <div class="form-group col-md-12">
-                                    <label for="image_1_text_1">Image 2 Text 1</label>
-                                    <textarea id="image_1_text_1_1" name="image_1_text_1" class="form-control" rows="5">{{ $items['about']['image_1_text_1'] }}</textarea>
+                                    <label for="image_2_text_1">Image 2 Text 1</label>
+                                    <textarea id="image_2_text_1_1" name="image_2_text_1" class="form-control" rows="5">{{ $items['services']['image_2_text_1'] }}</textarea>
 
                                 </div>
 
                                 <div class="form-group col-md-12">
-                                    <label for="image_1_text_2">Image 2 Text 2</label>
-                                    <textarea id="image_1_text_2_1" name="image_1_text_2" class="form-control" rows="5">{{ $items['about']['image_1_text_2'] }}</textarea>
+                                    <label for="image_2_text_2">Image 2 Text 2</label>
+                                    <textarea id="image_2_text_2_1" name="image_2_text_2" class="form-control" rows="5">{{ $items['services']['image_2_text_2'] }}</textarea>
                                 </div>
 
 
-                                 <div class="form-group col-md-6">
+                                <div class="form-group col-md-6">
                                     <label for="image">Image 3</label>
 
                                     <div class="admin_upload">
                                         <label class="admin-upload-wrap">
-                                            <input type="file" class="form-control mt-3 uploadFile" name="image_2"
-                                                id="image_2_about" accept="image/png, image/jpg, image/jpeg, image/webp">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_3"
+                                                id="image_3_service"
+                                                accept="image/png, image/jpg, image/jpeg, image/webp">
 
-                                            
+
                                         </label>
 
                                         <div class="profile_image">
 
-                                            @if ($items['about']['image_2'])
-                                                <img class="profile_img" id="thumbnail_show_image_2_about"
-                                                    src="{{ $items['about']['image_2'] }}" width="148px" height="221px">
+                                            @if ($items['services']['image_3'])
+                                                <img class="profile_img" id="thumbnail_show_image_3_service"
+                                                    src="{{ $items['services']['image_3'] }}" width="148px"
+                                                    height="221px">
                                             @else
-                                                <img class="profile_img" id="thumbnail_show_image_2_about"
+                                                <img class="profile_img" id="thumbnail_show_image_3_service"
                                                     src="{{ asset('asset/images/default_image.png') }}" width="148px"
                                                     height="221px">
                                             @endif
@@ -176,16 +183,18 @@
 
                                     <div class="admin_upload">
                                         <label class="admin-upload-wrap">
-                                            <input type="file" class="form-control mt-3 uploadFile" name="image_1"
-                                                id="image_1_about" accept="image/png, image/jpg, image/jpeg, image/webp">
+                                            <input type="file" class="form-control mt-3 uploadFile"
+                                                name="about_badge_icon3" id="about_badge_icon3"
+                                                accept="image/png, image/jpg, image/jpeg, image/webp">
                                         </label>
 
                                         <div class="profile_image">
-                                            @if ($items['about']['image_1'])
-                                                <img class="profile_img" id="thumbnail_show_image_1_about"
-                                                    src="{{ $items['about']['image_1'] }}" width="148px" height="221px">
+                                            @if ($items['services']['about_badge_icon3'])
+                                                <img class="profile_img" id="thumbnail_show_image_3_service_icon"
+                                                    src="{{ $items['services']['about_badge_icon3'] }}" width="148px"
+                                                    height="221px">
                                             @else
-                                                <img class="profile_img" id="thumbnail_show_image_1_about"
+                                                <img class="profile_img" id="thumbnail_show_image_3_service_icon"
                                                     src="{{ asset('asset/images/default_image.png') }}" width="148px"
                                                     height="221px">
                                             @endif
@@ -194,34 +203,36 @@
                                 </div>
 
                                 <div class="form-group col-md-12">
-                                    <label for="image_1_text_1">Image 3 Text 1</label>
-                                    <textarea id="image_1_text_1_1" name="image_1_text_1" class="form-control" rows="5">{{ $items['about']['image_1_text_1'] }}</textarea>
+                                    <label for="image_3_text_1">Image 3 Text 1</label>
+                                    <textarea id="image_3_text_1_1" name="image_3_text_1" class="form-control" rows="5">{{ $items['services']['image_3_text_1'] }}</textarea>
 
                                 </div>
 
                                 <div class="form-group col-md-12">
-                                    <label for="image_1_text_2">Image 3 Text 2</label>
-                                    <textarea id="image_1_text_2_1" name="image_1_text_2" class="form-control" rows="5">{{ $items['about']['image_1_text_2'] }}</textarea>
+                                    <label for="image_3_text_2">Image 3 Text 2</label>
+                                    <textarea id="image_3_text_2_1" name="image_3_text_2" class="form-control" rows="5">{{ $items['services']['image_3_text_2'] }}</textarea>
                                 </div>
 
-                                 <div class="form-group col-md-6">
+                                <div class="form-group col-md-6">
                                     <label for="image">Image 4</label>
 
                                     <div class="admin_upload">
                                         <label class="admin-upload-wrap">
-                                            <input type="file" class="form-control mt-3 uploadFile" name="image_2"
-                                                id="image_2_about" accept="image/png, image/jpg, image/jpeg, image/webp">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_4"
+                                                id="image_4_service"
+                                                accept="image/png, image/jpg, image/jpeg, image/webp">
 
-                                            
+
                                         </label>
 
                                         <div class="profile_image">
 
-                                            @if ($items['about']['image_2'])
-                                                <img class="profile_img" id="thumbnail_show_image_2_about"
-                                                    src="{{ $items['about']['image_2'] }}" width="148px" height="221px">
+                                            @if ($items['services']['image_4'])
+                                                <img class="profile_img" id="thumbnail_show_image_4_service"
+                                                    src="{{ $items['services']['image_4'] }}" width="148px"
+                                                    height="221px">
                                             @else
-                                                <img class="profile_img" id="thumbnail_show_image_2_about"
+                                                <img class="profile_img" id="thumbnail_show_image_4_service"
                                                     src="{{ asset('asset/images/default_image.png') }}" width="148px"
                                                     height="221px">
                                             @endif
@@ -233,16 +244,18 @@
 
                                     <div class="admin_upload">
                                         <label class="admin-upload-wrap">
-                                            <input type="file" class="form-control mt-3 uploadFile" name="image_1"
-                                                id="image_1_about" accept="image/png, image/jpg, image/jpeg, image/webp">
+                                            <input type="file" class="form-control mt-3 uploadFile"
+                                                name="about_badge_icon4" id="about_badge_icon4"
+                                                accept="image/png, image/jpg, image/jpeg, image/webp">
                                         </label>
 
                                         <div class="profile_image">
-                                            @if ($items['about']['image_1'])
-                                                <img class="profile_img" id="thumbnail_show_image_1_about"
-                                                    src="{{ $items['about']['image_1'] }}" width="148px" height="221px">
+                                            @if ($items['services']['about_badge_icon4'])
+                                                <img class="profile_img" id="thumbnail_show_image_4_service_icon"
+                                                    src="{{ $items['services']['about_badge_icon4'] }}" width="148px"
+                                                    height="221px">
                                             @else
-                                                <img class="profile_img" id="thumbnail_show_image_1_about"
+                                                <img class="profile_img" id="thumbnail_show_image_4_service_icon"
                                                     src="{{ asset('asset/images/default_image.png') }}" width="148px"
                                                     height="221px">
                                             @endif
@@ -251,17 +264,17 @@
                                 </div>
 
                                 <div class="form-group col-md-12">
-                                    <label for="image_1_text_1">Image 4 Text 1</label>
-                                    <textarea id="image_1_text_1_1" name="image_1_text_1" class="form-control" rows="5">{{ $items['about']['image_1_text_1'] }}</textarea>
+                                    <label for="image_4_text_1">Image 4 Text 1</label>
+                                    <textarea id="image_4_text_1_1" name="image_4_text_1" class="form-control" rows="5">{{ $items['services']['image_4_text_1'] }}</textarea>
 
                                 </div>
 
                                 <div class="form-group col-md-12">
                                     <label for="image_1_text_2">Image 4 Text 2</label>
-                                    <textarea id="image_1_text_2_1" name="image_1_text_2" class="form-control" rows="5">{{ $items['about']['image_1_text_2'] }}</textarea>
+                                    <textarea id="image_1_text_2_1" name="image_4_text_2" class="form-control" rows="5">{{ $items['services']['image_4_text_2'] }}</textarea>
                                 </div>
 
-                                
+
 
                             </div>
                             <!-- /.card-body -->
@@ -292,12 +305,15 @@
 
                                 <div class="form-group col-md-12">
                                     <label for="head_title">Head Title</label>
-                                    <textarea id="head_title1" name="head_title" class="form-control" rows="5">{{ $items['about']['head_title'] }}</textarea>
+                                    <textarea id="about_head_title1" name="head_title" class="form-control" rows="5">{{ $items['about']['head_title'] }}</textarea>
                                 </div>
-
+                                <div class="form-group col-md-12">
+                                    <label for="content">Title 2</label>
+                                    <textarea id="about_title_1" name="title_1" class="form-control" rows="5">{{ $items['about']['title_1'] }}</textarea>
+                                </div>
                                 <div class="form-group col-md-12">
                                     <label for="content">Details</label>
-                                    <textarea id="content1" name="content" class="form-control" rows="5">{{ $items['about']['content'] }}</textarea>
+                                    <textarea id="about_content1" name="content" class="form-control" rows="5">{{ $items['about']['content'] }}</textarea>
                                 </div>
 
 
@@ -313,7 +329,8 @@
                                         <div class="profile_image">
                                             @if ($items['about']['image_1'])
                                                 <img class="profile_img" id="thumbnail_show_image_1_about"
-                                                    src="{{ $items['about']['image_1'] }}" width="148px" height="221px">
+                                                    src="{{ $items['about']['image_1'] }}" width="148px"
+                                                    height="221px">
                                             @else
                                                 <img class="profile_img" id="thumbnail_show_image_1_about"
                                                     src="{{ asset('asset/images/default_image.png') }}" width="148px"
@@ -323,16 +340,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group col-md-12">
-                                    <label for="image_1_text_1">Image 1 Text 1</label>
-                                    <textarea id="image_1_text_1_1" name="image_1_text_1" class="form-control" rows="5">{{ $items['about']['image_1_text_1'] }}</textarea>
-
-                                </div>
-
-                                <div class="form-group col-md-12">
-                                    <label for="image_1_text_2">Image 1 Text 2</label>
-                                    <textarea id="image_1_text_2_1" name="image_1_text_2" class="form-control" rows="5">{{ $items['about']['image_1_text_2'] }}</textarea>
-                                </div>
+                              
 
                                 <div class="form-group col-md-6">
                                     <label for="image">Image 2</label>
@@ -342,18 +350,15 @@
                                             <input type="file" class="form-control mt-3 uploadFile" name="image_2"
                                                 id="image_2_about" accept="image/png, image/jpg, image/jpeg, image/webp">
 
-                                            {{-- @if (!is_null($items['about']['image_2']))
-                                                <button type="button" data-id="{{ $items['about']['id'] }}"
-                                                    data-field-name="image_2"
-                                                    class="btn btn-sm btn-danger del_about_right_img mt-3 mb-3"><i class="fas fa-trash" aria-hidden="true"></i> Delete</button>
-                                            @endif --}}
+                                           
                                         </label>
 
                                         <div class="profile_image">
 
                                             @if ($items['about']['image_2'])
                                                 <img class="profile_img" id="thumbnail_show_image_2_about"
-                                                    src="{{ $items['about']['image_2'] }}" width="148px" height="221px">
+                                                    src="{{ $items['about']['image_2'] }}" width="148px"
+                                                    height="221px">
                                             @else
                                                 <img class="profile_img" id="thumbnail_show_image_2_about"
                                                     src="{{ asset('asset/images/default_image.png') }}" width="148px"
@@ -362,184 +367,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group row col-md-12">
 
-                                    <div class="form-group col-md-6">
-                                        <label for="image">About Badge Text 1</label>
-                                        <input type="text" class="form-control text-input" name="badge_1_text"
-                                            value="{{ $items['about']['badge_1_text'] }}" placeholder="About Badge Text 1">
-
-                                        <label for="image">About Badge Icon 1</label>
-                                        <div class="admin_upload">
-
-                                            <label class="admin-upload-wrap">
-                                                <input type="file" class="form-control mt-3 uploadFile" name="about_badge_icon1"
-                                                    id="about_badge_icon1"
-                                                    accept="image/png, image/jpg, image/jpeg, image/webp">
-
-                                            </label>
-
-                                            <div class="profile_image">
-
-                                                @if ($items['about']['about_badge_icon1'])
-                                                    <img class="profile_img" id="thumbnail_show_image_1_about_badge"
-                                                        src="{{ $items['about']['about_badge_icon1'] }}" width="148px"
-                                                        height="221px">
-                                                @else
-                                                    <img class="profile_img" id="thumbnail_show_image_1_about_badge"
-                                                        src="{{ asset('asset/images/default_image.png') }}"
-                                                        width="148px" height="221px">
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="image">About Badge Text 2</label>
-                                        <input type="text" class="form-control text-input" name="badge_2_text"
-                                            value="{{ $items['about']['badge_2_text'] }}" placeholder="About Badge Text 2">
-
-                                        <label for="image">About Badge Icon 2</label>
-                                        <div class="admin_upload">
-
-                                            <label class="admin-upload-wrap">
-                                                <input type="file" class="form-control mt-3 uploadFile" name="about_badge_icon2"
-                                                    id="about_badge_icon2"
-                                                    accept="image/png, image/jpg, image/jpeg, image/webp">
-
-                                            </label>
-
-                                            <div class="profile_image">
-
-                                                @if ($items['about']['about_badge_icon2'])
-                                                    <img class="profile_img" id="thumbnail_show_image_2_about_badge"
-                                                        src="{{ $items['about']['about_badge_icon2'] }}" width="148px"
-                                                        height="221px">
-                                                @else
-                                                    <img class="profile_img" id="thumbnail_show_image_2_about_badge"
-                                                        src="{{ asset('asset/images/default_image.png') }}"
-                                                        width="148px" height="221px">
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="image">About Badge Text 3</label>
-                                        <input type="text" class="form-control text-input" name="badge_3_text"
-                                            value="{{ $items['about']['badge_3_text'] }}" placeholder="About Badge Text 3">
-
-                                        <label for="image">About Badge Icon 3</label>
-                                        <div class="admin_upload">
-
-                                            <label class="admin-upload-wrap">
-                                                <input type="file" class="form-control mt-3 uploadFile" name="about_badge_icon3"
-                                                    id="about_badge_icon3"
-                                                    accept="image/png, image/jpg, image/jpeg, image/webp">
-
-
-                                            </label>
-
-                                            <div class="profile_image">
-
-                                                @if ($items['about']['about_badge_icon3'])
-                                                    <img class="profile_img" id="thumbnail_show_image_3_about_badge"
-                                                        src="{{ $items['about']['about_badge_icon3'] }}" width="148px"
-                                                        height="221px">
-                                                @else
-                                                    <img class="profile_img" id="thumbnail_show_image_3_about_badge"
-                                                        src="{{ asset('asset/images/default_image.png') }}"
-                                                        width="148px" height="221px">
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                     <div class="form-group col-md-6">
-                                        <label for="image">About Badge Text 4</label>
-                                        <input type="text" class="form-control text-input" name="badge_4_text"
-                                            value="{{ $items['about']['badge_4_text'] }}" placeholder="About Badge Text 4">
-
-                                        <label for="image">About Badge Icon 4</label>
-                                        <div class="admin_upload">
-
-                                            <label class="admin-upload-wrap">
-                                                <input type="file" class="form-control mt-3 uploadFile" name="about_badge_icon4"
-                                                    id="about_badge_icon4"
-                                                    accept="image/png, image/jpg, image/jpeg, image/webp">
-
-
-                                            </label>
-
-                                            <div class="profile_image">
-
-                                                @if ($items['about']['about_badge_icon4'])
-                                                    <img class="profile_img" id="thumbnail_show_image_4_about_badge"
-                                                        src="{{ $items['about']['about_badge_icon4'] }}" width="148px"
-                                                        height="221px">
-                                                @else
-                                                    <img class="profile_img" id="thumbnail_show_image_4_about_badge"
-                                                        src="{{ asset('asset/images/default_image.png') }}"
-                                                        width="148px" height="221px">
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-                                     <div class="form-group col-md-6">
-                                        <label for="image">About profile Image</label>
-
-                                        <div class="admin_upload">
-
-                                            <label class="admin-upload-wrap">
-                                                <input type="file" class="form-control mt-3 uploadFile" name="about_profile_image"
-                                                    id="about_profile_image"
-                                                    accept="image/png, image/jpg, image/jpeg, image/webp">
-
-
-                                            </label>
-
-                                            <div class="profile_image">
-
-                                                @if ($items['about']['about_profile_image'])
-                                                    <img class="profile_img" id="thumbnail_show_about_profile_image"
-                                                        src="{{ $items['about']['about_profile_image'] }}" width="148px"
-                                                        height="221px">
-                                                @else
-                                                    <img class="profile_img" id="thumbnail_show_about_profile_image"
-                                                        src="{{ asset('asset/images/default_image.png') }}"
-                                                        width="148px" height="221px">
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                     <div class="form-group col-md-6">
-                                        <label for="image">About Signature Image</label>
-
-                                        <div class="admin_upload">
-
-                                            <label class="admin-upload-wrap">
-                                                <input type="file" class="form-control mt-3 uploadFile" name="about_signature_image"
-                                                    id="about_signature_image"
-                                                    accept="image/png, image/jpg, image/jpeg, image/webp">
-
-
-                                            </label>
-
-                                            <div class="profile_image">
-
-                                                @if ($items['about']['about_signature_image'])
-                                                    <img class="profile_img" id="thumbnail_show_about_signature_image"
-                                                        src="{{ $items['about']['about_signature_image'] }}" width="148px"
-                                                        height="221px">
-                                                @else
-                                                    <img class="profile_img" id="thumbnail_show_about_signature_image"
-                                                        src="{{ asset('asset/images/default_image.png') }}"
-                                                        width="148px" height="221px">
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
 
                             </div>
                             <!-- /.card-body -->
@@ -927,6 +755,49 @@
             $("#image_1_text_2_1").summernote({
                 height: 100,
             });
+             $("#image_2_text_1_1").summernote({
+                height: 100,
+            });
+            $("#image_2_text_2_1").summernote({
+                height: 100,
+            });
+             $("#image_3_text_1_1").summernote({
+                height: 100,
+            });
+            $("#image_3_text_2_1").summernote({
+                height: 100,
+            });
+             $("#image_4_text_1_1").summernote({
+                height: 100,
+            });
+            $("#image_4_text_2_1").summernote({
+                height: 100,
+            });
+
+
+             $("#about_head_title1").summernote({
+                height: 100,
+            });
+             $("#about_title_1").summernote({
+                height: 100,
+            });
+            $("#about_content1").summernote({
+                height: 200,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'italic', 'underline', 'clear', 'strikethrough']],
+                    ['fontname', ['fontname']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph', 'lineHeight']], // Include lineHeight here
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['view', ['fullscreen', 'codeview', 'help']],
+                    ['height', ['height']]
+
+
+                ]
+            });
 
 
             $("#head_title2").summernote({
@@ -1053,7 +924,7 @@
 
 
             })
-             $('#about_badge_icon1').on('change', function() {
+            $('#about_badge_icon1').on('change', function() {
 
                 var input = this;
                 var url = $(this).val();
@@ -1168,7 +1039,8 @@
 
                 } else {
 
-                    $('#thumbnail_show_about_signature_image').attr('src', '/asset/images/default_image.png');
+                    $('#thumbnail_show_about_signature_image').attr('src',
+                        '/asset/images/default_image.png');
 
                 }
 
