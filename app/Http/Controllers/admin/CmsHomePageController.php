@@ -23,7 +23,7 @@ class CmsHomePageController extends Controller
         $data['activeSubMenu'] = 'cms_home_page';
 
 
-        $cmsHome = CmsHomePage::where('page_type','home_page')->orderBy("id", "asc")->get()->toArray();
+        $cmsHome = CmsHomePage::where('page_type', 'home_page')->orderBy("id", "asc")->get()->toArray();
 
         $items = [];
 
@@ -69,7 +69,7 @@ class CmsHomePageController extends Controller
                 $item['about_badge_icon4'] = $default_image;
             }
 
-             if (!is_null($item['about_profile_image'])) {
+            if (!is_null($item['about_profile_image'])) {
                 $default_image = '/uploads/images/' . $item['about_profile_image'];
                 $item['about_profile_image'] = $default_image;
             }
@@ -127,14 +127,13 @@ class CmsHomePageController extends Controller
                 $items["video_section"] = $item;
             } elseif ($item['type'] == "info_section") {
                 $items["info_section"] = $item;
-
             }
         }
 
 
 
 
-       // dd($items);
+        // dd($items);
 
 
 
@@ -245,8 +244,7 @@ class CmsHomePageController extends Controller
 
                         $newFormData[$key] = $imageName;
                     }
-
-                 } elseif ($key == "about_badge_icon1") {
+                } elseif ($key == "about_badge_icon1") {
 
                     $old_image_name = CmsHomePage::find($request->id)->about_badge_icon1;
 
@@ -267,7 +265,7 @@ class CmsHomePageController extends Controller
 
                         $newFormData[$key] = $imageName;
                     }
-                 } elseif ($key == "about_badge_icon2") {
+                } elseif ($key == "about_badge_icon2") {
 
                     $old_image_name = CmsHomePage::find($request->id)->about_badge_icon2;
 
@@ -330,54 +328,6 @@ class CmsHomePageController extends Controller
 
                         $newFormData[$key] = $imageName;
                     }
-
-                } elseif ($key == "about_profile_image") {
-
-                    $old_image_name = CmsHomePage::find($request->id)->about_profile_image;
-
-                    if ($request->about_profile_image) {
-
-                        if (is_null($old_image_name)) {
-
-                            $imageName = image_convert_webp($request->about_profile_image);
-                        } else {
-
-                            $imageName = image_convert_webp($request->about_profile_image);
-
-                            $image_path = public_path('uploads/images/' . $old_image_name);
-                            if (file_exists($image_path)) {
-                                unlink($image_path);
-                            }
-                        }
-
-                        $newFormData[$key] = $imageName;
-                    }
-                } elseif ($key == "about_signature_image") {
-
-                    $old_image_name = CmsHomePage::find($request->id)->about_signature_image;
-
-                    if ($request->about_signature_image) {
-
-                        if (is_null($old_image_name)) {
-
-                            $imageName = image_convert_webp($request->about_signature_image);
-                        } else {
-
-                            $imageName = image_convert_webp($request->about_signature_image);
-
-                            $image_path = public_path('uploads/images/' . $old_image_name);
-                            if (file_exists($image_path)) {
-                                unlink($image_path);
-                            }
-                        }
-
-                        $newFormData[$key] = $imageName;
-                    }
-
-
-
-
-
                 } elseif ($key == "file_1") {
 
                     $old_file_name = CmsHomePage::find($request->id)->file_1;
@@ -415,7 +365,7 @@ class CmsHomePageController extends Controller
             // dd($newFormData);
             // dd($table_id);
 
-            CmsHomePage::where('page_type','home_page')->where("id", $table_id)->update($newFormData);
+            CmsHomePage::where('page_type', 'home_page')->where("id", $table_id)->update($newFormData);
 
 
 
@@ -426,7 +376,7 @@ class CmsHomePageController extends Controller
 
 
                     $data = new CmsBadge();
-                    $data->page_type= 'home_page';
+                    $data->page_type = 'home_page';
                     $data->type = 'what_we_do';
 
                     // bade_text_1 (category name)
@@ -490,7 +440,6 @@ class CmsHomePageController extends Controller
             // ));
 
             return redirect()->back()->with("success", "Update successfully");
-
         } catch (Exception $e) {
             // echo $e->getMessage();
             dd($e);
