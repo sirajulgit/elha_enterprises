@@ -6,6 +6,272 @@
         <div class="container-fluid">
             <div class="row">
 
+                  {{-- /////////////// Service /////////////////// --}}
+                <div class="col-lg-12 mb-5">
+                    <div class="card">
+
+                        <div class="card-header" style="background-color: #3498db;">
+                            <h3 class="card-title badge badge-success font-weight-bold ">Services</h3>
+                        </div>
+                        <!-- /.card-header -->
+
+                        <form id="aboutForm" action="{{ route('post_cms_home') }}" method="POST"
+                            enctype="multipart/form-data">
+                            @csrf
+
+
+                            <input type="hidden" name="id" value="{{ $items['about']['id'] }}" />
+
+                            <div class="card-body row">
+
+                                <div class="form-group col-md-12">
+                                    <label for="head_title">Head Title</label>
+                                    <textarea id="head_title1" name="head_title" class="form-control" rows="5">{{ $items['about']['head_title'] }}</textarea>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="content">Details</label>
+                                    <textarea id="content1" name="content" class="form-control" rows="5">{{ $items['about']['content'] }}</textarea>
+                                </div>
+
+
+                                <div class="form-group col-md-6">
+                                    <label for="image">Image 1</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_1"
+                                                id="image_1_about" accept="image/png, image/jpg, image/jpeg, image/webp">
+                                        </label>
+
+                                        <div class="profile_image">
+                                            @if ($items['about']['image_1'])
+                                                <img class="profile_img" id="thumbnail_show_image_1_about"
+                                                    src="{{ $items['about']['image_1'] }}" width="148px" height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_1_about"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="form-group col-md-6">
+                                    <label for="image">Icon 1</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_1"
+                                                id="image_1_about" accept="image/png, image/jpg, image/jpeg, image/webp">
+                                        </label>
+
+                                        <div class="profile_image">
+                                            @if ($items['about']['image_1'])
+                                                <img class="profile_img" id="thumbnail_show_image_1_about"
+                                                    src="{{ $items['about']['image_1'] }}" width="148px" height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_1_about"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="image_1_text_1">Image 1 Text 1</label>
+                                    <textarea id="image_1_text_1_1" name="image_1_text_1" class="form-control" rows="5">{{ $items['about']['image_1_text_1'] }}</textarea>
+
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="image_1_text_2">Image 1 Text 2</label>
+                                    <textarea id="image_1_text_2_1" name="image_1_text_2" class="form-control" rows="5">{{ $items['about']['image_1_text_2'] }}</textarea>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="image">Image 2</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_2"
+                                                id="image_2_about" accept="image/png, image/jpg, image/jpeg, image/webp">
+
+                                            
+                                        </label>
+
+                                        <div class="profile_image">
+
+                                            @if ($items['about']['image_2'])
+                                                <img class="profile_img" id="thumbnail_show_image_2_about"
+                                                    src="{{ $items['about']['image_2'] }}" width="148px" height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_2_about"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="image">Icon 2</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_1"
+                                                id="image_1_about" accept="image/png, image/jpg, image/jpeg, image/webp">
+                                        </label>
+
+                                        <div class="profile_image">
+                                            @if ($items['about']['image_1'])
+                                                <img class="profile_img" id="thumbnail_show_image_1_about"
+                                                    src="{{ $items['about']['image_1'] }}" width="148px" height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_1_about"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="image_1_text_1">Image 2 Text 1</label>
+                                    <textarea id="image_1_text_1_1" name="image_1_text_1" class="form-control" rows="5">{{ $items['about']['image_1_text_1'] }}</textarea>
+
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="image_1_text_2">Image 2 Text 2</label>
+                                    <textarea id="image_1_text_2_1" name="image_1_text_2" class="form-control" rows="5">{{ $items['about']['image_1_text_2'] }}</textarea>
+                                </div>
+
+
+                                 <div class="form-group col-md-6">
+                                    <label for="image">Image 3</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_2"
+                                                id="image_2_about" accept="image/png, image/jpg, image/jpeg, image/webp">
+
+                                            
+                                        </label>
+
+                                        <div class="profile_image">
+
+                                            @if ($items['about']['image_2'])
+                                                <img class="profile_img" id="thumbnail_show_image_2_about"
+                                                    src="{{ $items['about']['image_2'] }}" width="148px" height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_2_about"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="image">Icon 3</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_1"
+                                                id="image_1_about" accept="image/png, image/jpg, image/jpeg, image/webp">
+                                        </label>
+
+                                        <div class="profile_image">
+                                            @if ($items['about']['image_1'])
+                                                <img class="profile_img" id="thumbnail_show_image_1_about"
+                                                    src="{{ $items['about']['image_1'] }}" width="148px" height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_1_about"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="image_1_text_1">Image 3 Text 1</label>
+                                    <textarea id="image_1_text_1_1" name="image_1_text_1" class="form-control" rows="5">{{ $items['about']['image_1_text_1'] }}</textarea>
+
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="image_1_text_2">Image 3 Text 2</label>
+                                    <textarea id="image_1_text_2_1" name="image_1_text_2" class="form-control" rows="5">{{ $items['about']['image_1_text_2'] }}</textarea>
+                                </div>
+
+                                 <div class="form-group col-md-6">
+                                    <label for="image">Image 4</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_2"
+                                                id="image_2_about" accept="image/png, image/jpg, image/jpeg, image/webp">
+
+                                            
+                                        </label>
+
+                                        <div class="profile_image">
+
+                                            @if ($items['about']['image_2'])
+                                                <img class="profile_img" id="thumbnail_show_image_2_about"
+                                                    src="{{ $items['about']['image_2'] }}" width="148px" height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_2_about"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="image">Icon 4</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_1"
+                                                id="image_1_about" accept="image/png, image/jpg, image/jpeg, image/webp">
+                                        </label>
+
+                                        <div class="profile_image">
+                                            @if ($items['about']['image_1'])
+                                                <img class="profile_img" id="thumbnail_show_image_1_about"
+                                                    src="{{ $items['about']['image_1'] }}" width="148px" height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_1_about"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="image_1_text_1">Image 4 Text 1</label>
+                                    <textarea id="image_1_text_1_1" name="image_1_text_1" class="form-control" rows="5">{{ $items['about']['image_1_text_1'] }}</textarea>
+
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="image_1_text_2">Image 4 Text 2</label>
+                                    <textarea id="image_1_text_2_1" name="image_1_text_2" class="form-control" rows="5">{{ $items['about']['image_1_text_2'] }}</textarea>
+                                </div>
+
+                                
+
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
                 {{-- /////////////// about /////////////////// --}}
                 <div class="col-lg-12 mb-5">
                     <div class="card">
