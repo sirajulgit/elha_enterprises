@@ -68,7 +68,7 @@
 
                                         <div class="profile_image">
                                             @if ($items['services']['about_badge_icon1'])
-                                                <img class="profile_img" id="thumbnail_show_image_1_service_icon"
+                                                <img class="profile_img" id="thumbnail_show_image_1_service_icon" style="background-color: green;"
                                                     src="{{ $items['services']['about_badge_icon1'] }}" width="148px"
                                                     height="221px">
                                             @else
@@ -128,7 +128,7 @@
 
                                         <div class="profile_image">
                                             @if ($items['services']['about_badge_icon2'])
-                                                <img class="profile_img" id="thumbnail_show_image_2_service_icon"
+                                                <img class="profile_img" style="background-color: green;" id="thumbnail_show_image_2_service_icon"
                                                     src="{{ $items['services']['about_badge_icon2'] }}" width="148px"
                                                     height="221px">
                                             @else
@@ -167,7 +167,7 @@
                                         <div class="profile_image">
 
                                             @if ($items['services']['image_3'])
-                                                <img class="profile_img" id="thumbnail_show_image_3_service"
+                                                <img class="profile_img"  id="thumbnail_show_image_3_service"
                                                     src="{{ $items['services']['image_3'] }}" width="148px"
                                                     height="221px">
                                             @else
@@ -183,7 +183,7 @@
 
                                     <div class="admin_upload">
                                         <label class="admin-upload-wrap">
-                                            <input type="file" class="form-control mt-3 uploadFile"
+                                            <input type="file" style="background-color: green;" class="form-control mt-3 uploadFile"
                                                 name="about_badge_icon3" id="about_badge_icon3"
                                                 accept="image/png, image/jpg, image/jpeg, image/webp">
                                         </label>
@@ -244,7 +244,7 @@
 
                                     <div class="admin_upload">
                                         <label class="admin-upload-wrap">
-                                            <input type="file" class="form-control mt-3 uploadFile"
+                                            <input type="file" style="background-color: green;" class="form-control mt-3 uploadFile"
                                                 name="about_badge_icon4" id="about_badge_icon4"
                                                 accept="image/png, image/jpg, image/jpeg, image/webp">
                                         </label>
