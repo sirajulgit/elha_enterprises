@@ -362,8 +362,8 @@ class CmsHomePageController extends Controller
                 }
             }
 
-             dd($newFormData);
-             dd($table_id);
+            // dd($newFormData);
+            // dd($table_id);
 
             CmsHomePage::where('page_type', 'home_page')->where("id", $table_id)->update($newFormData);
 
