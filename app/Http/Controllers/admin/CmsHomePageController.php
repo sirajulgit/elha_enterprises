@@ -88,7 +88,7 @@ class CmsHomePageController extends Controller
 
             if ($item['type'] == "services") {
                 $items["services"] = $item;
-            if ($item['type'] == "work") {
+            }elseif ($item['type'] == "work") {
                 $items["work"] = $item;
             } elseif ($item['type'] == "about") {
                 $items["about"] = $item;
