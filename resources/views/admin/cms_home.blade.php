@@ -68,7 +68,8 @@
 
                                         <div class="profile_image">
                                             @if ($items['services']['about_badge_icon1'])
-                                                <img class="profile_img" id="thumbnail_show_image_1_service_icon" style="background-color: green;"
+                                                <img class="profile_img" id="thumbnail_show_image_1_service_icon"
+                                                    style="background-color: green;"
                                                     src="{{ $items['services']['about_badge_icon1'] }}" width="148px"
                                                     height="221px">
                                             @else
@@ -128,7 +129,8 @@
 
                                         <div class="profile_image">
                                             @if ($items['services']['about_badge_icon2'])
-                                                <img class="profile_img" style="background-color: green;" id="thumbnail_show_image_2_service_icon"
+                                                <img class="profile_img" style="background-color: green;"
+                                                    id="thumbnail_show_image_2_service_icon"
                                                     src="{{ $items['services']['about_badge_icon2'] }}" width="148px"
                                                     height="221px">
                                             @else
@@ -167,7 +169,7 @@
                                         <div class="profile_image">
 
                                             @if ($items['services']['image_3'])
-                                                <img class="profile_img"  id="thumbnail_show_image_3_service"
+                                                <img class="profile_img" id="thumbnail_show_image_3_service"
                                                     src="{{ $items['services']['image_3'] }}" width="148px"
                                                     height="221px">
                                             @else
@@ -183,14 +185,15 @@
 
                                     <div class="admin_upload">
                                         <label class="admin-upload-wrap">
-                                            <input type="file"  class="form-control mt-3 uploadFile"
+                                            <input type="file" class="form-control mt-3 uploadFile"
                                                 name="about_badge_icon3" id="about_badge_icon3"
                                                 accept="image/png, image/jpg, image/jpeg, image/webp">
                                         </label>
 
                                         <div class="profile_image">
                                             @if ($items['services']['about_badge_icon3'])
-                                                <img class="profile_img" id="thumbnail_show_image_3_service_icon" style="background-color: green;"
+                                                <img class="profile_img" id="thumbnail_show_image_3_service_icon"
+                                                    style="background-color: green;"
                                                     src="{{ $items['services']['about_badge_icon3'] }}" width="148px"
                                                     height="221px">
                                             @else
@@ -244,14 +247,15 @@
 
                                     <div class="admin_upload">
                                         <label class="admin-upload-wrap">
-                                            <input type="file"  class="form-control mt-3 uploadFile"
+                                            <input type="file" class="form-control mt-3 uploadFile"
                                                 name="about_badge_icon4" id="about_badge_icon4"
                                                 accept="image/png, image/jpg, image/jpeg, image/webp">
                                         </label>
 
                                         <div class="profile_image">
                                             @if ($items['services']['about_badge_icon4'])
-                                                <img class="profile_img" style="background-color: green;" id="thumbnail_show_image_4_service_icon"
+                                                <img class="profile_img" style="background-color: green;"
+                                                    id="thumbnail_show_image_4_service_icon"
                                                     src="{{ $items['services']['about_badge_icon4'] }}" width="148px"
                                                     height="221px">
                                             @else
@@ -340,7 +344,7 @@
                                     </div>
                                 </div>
 
-                              
+
 
                                 <div class="form-group col-md-6">
                                     <label for="image">Image 2</label>
@@ -350,7 +354,7 @@
                                             <input type="file" class="form-control mt-3 uploadFile" name="image_2"
                                                 id="image_2_about" accept="image/png, image/jpg, image/jpeg, image/webp">
 
-                                           
+
                                         </label>
 
                                         <div class="profile_image">
@@ -380,7 +384,195 @@
 
 
                 {{-- /////////////// Different Industry Section /////////////////// --}}
-               
+                <div class="col-lg-12 mb-5">
+                    <div class="card">
+
+                        <div class="card-header" style="background-color: #3498db;">
+                            <h3 class="card-title badge badge-success font-weight-bold ">Industry Section</h3>
+                        </div>
+                        <!-- /.card-header -->
+
+                        <form id="aboutForm" action="{{ route('post_cms_home') }}" method="POST"
+                            enctype="multipart/form-data">
+                            @csrf
+
+
+                            <input type="hidden" name="id" value="{{ $items['industry']['id'] }}" />
+
+                            <div class="card-body row">
+
+                                <div class="form-group col-md-12">
+                                    <label for="head_title">Head Title</label>
+                                    <textarea id="industry_head_title1" name="head_title" class="form-control" rows="5">{{ $items['industry']['head_title'] }}</textarea>
+                                </div>
+
+
+
+
+                                <div class="form-group col-md-6">
+                                    <label for="image">Image 1</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_1"
+                                                id="image_1_industry"
+                                                accept="image/png, image/jpg, image/jpeg, image/webp">
+                                        </label>
+
+                                        <div class="profile_image">
+                                            @if ($items['industry']['image_1'])
+                                                <img class="profile_img" id="thumbnail_show_image_1_industry"
+                                                    src="{{ $items['industry']['image_1'] }}" width="148px"
+                                                    height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_1_industry"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group col-md-12">
+                                    <label for="image_1_text_1">Image 1 Text 1</label>
+                                    <textarea id="industry_image_1_text_1_1" name="image_1_text_1" class="form-control" rows="5">{{ $items['industry']['image_1_text_1'] }}</textarea>
+
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="image_1_text_2">Image 1 Text 2</label>
+                                    <textarea id="industry_image_1_text_2_1" name="image_1_text_2" class="form-control" rows="5">{{ $items['industry']['image_1_text_2'] }}</textarea>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="image">Image 2</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_2"
+                                                id="image_2_industry"
+                                                accept="image/png, image/jpg, image/jpeg, image/webp">
+
+
+                                        </label>
+
+                                        <div class="profile_image">
+
+                                            @if ($items['industry']['image_2'])
+                                                <img class="profile_img" id="thumbnail_show_image_2_industry"
+                                                    src="{{ $items['industry']['image_2'] }}" width="148px"
+                                                    height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_2_industry"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group col-md-12">
+                                    <label for="image_2_text_1">Image 2 Text 1</label>
+                                    <textarea id="industry_image_2_text_1_1" name="image_2_text_1" class="form-control" rows="5">{{ $items['industry']['image_2_text_1'] }}</textarea>
+
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="image_2_text_2">Image 2 Text 2</label>
+                                    <textarea id="industry_image_2_text_2_1" name="image_2_text_2" class="form-control" rows="5">{{ $items['industry']['image_2_text_2'] }}</textarea>
+                                </div>
+
+
+                                <div class="form-group col-md-6">
+                                    <label for="image">Image 3</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_3"
+                                                id="image_3_industry"
+                                                accept="image/png, image/jpg, image/jpeg, image/webp">
+
+
+                                        </label>
+
+                                        <div class="profile_image">
+
+                                            @if ($items['industry']['image_3'])
+                                                <img class="profile_img" id="thumbnail_show_image_3_industry"
+                                                    src="{{ $items['industry']['image_3'] }}" width="148px"
+                                                    height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_3_industry"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group col-md-12">
+                                    <label for="image_3_text_1">Image 3 Text 1</label>
+                                    <textarea id="industry_image_3_text_1_1" name="image_3_text_1" class="form-control" rows="5">{{ $items['industry']['image_3_text_1'] }}</textarea>
+
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="image_3_text_2">Image 3 Text 2</label>
+                                    <textarea id="industry_image_3_text_2_1" name="image_3_text_2" class="form-control" rows="5">{{ $items['industry']['image_3_text_2'] }}</textarea>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="image">Image 4</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_4"
+                                                id="image_4_industry"
+                                                accept="image/png, image/jpg, image/jpeg, image/webp">
+
+
+                                        </label>
+
+                                        <div class="profile_image">
+
+                                            @if ($items['industry']['image_4'])
+                                                <img class="profile_img" id="thumbnail_show_image_4_industry"
+                                                    src="{{ $items['industry']['image_4'] }}" width="148px"
+                                                    height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_4_industry"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group col-md-12">
+                                    <label for="image_4_text_1">Image 4 Text 1</label>
+                                    <textarea id="industry_image_4_text_1_1" name="image_4_text_1" class="form-control" rows="5">{{ $items['industry']['image_4_text_1'] }}</textarea>
+
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="image_1_text_2">Image 4 Text 2</label>
+                                    <textarea id="industry_image_1_text_2_1" name="image_4_text_2" class="form-control" rows="5">{{ $items['industry']['image_4_text_2'] }}</textarea>
+                                </div>
+
+
+
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
 
                 {{-- /////////////// video_section /////////////////// --}}
@@ -581,30 +773,57 @@
             $("#image_1_text_2_1").summernote({
                 height: 100,
             });
-             $("#image_2_text_1_1").summernote({
+            $("#image_2_text_1_1").summernote({
                 height: 100,
             });
             $("#image_2_text_2_1").summernote({
                 height: 100,
             });
-             $("#image_3_text_1_1").summernote({
+            $("#image_3_text_1_1").summernote({
                 height: 100,
             });
             $("#image_3_text_2_1").summernote({
                 height: 100,
             });
-             $("#image_4_text_1_1").summernote({
+            $("#image_4_text_1_1").summernote({
                 height: 100,
             });
             $("#image_4_text_2_1").summernote({
                 height: 100,
             });
 
-
-             $("#about_head_title1").summernote({
+            $("#industry_image_1_text_1_1").summernote({
                 height: 100,
             });
-             $("#about_title_1").summernote({
+            $("#industry_image_1_text_2_1").summernote({
+                height: 100,
+            });
+            $("#industry_image_2_text_1_1").summernote({
+                height: 100,
+            });
+            $("#industry_image_2_text_2_1").summernote({
+                height: 100,
+            });
+            $("#industry_image_3_text_1_1").summernote({
+                height: 100,
+            });
+            $("#industry_image_3_text_2_1").summernote({
+                height: 100,
+            });
+            $("#industry_image_4_text_1_1").summernote({
+                height: 100,
+            });
+            $("#industry_image_4_text_2_1").summernote({
+                height: 100,
+            });
+
+            $("#industry_head_title1").summernote({
+                height: 100,
+            });
+            $("#about_head_title1").summernote({
+                height: 100,
+            });
+            $("#about_title_1").summernote({
                 height: 100,
             });
             $("#about_content1").summernote({
@@ -869,7 +1088,8 @@
 
                 } else {
 
-                    $('#thumbnail_show_image_1_service_icon').attr('src', '/asset/images/default_image.png');
+                    $('#thumbnail_show_image_1_service_icon').attr('src',
+                    '/asset/images/default_image.png');
 
                 }
 
@@ -893,7 +1113,8 @@
 
                 } else {
 
-                    $('#thumbnail_show_image_2_service_icon').attr('src', '/asset/images/default_image.png');
+                    $('#thumbnail_show_image_2_service_icon').attr('src',
+                    '/asset/images/default_image.png');
 
                 }
 
@@ -918,7 +1139,8 @@
 
                 } else {
 
-                    $('#thumbnail_show_image_3_service_icon').attr('src', '/asset/images/default_image.png');
+                    $('#thumbnail_show_image_3_service_icon').attr('src',
+                    '/asset/images/default_image.png');
 
                 }
 
@@ -942,15 +1164,114 @@
 
                 } else {
 
-                    $('#thumbnail_show_image_4_service_icon').attr('src', '/asset/images/default_image.png');
+                    $('#thumbnail_show_image_4_service_icon').attr('src',
+                    '/asset/images/default_image.png');
 
                 }
 
 
             })
-          
 
 
+            $('#image_1_industry').on('change', function() {
+
+                var input = this;
+                var url = $(this).val();
+                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
+                        ext == 'webp')) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $('#thumbnail_show_image_1_industry').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    $("#jquery_form_error_msg").text("");
+
+                } else {
+
+                    $('#thumbnail_show_image_1_industry').attr('src', '/asset/images/default_image.png');
+
+                }
+
+
+            })
+
+            $('#image_2_industry').on('change', function() {
+
+                var input = this;
+                var url = $(this).val();
+                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
+                        ext == 'webp')) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $('#thumbnail_show_image_2_industry').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    $("#jquery_form_error_msg").text("");
+
+                } else {
+
+                    $('#thumbnail_show_image_2_industry').attr('src', '/asset/images/default_image.png');
+
+                }
+
+
+            })
+
+            $('#image_3_industry').on('change', function() {
+
+                var input = this;
+                var url = $(this).val();
+                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
+                        ext == 'webp')) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $('#thumbnail_show_image_3_industry').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    $("#jquery_form_error_msg").text("");
+
+                } else {
+
+                    $('#thumbnail_show_image_3_industry').attr('src', '/asset/images/default_image.png');
+
+                }
+
+
+            })
+
+            $('#image_4_industry').on('change', function() {
+
+                var input = this;
+                var url = $(this).val();
+                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
+                        ext == 'webp')) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $('#thumbnail_show_image_4_industry').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    $("#jquery_form_error_msg").text("");
+
+                } else {
+
+                    $('#thumbnail_show_image_4_industry').attr('src', '/asset/images/default_image.png');
+
+                }
+
+
+            })
 
             $('#image_1_what_i_teach').on('change', function() {
 
@@ -1371,7 +1692,7 @@
 
 
 
-          
+
 
             /////// delete about right image ///////
             $(document).on('click', '.del_about_right_img', function() {
