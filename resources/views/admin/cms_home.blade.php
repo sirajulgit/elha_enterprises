@@ -899,7 +899,7 @@
                                         <div class="profile_image">
                                             @if ($items['market']['about_badge_icon1'])
                                                 <img class="profile_img" id="thumbnail_show_image_1_market"
-                                                    
+                                                    style="background-color: green"
                                                     src="{{ $items['market']['about_badge_icon1'] }}" width="148px"
                                                     height="221px">
                                             @else
@@ -928,7 +928,7 @@
                                         <div class="profile_image">
                                             @if ($items['market']['about_badge_icon2'])
                                                 <img class="profile_img" id="thumbnail_show_image_2_market"
-                                                   
+                                                   style="background-color: green"
                                                     src="{{ $items['market']['about_badge_icon2'] }}" width="148px"
                                                     height="221px">
                                             @else
@@ -957,7 +957,7 @@
                                         <div class="profile_image">
                                             @if ($items['market']['about_badge_icon3'])
                                                 <img class="profile_img" id="thumbnail_show_image_3_market"
-                                                    
+                                                    style="background-color: green"
                                                     src="{{ $items['market']['about_badge_icon3'] }}" width="148px"
                                                     height="221px">
                                             @else
@@ -986,7 +986,7 @@
                                         <div class="profile_image">
                                             @if ($items['market']['about_badge_icon4'])
                                                 <img class="profile_img" id="thumbnail_show_image_4_market"
-                                                    
+                                                    style="background-color: green"
                                                     src="{{ $items['market']['about_badge_icon4'] }}" width="148px"
                                                     height="221px">
                                             @else
