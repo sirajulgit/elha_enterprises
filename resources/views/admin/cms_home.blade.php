@@ -824,11 +824,6 @@
                                     <textarea id="work_image_7_text_1_1" name="badge_3_text" class="form-control" rows="5">{{ $items['work']['badge_3_text'] }}</textarea>
 
                                 </div>
-                                
-                                
-
-                              
-
 
 
                             </div>
@@ -840,12 +835,12 @@
                     </div>
                 </div>
 
-                {{-- /////////////// info_section /////////////////// --}}
+                {{-- /////////////// market_section /////////////////// --}}
                 <div class="col-lg-12 mb-5">
                     <div class="card">
 
                         <div class="card-header" style="background-color: #3498db;">
-                            <h3 class="card-title badge badge-success font-weight-bold ">Info Section</h3>
+                            <h3 class="card-title badge badge-success font-weight-bold ">Market Section</h3>
                         </div>
                         <!-- /.card-header -->
 
@@ -853,18 +848,18 @@
                             enctype="multipart/form-data">
                             @csrf
 
-                            <input type="hidden" name="id" value="{{ $items['info_section']['id'] }}" />
+                            <input type="hidden" name="id" value="{{ $items['market']['id'] }}" />
 
                             <div class="card-body row">
 
                                 <div class="form-group col-md-12">
                                     <label for="title_1_4">Title</label>
-                                    <textarea id="title_1_4" name="title_1" class="form-control" rows="5">{{ $items['info_section']['title_1'] }}</textarea>
+                                    <textarea id="title_1_4" name="title_1" class="form-control" rows="5">{{ $items['market']['title_1'] }}</textarea>
                                 </div>
 
                                 <div class="form-group col-md-12">
                                     <label for="content_4">Details</label>
-                                    <textarea id="content_4" name="content" class="form-control" rows="5">{{ $items['info_section']['content'] }}</textarea>
+                                    <textarea id="content_4" name="content" class="form-control" rows="5">{{ $items['market']['content'] }}</textarea>
                                 </div>
 
                                 <div class="form-group col-md-6">
@@ -878,9 +873,9 @@
                                         </label>
 
                                         <div class="profile_image">
-                                            @if ($items['info_section']['image_1'])
+                                            @if ($items['market']['image_1'])
                                                 <img class="profile_img" id="thumbnail_show_image_1_4_info_section"
-                                                    src="{{ $items['info_section']['image_1'] }}" width="148px"
+                                                    src="{{ $items['market']['image_1'] }}" width="148px"
                                                     height="221px">
                                             @else
                                                 <img class="profile_img" id="thumbnail_show_image_1_4_info_section"
@@ -889,6 +884,123 @@
                                             @endif
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="image">Icon 1</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile"
+                                                name="about_badge_icon1" id="image_1_market"
+                                                accept="image/png, image/jpg, image/jpeg, image/webp">
+                                        </label>
+
+                                        <div class="profile_image">
+                                            @if ($items['market']['about_badge_icon1'])
+                                                <img class="profile_img" id="thumbnail_show_image_1_market"
+                                                    
+                                                    src="{{ $items['market']['about_badge_icon1'] }}" width="148px"
+                                                    height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_1_market"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="image_3_text_1">Icon 1 Text 1</label>
+                                    <textarea id="market_image_1_text_1_1" name="badge_1_text" class="form-control" rows="5">{{ $items['market']['badge_1_text'] }}</textarea>
+
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="image">Icon 2</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile"
+                                                name="about_badge_icon2" id="image_2_market"
+                                                accept="image/png, image/jpg, image/jpeg, image/webp">
+                                        </label>
+
+                                        <div class="profile_image">
+                                            @if ($items['market']['about_badge_icon2'])
+                                                <img class="profile_img" id="thumbnail_show_image_2_market"
+                                                   
+                                                    src="{{ $items['market']['about_badge_icon2'] }}" width="148px"
+                                                    height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_2_market"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="image_3_text_1">Icon 2 Text 1</label>
+                                    <textarea id="market_image_2_text_1_1" name="badge_2_text" class="form-control" rows="5">{{ $items['market']['badge_2_text'] }}</textarea>
+
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="image">Icon 3</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile"
+                                                name="about_badge_icon3" id="image_3_market"
+                                                accept="image/png, image/jpg, image/jpeg, image/webp">
+                                        </label>
+
+                                        <div class="profile_image">
+                                            @if ($items['market']['about_badge_icon3'])
+                                                <img class="profile_img" id="thumbnail_show_image_3_market"
+                                                    
+                                                    src="{{ $items['market']['about_badge_icon3'] }}" width="148px"
+                                                    height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_3_market"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="image_3_text_1">Icon 3 Text 1</label>
+                                    <textarea id="market_image_3_text_1_1" name="badge_3_text" class="form-control" rows="5">{{ $items['market']['badge_3_text'] }}</textarea>
+
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="image">Icon 4</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile"
+                                                name="about_badge_icon4" id="image_4_market"
+                                                accept="image/png, image/jpg, image/jpeg, image/webp">
+                                        </label>
+
+                                        <div class="profile_image">
+                                            @if ($items['market']['about_badge_icon4'])
+                                                <img class="profile_img" id="thumbnail_show_image_4_market"
+                                                    
+                                                    src="{{ $items['market']['about_badge_icon4'] }}" width="148px"
+                                                    height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_4_market"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="image_3_text_1">Icon 4 Text 1</label>
+                                    <textarea id="market_image_4_text_1_1" name="badge_4_text" class="form-control" rows="5">{{ $items['market']['badge_4_text'] }}</textarea>
+
                                 </div>
 
                             </div>
@@ -1005,6 +1117,18 @@
                 height: 100,
             });
               $("#work_image_7_text_1_1").summernote({
+                height: 100,
+            });
+             $("#market_image_1_text_1_1").summernote({
+                height: 100,
+            });
+             $("#market_image_2_text_1_1").summernote({
+                height: 100,
+            });
+             $("#market_image_3_text_1_1").summernote({
+                height: 100,
+            });
+             $("#market_image_4_text_1_1").summernote({
                 height: 100,
             });
 
@@ -1638,137 +1762,7 @@
 
             
 
-            $('#image_1_what_i_teach').on('change', function() {
-
-                var input = this;
-                var url = $(this).val();
-                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
-                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
-                        ext == 'webp')) {
-
-                    var reader = new FileReader();
-
-                    reader.onload = function(e) {
-                        $('#thumbnail_show_image_1_what_i_teach').attr('src', e.target.result);
-                    }
-                    reader.readAsDataURL(input.files[0]);
-                    $("#jquery_form_error_msg").text("");
-
-                } else {
-
-                    $('#thumbnail_show_image_1_what_i_teach').attr('src',
-                        '/asset/images/default_image.png');
-
-                }
-
-
-            })
-
-
-
-            $('#image_1_my_expertise').on('change', function() {
-
-                var input = this;
-                var url = $(this).val();
-                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
-                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
-                        ext == 'webp')) {
-
-                    var reader = new FileReader();
-
-                    reader.onload = function(e) {
-                        $('#thumbnail_show_image_1_my_expertise').attr('src', e.target.result);
-                    }
-                    reader.readAsDataURL(input.files[0]);
-                    $("#jquery_form_error_msg").text("");
-
-                } else {
-
-                    $('#thumbnail_show_image_1_my_expertise').attr('src',
-                        '/asset/images/default_image.png');
-
-                }
-
-
-            })
-
-            $('#image_2_my_expertise').on('change', function() {
-
-                var input = this;
-                var url = $(this).val();
-                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
-                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
-                        ext == 'webp')) {
-
-                    var reader = new FileReader();
-
-                    reader.onload = function(e) {
-                        $('#thumbnail_show_image_2_my_expertise').attr('src', e.target.result);
-                    }
-                    reader.readAsDataURL(input.files[0]);
-                    $("#jquery_form_error_msg").text("");
-
-                } else {
-
-                    $('#thumbnail_show_image_2_my_expertise').attr('src',
-                        '/asset/images/default_image.png');
-
-                }
-
-
-            })
-
-            $('#image_3_my_expertise').on('change', function() {
-
-                var input = this;
-                var url = $(this).val();
-                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
-                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
-                        ext == 'webp')) {
-
-                    var reader = new FileReader();
-
-                    reader.onload = function(e) {
-                        $('#thumbnail_show_image_3_my_expertise').attr('src', e.target.result);
-                    }
-                    reader.readAsDataURL(input.files[0]);
-                    $("#jquery_form_error_msg").text("");
-
-                } else {
-
-                    $('#thumbnail_show_image_3_my_expertise').attr('src',
-                        '/asset/images/default_image.png');
-
-                }
-
-
-            })
-
-            $('#image_4_my_expertise').on('change', function() {
-
-                var input = this;
-                var url = $(this).val();
-                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
-                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
-                        ext == 'webp')) {
-
-                    var reader = new FileReader();
-
-                    reader.onload = function(e) {
-                        $('#thumbnail_show_image_4_my_expertise').attr('src', e.target.result);
-                    }
-                    reader.readAsDataURL(input.files[0]);
-                    $("#jquery_form_error_msg").text("");
-
-                } else {
-
-                    $('#thumbnail_show_image_4_my_expertise').attr('src',
-                        '/asset/images/default_image.png');
-
-                }
-
-
-            })
+           
 
             $("#image_1_4_info_section").on("change", function() {
                 var input = this;
@@ -1791,6 +1785,102 @@
                         '/asset/images/default_image.png');
 
                 }
+            })
+             $('#image_1_market').on('change', function() {
+
+                var input = this;
+                var url = $(this).val();
+                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
+                        ext == 'webp')) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $('#thumbnail_show_image_1_market').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    $("#jquery_form_error_msg").text("");
+
+                } else {
+
+                    $('#thumbnail_show_image_1_market').attr('src', '/asset/images/default_image.png');
+
+                }
+
+
+            })
+            $('#image_2_market').on('change', function() {
+
+                var input = this;
+                var url = $(this).val();
+                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
+                        ext == 'webp')) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $('#thumbnail_show_image_2_market').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    $("#jquery_form_error_msg").text("");
+
+                } else {
+
+                    $('#thumbnail_show_image_2_market').attr('src', '/asset/images/default_image.png');
+
+                }
+
+
+            })
+            $('#image_3_market').on('change', function() {
+
+                var input = this;
+                var url = $(this).val();
+                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
+                        ext == 'webp')) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $('#thumbnail_show_image_3_market').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    $("#jquery_form_error_msg").text("");
+
+                } else {
+
+                    $('#thumbnail_show_image_3_market').attr('src', '/asset/images/default_image.png');
+
+                }
+
+
+            })
+            $('#image_4_market').on('change', function() {
+
+                var input = this;
+                var url = $(this).val();
+                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
+                        ext == 'webp')) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $('#thumbnail_show_image_4_market').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    $("#jquery_form_error_msg").text("");
+
+                } else {
+
+                    $('#thumbnail_show_image_4_market').attr('src', '/asset/images/default_image.png');
+
+                }
+
+
             })
             ///////////////// end preview image  ////////////////////
 
