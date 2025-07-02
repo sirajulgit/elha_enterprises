@@ -454,6 +454,37 @@ class CmsHomePageController extends Controller
                 }
             }
 
+             ////// cms badge modal insert (FAQ) //////////////
+            if (array_key_exists("badge_title_1", $formData)) {
+
+                for ($item = 0; $item < count($formData['badge_title_1']); $item++) {
+
+
+                    $data = new CmsBadge();
+                    $data->page_type = 'home_page';
+                    $data->type = 'faq';
+
+                    // badge_title_1 (FAQ Question)
+                    if (array_key_exists("badge_title_1", $formData)) {
+                        if ($formData['badge_title_1'][$item]) {
+                            $data->badge_title_1 = $formData['badge_title_1'][$item];
+                        }
+                    }
+
+
+                
+                    // badge_details_1 (FAQ Description)
+                    if (array_key_exists("badge_details_1", $formData)) {
+                        if ($formData['badge_details_1'][$item]) {
+                            $data->badge_details_1 = $formData['badge_details_1'][$item];
+                        }
+                    }
+
+
+                    $data->save();
+                }
+            }
+
 
             // return json_encode(array(
             //     'status' => true,
