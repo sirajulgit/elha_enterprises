@@ -385,7 +385,7 @@ class CmsHomePageController extends Controller
 
                     $data = new CmsBadge();
                     $data->page_type = 'home_page';
-                    $data->type = 'what_we_do';
+                    $data->type = 'testimonials';
 
                     // bade_text_1 (category name)
                     if (array_key_exists("badge_text_1", $formData)) {
