@@ -97,12 +97,12 @@ class CmsHomePageController extends Controller
                 $items["industry"] = $item;
             } elseif ($item['type'] == "market") {
                 $items["market"] = $item;
-            } elseif ($item['type'] == "what_we_do") {
-                $items["what_we_do"] = $item;
+            } elseif ($item['type'] == "testimonials") {
+                $items["testimonials"] = $item;
 
-                $cmsBadge = CmsBadge::where('type', 'what_we_do')->orderBy("id", "asc")->get()->toArray();
+                $cmsBadge = CmsBadge::where('type', 'testimonials')->orderBy("id", "asc")->get()->toArray();
 
-                $items['what_we_do']["badge_data"] = [];
+                $items['testimonials']["badge_data"] = [];
 
                 foreach ($cmsBadge as $item2) {
 
@@ -128,8 +128,9 @@ class CmsHomePageController extends Controller
                         $item2['badge_image_1'] = $default_file;
                     }
 
-                    $items['what_we_do']["badge_data"][] = $item2;
+                    $items['testimonials']["badge_data"][] = $item2;
                 }
+                dd($items['testimonials']);
             } elseif ($item['type'] == "video_section") {
                 $items["video_section"] = $item;
             } elseif ($item['type'] == "info_section") {
