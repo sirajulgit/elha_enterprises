@@ -2588,9 +2588,9 @@
              ///////////////// dynamic add more fields (faq) ////////////////////////////////
             var pre_badge_count = "{{ count($items['faq']['badge_data']) }}";
             var badge_fields_current_length = (Number(pre_badge_count) != 0) ? Number(pre_badge_count) : 1;
-            const badge_fields_max_length = 16;
+            const badge_fields_max_length_faq = 16;
 
-            if (badge_fields_current_length >= badge_fields_max_length) {
+            if (badge_fields_current_length >= badge_fields_max_length_faq) {
                 $("#addInputfaq").hide();
             }
 
@@ -2599,7 +2599,7 @@
 
                 // alert(badge_fields_current_length)
 
-                if (badge_fields_current_length >= badge_fields_max_length) {
+                if (badge_fields_current_length >= badge_fields_max_length_faq) {
                     $("#addInputfaq").hide();
                     return false;
                 }
