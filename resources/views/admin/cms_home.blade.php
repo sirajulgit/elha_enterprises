@@ -1087,7 +1087,7 @@
 
                                                         @if ($item['badge_image_1'])
                                                             <img src="{{ asset($item['badge_image_1']) }}" alt=""
-                                                                width="464.8px" height="456.4px" class="mt-3" />
+                                                                width="200px" height="200px" class="mt-3" />
                                                         @endif
                                                     </div>
 
