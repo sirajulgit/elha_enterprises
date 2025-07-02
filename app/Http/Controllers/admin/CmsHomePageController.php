@@ -130,7 +130,7 @@ class CmsHomePageController extends Controller
 
                     $items['testimonials']["badge_data"][] = $item2;
                 }
-                dd($items['testimonials']);
+                //dd($items['testimonials']);
             } elseif ($item['type'] == "video_section") {
                 $items["video_section"] = $item;
             } elseif ($item['type'] == "info_section") {
