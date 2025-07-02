@@ -131,6 +131,21 @@ class CmsHomePageController extends Controller
                     $items['testimonials']["badge_data"][] = $item2;
                 }
                 //dd($items['testimonials']);
+            } elseif ($item['type'] == "faq") {
+                $items["faq"] = $item;
+
+                $cmsBadge = CmsBadge::where('type', 'faq')->orderBy("id", "asc")->get()->toArray();
+
+                $items['faq']["badge_data"] = [];
+
+                foreach ($cmsBadge as $item2) {
+
+                   
+
+
+                    
+                    $items['faq']["badge_data"][] = $item2;
+                }
             } elseif ($item['type'] == "video_section") {
                 $items["video_section"] = $item;
             } elseif ($item['type'] == "info_section") {
