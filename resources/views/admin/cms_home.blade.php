@@ -1191,7 +1191,7 @@
                                                     <div class="form-group col-md-4">
                                                         <input type="text"
                                                             class="form-control text-input badge_title_1_{{ $item['id'] }}"
-                                                            name="old_badge_title_1[]" value="{{ $item['badge_text_1'] }}"
+                                                            name="old_badge_title_1[]" value="{{ $item['badge_title_1'] }}"
                                                             placeholder="FAQ Question">
                                                     </div>
 
