@@ -1189,10 +1189,11 @@
 
                                                     {{-- FAQ Question --}}
                                                     <div class="form-group col-md-4">
-                                                        <input type="text"
-                                                            class="form-control text-input badge_title_1_{{ $item['id'] }}"
-                                                            name="old_badge_title_1[]" value="{{ $item['badge_title_1'] }}"
-                                                            placeholder="FAQ Question">
+                                                      
+
+                                                             <textarea name="old_badge_title_1[]" class="form-control badge_title_1_{{ $item['id'] }}" rows="5"
+                                                            placeholder="FAQ Question">{{ $item['badge_title_1'] }}</textarea>
+                                                            
                                                     </div>
 
 
@@ -2609,14 +2610,14 @@
                         <input type="hidden" value="" name="badge_id[]" />
 
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control text-input"
-                                name="badge_title_1[]" placeholder="Client Name">
+                          
+                                <textarea name="badge_title_1[]" class="form-control" rows="5" placeholder="FAQ Question"></textarea>
                         </div>
 
                       
 
                         <div class="form-group col-md-4">
-                            <textarea name="badge_details_1[]" class="form-control" rows="5" placeholder="Client Message"></textarea>
+                            <textarea name="badge_details_1[]" class="form-control" rows="5" placeholder="FAQ Description"></textarea>
                         </div>
 
                         <div class="form-group col-md-4">
