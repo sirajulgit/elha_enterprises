@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('asset/frontend/css/slick.css')}}"/>
   <link rel="stylesheet" type="text/css" href="{{ asset('asset/frontend/css/slick-theme.css')}}"/>
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ asset('asset/frontend/fonts/font-awesome.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('asset/frontend/css/font-awesome.min.css')}}">
   <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Style CSS -->
