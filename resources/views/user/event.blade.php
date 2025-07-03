@@ -3,56 +3,37 @@
 
 @section('content')
 
-    {{-- ############# | CMS BANNER | ############# --}}
-    <div class="banner-area position-relative">
-        <div class="banner-slide">
-            @foreach ($data['banner_data'] as $item)
-                <div>
-                    <img src="{{ asset($item['image']) }}">
-                </div>
-            @endforeach
-        </div>
-
-    </div>
-
-
-
-
-    <div class="blog-area pb-5 mt-5">
+    <div class="inner-banner position-relative" style="background-image:url({{ asset('asset/frontend/images/banner.jpg')}});">
         <div class="container">
-            <div class="about-content-right text-center mb-5 pb-4">
-                <h2> <strong>Our Events</strong> </h2>
+            <div class="text-center">
+                <strong> Events </strong>
             </div>
+        </div>
+    </div>
+    <!-- Service -->
 
-            {{-- ########### | Events | ########### --}}
-            <div class="row">
-                @foreach ($data['event_data'] as $item)
-                    <div class="col-lg-4 mb-4">
-                        <div class="blog-card">
-                            <div class="blog-image">
-                                <img src="{{ asset($item['image']) }}">
-                            </div>
-                            <div class="blog-content">
-                                <span class="date-blog">
-                                    <i class="bi bi-calendar-check-fill"></i>
-                                    {{ \Carbon\Carbon::parse($item['start_date'])->format('F d, Y h:i A') }}
-                                    -
-                                    {{ \Carbon\Carbon::parse($item['end_date'])->format('F d, Y h:i A') }}
-                                </span>
-                                <h4> {{ $item['title'] }} </h4>
+    <section class="gap-top gap-bottom">
+        <div class="container">
+
+            @foreach ($data['event_data'] as $item)
+                <div class="row align-items-center event-area mb-4">
+                    <div class="col-md-4">
+                        <img src="{{ asset($item['image']) }}">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="common-text">
+                            <h2>{{ $item['title'] }}</h2>
+                            <p>
                                 @if ($item['short_description'])
                                     {!! \Illuminate\Support\Str::limit($item['short_description'], 100, '...') !!}
                                 @endif
-                            </div>
-                            <div class="readmore-btn">
-                                <a href="{{ route('event_details', $item['slug']) }}"> Read More <i
-                                        class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
+                            </p>
+                            <a class="btn-readmore" href="{{ route('event_details', $item['slug']) }}"> Read More <i
+                                    class="fa fa-arrow-right"></i> </a>
                         </div>
                     </div>
-                @endforeach
-            </div>
+                </div>
+            @endforeach
 
 
             {{-- ########### | Pagination | ########### --}}
@@ -94,5 +75,6 @@
             @endif
 
         </div>
-    </div>
+    </section>
+
 @endsection

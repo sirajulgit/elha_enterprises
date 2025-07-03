@@ -4,7 +4,8 @@
 @section('content')
 
 
-    <div class="inner-banner position-relative" style="background-image:url({{ asset('asset/frontend/images/banner.jpg')}});">
+    <div class="inner-banner position-relative"
+        style="background-image:url({{ asset('asset/frontend/images/banner.jpg') }});">
         <div class="container">
             <div class="text-center">
                 <strong> Blog </strong>
@@ -12,12 +13,7 @@
         </div>
     </div>
 
-
-
-
-
-
-    <!-- Service -->
+    <!-- Blogs -->
 
     <section class="gap-top gap-bottom">
         <div class="container">
@@ -30,13 +26,14 @@
                                 <img src="{{ asset($item['image']) }}">
                             </div>
                             <div class="blog-content">
-                               <h4> {{ $item['title'] }} </h4>
-                               <p>
-                                @if ($item['short_description'])
-                                    {!! \Illuminate\Support\Str::limit($item['short_description'], 100, '...') !!}
-                                @endif
+                                <h4> {{ $item['title'] }} </h4>
+                                <p>
+                                    @if ($item['short_description'])
+                                        {!! \Illuminate\Support\Str::limit($item['short_description'], 100, '...') !!}
+                                    @endif
                                 </p>
-                                <a class="btn-readmore" href="{{ route('blog_details', $item['slug']) }}"> Read More <i class="fa fa-arrow-right"></i> </a>
+                                <a class="btn-readmore" href="{{ route('blog_details', $item['slug']) }}"> Read More <i
+                                        class="fa fa-arrow-right"></i> </a>
                             </div>
                         </div>
                     </div>

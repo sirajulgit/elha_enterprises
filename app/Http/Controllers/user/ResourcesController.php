@@ -10,22 +10,23 @@ use App\Models\Gallery;
 use Illuminate\Http\Request;
 
 
-class ServicesController extends Controller
+class ResourcesController extends Controller
 {
     //
 
     public function index()
     {
         $data = [
-            'page_title' => 'Services',
-            'activePageName' => 'services',
+            'page_title' => 'Resources',
+            'activePageName' => 'resources',
             'banner_data' => [],
             'page_data' => [],
             'gallery_data' => [],
         ];
 
-      
+       
 
-        return view('user.services', ['data' => $data]);
+
+        return view('user.resources', ['data' => $data]);
     }
 }

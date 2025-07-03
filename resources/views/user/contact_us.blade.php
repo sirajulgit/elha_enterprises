@@ -2,53 +2,60 @@
 
 
 @section('content')
-    {{-- ############# | CMS BANNER | ############# --}}
-    <div class="banner-area position-relative">
-        <div class="banner-slide">
-            @foreach ($data['banner_data'] as $item)
-                <div>
-                    <img src="{{ asset($item['image']) }}">
-                </div>
-            @endforeach
-        </div>
 
+
+
+    <div class="inner-banner position-relative" style="background-image:url({{ asset('asset/frontend/images/banner.jpg')}});">
+    <div class="container">
+      <div class="text-center">
+        <strong> Contact us </strong>
+      </div>
     </div>
+  </div>
+
+ 
+
+ 
 
 
-    <div class="space-section mt-5 pt-4 pb-4 mb-5">
-        <div class="container">
-            <div class="row">
+  <!-- Service -->
 
-                <div class="col-lg-4">
-                    <div class="details-contact">
-                        <h3 class="heading-contact mb-4">Contact Us</h3>
+  <section class="gap-top gap-bottom">
+    <div class="container">
 
-                        <div class="foot-description d-flex align-items-center mb-3">
-                            <span class="round-icon"> <i class="bi bi-geo-alt"></i> </span>
-                            <div>
-                                <b>Our Location</b>
-                                {!! $data['contact_data']['address'] !!}
-                            </div>
-                        </div>
+       <div class="row">
 
-                        <div class="foot-description d-flex align-items-center mb-3">
-                            <span class="round-icon"> <i class="bi bi-telephone"></i> </span>
-                            <div>
-                                <p> {{ $data['contact_data']['phone'] }} </p>
-                            </div>
-                        </div>
+          <div class="col-lg-4">
+          <div class="details-contact bg-red">
+            <h3 class="heading-contact mb-4">Contact Us</h3>
+              
+              <div class="foot-description d-flex align-items-center mb-3">
+                  <span class="round-icon"> <i class="bi bi-geo-alt"></i> </span>
+                  <div>
+                    <b>Our Location</b>
+                    {!! $data['contact_data']['address'] !!}
+                  </div>
+              </div>
 
-                        <div class="foot-description d-flex align-items-center mb-3">
-                            <span class="round-icon"> <i class="bi bi-envelope"></i> </span>
-                            <div>
-                                <p> {{ $data['contact_data']['email'] }} </p>
-                            </div>
-                        </div>
+              <div class="foot-description d-flex align-items-center mb-3">
+                  <span class="round-icon"> <i class="bi bi-telephone"></i> </span>
+                  <div>
+                    <p> {{ $data['contact_data']['phone'] }} </p>
+                  </div>
+              </div>
 
-                    </div>
+              <div class="foot-description d-flex align-items-center mb-3">
+                <span class="round-icon"> <i class="bi bi-envelope"></i> </span>
+                <div>
+                  <p> {{ $data['contact_data']['email'] }}  </p>
                 </div>
+              </div>
+              
+          </div>
+          </div>
 
-                <div class="col-lg-8">
+          
+           <div class="col-lg-8">
                     <div class="contact-form">
                         <div class="mb-4">
                             <h3 class="heading"> Get A Quote</h3>
@@ -101,10 +108,13 @@
                         </form>
                     </div>
                 </div>
+          
 
-            </div>
         </div>
+        
     </div>
+  </section>
+
 @endsection
 
 

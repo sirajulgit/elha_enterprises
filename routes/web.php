@@ -47,6 +47,7 @@ use App\Http\Controllers\user\ContactUsController;
 use App\Http\Controllers\user\EventsController as UserEventsController;
 use App\Http\Controllers\user\GalleryController as UserGalleryController;
 use App\Http\Controllers\user\ServicesController;
+use App\Http\Controllers\user\ResourcesController;
 
 
 
@@ -71,15 +72,16 @@ Route::middleware('isGuest')->group(function () {
     });
 
     Route::get('/home', [HomeController::class, 'index'])->name('home');
-    Route::get('/about-me', [AboutUsController::class, 'index'])->name('about_us');
+    Route::get('/about-us', [AboutUsController::class, 'index'])->name('about_us');
     Route::get('/blogs', [UserBlogsController::class, 'index'])->name('blogs');
     Route::get('/blogs/{slug}', [UserBlogsController::class, 'blog_details'])->name('blog_details');
     Route::get('/events', [UserEventsController::class, 'index'])->name('events');
     Route::get('/events/{slug}', [UserEventsController::class, 'event_details'])->name('event_details');
     Route::get('/gallery', [UserGalleryController::class, 'index'])->name('gallery');
-    Route::get('/contact-me', [ContactUsController::class, 'index'])->name('contact_us');
-    Route::post('/contact-me', [ContactUsController::class, 'post_contact_us'])->name('post_contact_us');
-     Route::get('/services', [ServicesController::class, 'index'])->name('services');
+    Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact_us');
+    Route::post('/contact-us', [ContactUsController::class, 'post_contact_us'])->name('post_contact_us');
+    Route::get('/services', [ServicesController::class, 'index'])->name('services');
+     Route::get('/resources', [ResourcesController::class, 'index'])->name('resources');
     
     // Route::post('/login', [AuthController::class, 'post_login'])->name('post_user_login');
     // Route::get('/register', [AuthController::class, 'register'])->name('user_register');

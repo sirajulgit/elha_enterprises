@@ -39,6 +39,10 @@
                            <li class="{{ $data['activePageName'] == 'services' ? 'current-menu-item' : '' }}">
                                <a href="{{ route('services') }}"> Services </a>
                            </li>
+                            <li class="{{ $data['activePageName'] == 'resources' ? 'current-menu-item' : '' }}">
+                               <a href="{{ route('resources') }}"> Resources </a>
+                           </li>
+                           
                            <li class="{{ $data['activePageName'] == 'blog' ? 'current-menu-item' : '' }}">
                                <a href="{{ route('blogs') }}"> Blog </a>
                            </li>
