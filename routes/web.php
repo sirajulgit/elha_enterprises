@@ -46,6 +46,7 @@ use App\Http\Controllers\user\BlogsController as UserBlogsController;
 use App\Http\Controllers\user\ContactUsController;
 use App\Http\Controllers\user\EventsController as UserEventsController;
 use App\Http\Controllers\user\GalleryController as UserGalleryController;
+use App\Http\Controllers\user\ServicesController;
 
 
 
@@ -78,6 +79,8 @@ Route::middleware('isGuest')->group(function () {
     Route::get('/gallery', [UserGalleryController::class, 'index'])->name('gallery');
     Route::get('/contact-me', [ContactUsController::class, 'index'])->name('contact_us');
     Route::post('/contact-me', [ContactUsController::class, 'post_contact_us'])->name('post_contact_us');
+     Route::get('/services', [ServicesController::class, 'index'])->name('services');
+    
     // Route::post('/login', [AuthController::class, 'post_login'])->name('post_user_login');
     // Route::get('/register', [AuthController::class, 'register'])->name('user_register');
     // Route::post('/register', [AuthController::class, 'post_register'])->name('post_user_register');
