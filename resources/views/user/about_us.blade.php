@@ -171,7 +171,7 @@
         <div class="col-lg-3">
 
           <div class="client-say-heading">
-            <img class="mb-3" src="{{ asset('asset/frontend/images/inverted-comma.png">
+            <img class="mb-3" src="{{ asset('asset/frontend/images/inverted-comma.png')}}">
             <div class="testimo-heading">
               <h3>What our <br> clients <br> say about <br> our company</h3>
             </div>
