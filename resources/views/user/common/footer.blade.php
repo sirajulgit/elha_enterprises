@@ -1,59 +1,96 @@
 
-<footer class="pt-5">
+<footer>
   <div class="container">
-    <div class="row mb-5">
-      <div class="col-lg-4 col-md-6">
-        <div class="foot-description d-flex align-items-center">
-          <span class="round-icon"> <i class="bi bi-geo-alt"></i> </span>
-          <div>
-            <b>Our Location</b>
-            <p>{!! $settings['address'] !!} </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="foot-description d-flex align-items-center">
-          <span class="round-icon"> <i class="bi bi-telephone"></i> </span>
-          <div>
-            <p>  {{$settings['contact_no']}} </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-12">
-        <div class="foot-description d-flex align-items-center">
-          <span class="round-icon"> <i class="bi bi-envelope"></i> </span>
-          <div>
-            <p> {{$settings['contact_email']}}  </p>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="midle-footer d-flex align-items-center justify-content-between">
-      <div>
-        <ul class="d-flex social-footer">
-          <li class="me-4">Social: </li>
-          <li><a href="{{$settings['fb_link']}}"><i class="bi bi-facebook"></i> </a></li>
-          <li><a href="{{$settings['twitter_link']}}"> <i class="bi bi-twitter-x"></i> </a></li>
-          <li><a href="{{$settings['insra_link']}}"> <i class="bi bi-instagram"></i> </a></li>
-          <li><a href="{{$settings['youtube_link']}}"> <i class="bi bi-youtube"></i> </a></li>
-        </ul>
-      </div>
-
-      <ul class="d-flex footer-link">
-        <li><a href="">Terms & Conditions </a></li>
-        <li><a href=""> Privacy Policy </a></li>
+    <div class="footer-info">
+      <ul class="d-flex justify-content-center">
+        <li class="d-flex">
+          <i class="fa fa-map-marker"></i>
+          <div>
+            <strong>Address</strong>
+            <p> {!! $settings['address'] !!} </p>
+          </div>
+        </li>
+        <li class="d-flex">
+          <i class="fa fa-phone"></i>
+          <div>
+            <strong>Phone</strong>
+            <p> {{$settings['contact_no']}} </p>
+          </div>
+        </li>
+        <li class="d-flex">
+          <i class="fa fa-envelope-o"></i>
+          <div>
+            <strong>Mail</strong>
+            <p> {{$settings['contact_email']}} </p>
+          </div>
+        </li>
       </ul>
 
+    </div>
+
+    <div class="row pt-4 pb-4">
+      
+      <div class="col-lg-2 col-md-6">
+        <div class="footer-holder">
+          <h3> Services </h3>
+          <ul>
+            <li><a href=""> Consulting Gold </a></li>
+            <li><a href=""> Minerals Import & Export </a></li>
+            <li><a href=""> Trade </a></li>
+            <li><a href=""> Logistics </a></li>
+            <li><a href=""> Financial </a></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-holder">
+          <h3> Useful Links </h3>
+          <ul>
+            <li><a href=""> Consulting gold </a></li>
+            <li><a href=""> Minerals Import & Export </a></li>
+            <li><a href=""> Trade </a></li>
+            <li><a href=""> Logistics </a></li>
+            <li><a href=""> Financial </a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-holder">
+          <h3> Newsletter </h3>
+          <p> Subscribe our newsletter to get our latest update & news </p>
+          <div class="submit-area d-flex mt-4">
+            <input class="form-control" type="email" placeholder="Enter Your Email Id">
+            <input class="foot-submit" type="submit" value="Submit">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-holder">
+          <h3> About Us </h3>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  </p>
+        </div>
+      </div>
+
 
     </div>
 
-    <div class="copy-right text-center pt-4 pb-4 justify-content-between">
-      <p> Copyright © 2025 All Right Reserved  </p>
-      <p> Powered by The Tech On Point, Inc.  <a href="https://www.thetechonpoint.com/"> www.thetechonpoint.com</a>  </p>
+
+    <div class="copy-right mt-4">
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <div class="text-center pt-4 pb-4">
+            <p> © Copyright 2025 All rights reserved. </p>
+               <p> Powered by The Tech On Point, Inc.  <a href="https://www.thetechonpoint.com/"> www.thetechonpoint.com</a>  </p>
+            </div>
+          </div>
+        </div>
     </div>
 
-
-
+  
   </div>
 </footer>

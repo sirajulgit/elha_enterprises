@@ -10,28 +10,10 @@ jQuery(document).ready(function ($) {
         });
     }
     // Hamburgers
-
-    //Nav fixed top
-    jQuery(window).scroll(function () {
-        if (jQuery(this).scrollTop() > 100) {
-            jQuery("header").addClass("topmines");
-        } else {
-            jQuery("header").removeClass("topmines");
-        }
-        if (jQuery(this).scrollTop() > 250) {
-            jQuery("header").addClass("nav-active");
-        } else {
-            jQuery("header").removeClass("nav-active");
-        }
-
-    });
-
     // Side Menu 
-
     $('#pull').click(function () {
         $('.nav').toggleClass("menutogg");
     });
-
     $('.nav ul li').find(".sub-menu").parent().addClass("drop");
     $(".drop").append('<span class="arrow-icon"> <i class="fa fa-angle-down"></i> </span>');
     if ($(window).width() < 991.98) {
@@ -43,10 +25,36 @@ jQuery(document).ready(function ($) {
         $('.sub-menu').slideUp();
         $(this).siblings('.sub-menu').slideToggle();
     });
-
+    //menu
+    // var pull = jQuery('#pull');
+    // menu = jQuery('#menu-bg');
+    // menuHeight = menu.height();
+    // jQuery(pull).on('click', function (e) {
+    //     e.preventDefault();
+    //     menu.slideToggle(1000);
+    // });
+    // jQuery(window).resize(function () {
+    //     var w = $(window).width();
+    //     if (w > 320 && menu.is(':hidden')) {
+    //         menu.removeAttr('style');
+    //     }
+    // });
+    //menu
+    //Nav fixed top
+    jQuery(window).scroll(function () {
+        if (jQuery(this).scrollTop() > 100) {
+            jQuery(".top-nav").addClass("topmines");
+        } else {
+            jQuery(".top-nav").removeClass("topmines");
+        }
+        if (jQuery(this).scrollTop() > 250) {
+            jQuery(".top-nav").addClass("nav-active");
+        } else {
+            jQuery(".top-nav").removeClass("nav-active");
+        }
+    });
     //scroll top
     jQuery(window).scroll(function () {
-
         if (jQuery(this).scrollTop() > 100) {
             jQuery(".scrollup").addClass("active");
         } else {
@@ -59,34 +67,82 @@ jQuery(document).ready(function ($) {
         }, 600);
         return false;
     });
-
     //scroll top
-     
-    
-    //   Slider
 
-    $('.banner-slide').slick({
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    adaptiveHeight: true, 
-    autoplay: true, 
-     fade: true,
-     arrows: true,
-      
+
+    //   Slider
+    $('.banner-area').slick({
+        autoplay: false,
+        speed: 800,
+        lazyLoad: 'progressive',
+        arrows: false,
+        dots: false,
+        // prevArrow: '<div class="slick-nav prev-arrow"><i></i><svg><use xlink:href="#circle"></svg></div>',
+        // nextArrow: '<div class="slick-nav next-arrow"><i></i><svg><use xlink:href="#circle"></svg></div>',
+    }).slickAnimation();
+    $('.slick-nav').on('click touch', function (e) {
+        e.preventDefault();
+        var arrow = $(this);
+        if (!arrow.hasClass('animate')) {
+            arrow.addClass('animate');
+            setTimeout(() => {
+                arrow.removeClass('animate');
+            }, 1600);
+        }
     });
 
-     
+    $('.testi-slider').slick({
+        autoplay: true,
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+            responsive: [
+                 {
+                breakpoint: 1350,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+                },
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+                },
+                {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                },
+                {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+                
+            ]
+        });
 
-    AOS.init();
-    
+ 
+
     //machheight
     jQuery(".matchHeight").matchHeight();
-    
+    AOS.init();
 });
 //GALLERY
-baguetteBox.run('.tz-gallery');
+// baguetteBox.run('.tz-gallery');
 
 
 
