@@ -40,14 +40,14 @@
           <div class="logistic">
             <div class="pic">
               <img src="{{ asset('asset/frontend/images/rashio-image.jpg')}}" alt="Blank Image">
-              <a class="holder" href="" style="background-image:url({{ asset('asset/frontend/images/service-image-1.png')}});"></a>
+              <a class="holder" href="" style="background-image:url({{ $homedata['services']['image_1'] }});"></a>
             </div>
              <div class="service-icon blue-bg">
                 <img src="{{ asset('asset/frontend/images/Logistics.png')}}">
               </div>
             <div class="service-content-area text-center matchHeight">
-              <h3> Logistics </h3>
-              <p> Lorem ipsum dolor sit amet, consectetur adipiscing  </p>
+              <h3> {{ $homedata['services']['image_1_text_1'] }} </h3>
+              <p> {{ $homedata['services']['image_1_text_2'] }}  </p>
             </div>
           </div>
         </div>
