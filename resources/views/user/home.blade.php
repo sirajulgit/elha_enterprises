@@ -114,13 +114,13 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="heading mb-5">
-          {!! $items['about']['head_title'] !!}
+          {!! $homedata['about']['head_title'] !!}
           <span><img src="{{ asset('asset/frontend/images/three-dots.png')}}"> </span>
           </div>
 
           <div class="common-text">
-            {!! $items['about']['title_1'] !!}
-            {!! $items['about']['content'] !!}
+            {!! $homedata['about']['title_1'] !!}
+            {!! $homedata['about']['content'] !!}
             <a class="btn-readmore" href="{{ route('about_us') }}"> Read More <i class="fa fa-arrow-right"></i> </a>
           </div>
 
@@ -129,11 +129,11 @@
         <div class="col-lg-6">
           <div class="about-image-area position-relative">
             <div class="about-right text-end">
-              <img src="{{ $items['about']['image_1'] }}">
+              <img src="{{ $homedata['about']['image_1'] }}">
             </div>
 
             <div class="about-left-image">
-              <img src="{{ $items['about']['image_2'] }}" alt="">
+              <img src="{{ $homedata['about']['image_2'] }}" alt="">
             </div>
 
 
