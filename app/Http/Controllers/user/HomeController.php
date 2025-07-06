@@ -32,6 +32,7 @@ class HomeController extends Controller
 
             array_push($temp_arr, $item);
         }
+
         $cmsHome = CmsHomePage::where('page_type', 'home_page')->orderBy("id", "asc")->get()->toArray();
 
         $items = [];
@@ -77,7 +78,8 @@ class HomeController extends Controller
                 $default_image = '/uploads/images/' . $item['about_badge_icon4'];
                 $item['about_badge_icon4'] = $default_image;
             }
-              if (!is_null($item['about_profile_image'])) {
+
+            if (!is_null($item['about_profile_image'])) {
                 $default_image = '/uploads/images/' . $item['about_profile_image'];
                 $item['about_profile_image'] = $default_image;
             }
@@ -87,7 +89,6 @@ class HomeController extends Controller
                 $item['about_signature_image'] = $default_image;
             }
 
-
             if (!is_null($item['file_1'])) {
                 $default_file = '/uploads/files/' . $item['file_1'];
                 $item['file_1'] = $default_file;
@@ -95,14 +96,22 @@ class HomeController extends Controller
 
 
 
-            if ($item['type'] == "about") {
+            if ($item['type'] == "services") {
+                $items["services"] = $item;
+            } elseif ($item['type'] == "work") {
+                $items["work"] = $item;
+            } elseif ($item['type'] == "about") {
                 $items["about"] = $item;
-            } elseif ($item['type'] == "what_we_do") {
-                $items["what_we_do"] = $item;
+            } elseif ($item['type'] == "industry") {
+                $items["industry"] = $item;
+            } elseif ($item['type'] == "market") {
+                $items["market"] = $item;
+            } elseif ($item['type'] == "testimonials") {
+                $items["testimonials"] = $item;
 
-                $cmsBadge = CmsBadge::where('type', 'what_we_do')->orderBy("id", "asc")->get()->toArray();
+                $cmsBadge = CmsBadge::where('type', 'testimonials')->orderBy("id", "asc")->get()->toArray();
 
-                $items['what_we_do']["badge_data"] = [];
+                $items['testimonials']["badge_data"] = [];
 
                 foreach ($cmsBadge as $item2) {
 
@@ -128,7 +137,23 @@ class HomeController extends Controller
                         $item2['badge_image_1'] = $default_file;
                     }
 
-                    $items['what_we_do']["badge_data"][] = $item2;
+                    $items['testimonials']["badge_data"][] = $item2;
+                }
+                //dd($items['testimonials']);
+            } elseif ($item['type'] == "faq") {
+                $items["faq"] = $item;
+
+                $cmsBadge = CmsBadge::where('type', 'faq')->orderBy("id", "asc")->get()->toArray();
+
+                $items['faq']["badge_data"] = [];
+
+                foreach ($cmsBadge as $item2) {
+
+
+
+
+
+                    $items['faq']["badge_data"][] = $item2;
                 }
             } elseif ($item['type'] == "video_section") {
                 $items["video_section"] = $item;
@@ -136,6 +161,10 @@ class HomeController extends Controller
                 $items["info_section"] = $item;
             }
         }
+
+
+
+
         //dd($items);exit;
 
         $gallery = Gallery::orderBy("id", "desc")->limit(8)->get();

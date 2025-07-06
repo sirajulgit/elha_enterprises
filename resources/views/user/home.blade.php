@@ -30,8 +30,8 @@
   <section class="service gap-top">
     <div class="container">
       <div class="heading mb-5 pb-5">
-        <span> Our Services <img src="{{ asset('asset/frontend/images/three-dots.png')}}"> </span>
-        <h2> Were Offering Our <br> Special Services </h2>
+        <span> {{ $items['services']['head_title'] }} <img src="{{ asset('asset/frontend/images/three-dots.png')}}"> </span>
+        <h2> {{ $items['services']['content'] }} </h2>
       </div>
 
       <div class="row">
