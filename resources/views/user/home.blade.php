@@ -129,11 +129,11 @@
         <div class="col-lg-6">
           <div class="about-image-area position-relative">
             <div class="about-right text-end">
-              <img src="{{ $homedata['about']['image_1'] }}">
+              <img src="{{ $homedata['about']['image_2'] }}">
             </div>
 
             <div class="about-left-image">
-              <img src="{{ $homedata['about']['image_2'] }}" alt="">
+              <img src="{{ $homedata['about']['image_1'] }}" alt="">
             </div>
 
 
