@@ -43,7 +43,7 @@
               <a class="holder" href="" style="background-image:url({{ $homedata['services']['image_1'] }});"></a>
             </div>
              <div class="service-icon blue-bg">
-                <img src="{{ asset('asset/frontend/images/Logistics.png')}}">
+                <img src="{{ $homedata['services']['about_badge_icon1'] }}">
               </div>
             <div class="service-content-area text-center matchHeight">
               <h3> {{ $homedata['services']['image_1_text_1'] }} </h3>
@@ -56,14 +56,14 @@
           <div class="logistic">
             <div class="pic">
               <img src="{{ asset('asset/frontend/images/rashio-image.jpg')}}" alt="Blank Image">
-              <a class="holder" href="" style="background-image:url({{ asset('asset/frontend/images/service-image-2.png')}});"></a>
+              <a class="holder" href="" style="background-image:url({{ $homedata['services']['image_2'] }});"></a>
             </div>
              <div class="service-icon green-bg">
-                <img src="{{ asset('asset/frontend/images/Financial.png')}}">
+                <img src="{{ $homedata['services']['about_badge_icon2'] }}">
               </div>
             <div class="service-content-area text-center matchHeight">
-              <h3> Financial </h3>
-              <p> Lorem ipsum dolor sit amet, consectetur adipiscing  </p>
+               <h3> {{ $homedata['services']['image_2_text_1'] }} </h3>
+              <p> {{ $homedata['services']['image_2_text_2'] }}  </p>
             </div>
           </div>
         </div>
