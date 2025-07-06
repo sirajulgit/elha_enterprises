@@ -72,14 +72,14 @@
           <div class="logistic margin-top-mynes">
             <div class="pic">
               <img src="{{ asset('asset/frontend/images/rashio-image.jpg')}}" alt="Blank Image">
-              <a class="holder" href="" style="background-image:url({{ asset('asset/frontend/images/service-image-3.png')}});"></a>
+              <a class="holder" href="" style="background-image:url({{ $homedata['services']['image_3'] }});"></a>
             </div>
-             <div class="service-icon green-bg">
-                <img src="{{ asset('asset/frontend/images/gold-ingot.png')}}">
+              <div class="service-icon green-bg">
+                <img src="{{ $homedata['services']['about_badge_icon3'] }}">
               </div>
             <div class="service-content-area text-center matchHeight">
-              <h3> Consulting Gold </h3>
-              <p> Lorem ipsum dolor sit amet, consectetur adipiscing  </p>
+               <h3> {{ $homedata['services']['image_3_text_1'] }} </h3>
+              <p> {{ $homedata['services']['image_3_text_2'] }}  </p>
             </div>
           </div>
         </div>
@@ -88,14 +88,14 @@
           <div class="logistic margin-top-mynes">
             <div class="pic">
               <img src="{{ asset('asset/frontend/images/rashio-image.jpg')}}" alt="Blank Image">
-              <a class="holder" href="" style="background-image:url({{ asset('asset/frontend/images/service-image-4.png')}});"></a>
+              <a class="holder" href="" style="background-image:url({{ $homedata['services']['image_4'] }});"></a>
             </div>
-             <div class="service-icon blue-bg">
-                <img src="{{ asset('asset/frontend/images/charcoal.png')}}">
+             <div class="service-icon green-bg">
+                <img src="{{ $homedata['services']['about_badge_icon4'] }}">
               </div>
             <div class="service-content-area text-center matchHeight">
-              <h3> Minerals Import & Export Trade </h3>
-              <p> Lorem ipsum dolor sit amet, consectetur adipiscing  </p>
+               <h3> {{ $homedata['services']['image_4_text_1'] }} </h3>
+              <p> {{ $homedata['services']['image_4_text_2'] }}  </p>
             </div>
           </div>
         </div>
