@@ -30,8 +30,8 @@
   <section class="service gap-top">
     <div class="container">
       <div class="heading mb-5 pb-5">
-        <span> {{ $items['services']['head_title'] }} <img src="{{ asset('asset/frontend/images/three-dots.png')}}"> </span>
-        <h2> {{ $items['services']['content'] }} </h2>
+        <span> {{ $homedata['services']['head_title'] }} <img src="{{ asset('asset/frontend/images/three-dots.png')}}"> </span>
+        <h2> {{ $homedata['services']['content'] }} </h2>
       </div>
 
       <div class="row">
