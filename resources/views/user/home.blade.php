@@ -114,15 +114,14 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="heading mb-5">
-          <h2> About Our Company </h2>
+          {!! $items['about']['head_title'] !!}
           <span><img src="{{ asset('asset/frontend/images/three-dots.png')}}"> </span>
           </div>
 
           <div class="common-text">
-            <h3> Leading global logistic and transport agency </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem vitae sem vestibulum venenatis. Ut nec dapibus diam. Sed placerat condimentum nulla ac ultricies. Phasellus scelerisque facilisis arcu, et maximus justo porta volutpat. Duis placerat velit quam, vitae sodales velit volutpat sit amet. </p>
-            <p> Ut pretium vehicula pretium. Curabitur vulputate congue tellus nec commodo. Praesent dignissim vel orci et efficitur. Nulla gravida enim sapien, at imperdiet nunc convallis ac. Sed finibus nisl non auctor hendrerit. Morbi quis diam dui </p>
-            <a class="btn-readmore" href=""> Read More <i class="fa fa-arrow-right"></i> </a>
+            {!! $items['about']['title_1'] !!}
+            {!! $items['about']['content'] !!}
+            <a class="btn-readmore" href="{{ route('about_us') }}"> Read More <i class="fa fa-arrow-right"></i> </a>
           </div>
 
         </div>
@@ -130,11 +129,11 @@
         <div class="col-lg-6">
           <div class="about-image-area position-relative">
             <div class="about-right text-end">
-              <img src="{{ asset('asset/frontend/images/about-right.png')}}">
+              <img src="{{ $items['about']['image_1'] }}">
             </div>
 
             <div class="about-left-image">
-              <img src="{{ asset('asset/frontend/images/about-left.png')}}" alt="">
+              <img src="{{ $items['about']['image_2'] }}" alt="">
             </div>
 
 
