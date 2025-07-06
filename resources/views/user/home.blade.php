@@ -5,29 +5,21 @@
 
   <div class="banner">
     <div class="banner-area">
+        @foreach ($bannerdata as $item)
         <div class="position-relative">
-          <img src="{{ asset('asset/frontend/images/banner.jpg')}}" alt="banner">
+          <img src="{{ $item->image }}" alt="banner">
           <div class="container">
             <div class="banner-content">
               <h1 class="animated top-title" data-animation-in="animate__fadeInUp" data-delay-in="0.3"> 
-                Lorem Ipsum <br> Dolor sit amet
+                {{ $item->title_1 }}
               </h1>
-              <p class="animated" data-animation-in="animate__fadeInUp" data-delay-in="0.9"> <i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed ex non est cursus tristique ac quis metus. Proin semper est at orci cursus euismod.  </i>  </p>
+              <p class="animated" data-animation-in="animate__fadeInUp" data-delay-in="0.9"> <i>{{ $item->details }} </i>  </p>
             </div>
           </div>
         </div>
+        @endforeach
 
-        <div class="position-relative">
-          <img src="{{ asset('asset/frontend/images/banner.jpg')}}" alt="banner">
-          <div class="container">
-            <div class="banner-content">
-              <h1 class="animated top-title" data-animation-in="animate__fadeInUp" data-delay-in="0.3"> 
-                Lorem Ipsum <br> Dolor sit amet
-              </h1>
-              <p class="animated" data-animation-in="animate__fadeInUp" data-delay-in="0.9"> <i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed ex non est cursus tristique ac quis metus. Proin semper est at orci cursus euismod.  </i>  </p>
-            </div>
-          </div>
-        </div>
+        
       </div>
   </div>
 
