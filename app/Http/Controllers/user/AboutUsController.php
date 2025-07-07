@@ -24,24 +24,10 @@ class AboutUsController extends Controller
             'gallery_data' => [],
         ];
 
-        // +++++++++++++++ | CMS BANNER | +++++++++++++++
-        $cmsBanner = CmsBanner::where('type', 'book_page')->orderBy("id", "asc")->get()->toArray();
 
+        $cmsHome = CmsHomePage::where('page_type', 'home_page')->orderBy("id", "asc")->get()->toArray();
 
-        foreach ($cmsBanner as $item) {
-
-            if (!is_null($item['image'])) {
-                $default_image = '/uploads/images/' . $item['image'];
-                $item['image'] = $default_image;
-            }
-
-            array_push($data['banner_data'], $item);
-        }
-
-        // +++++++++++++++ | CMS PAGE | +++++++++++++++
         $items = [];
-
-        $cmsHome = CmsHomePage::where('page_type','about_page')->orderBy("id", "asc")->get()->toArray();
 
         foreach ($cmsHome as $item) {
 
@@ -65,6 +51,36 @@ class AboutUsController extends Controller
                 $item['image_4'] = $default_image;
             }
 
+            if (!is_null($item['about_badge_icon1'])) {
+                $default_image = '/uploads/images/' . $item['about_badge_icon1'];
+                $item['about_badge_icon1'] = $default_image;
+            }
+
+            if (!is_null($item['about_badge_icon2'])) {
+                $default_image = '/uploads/images/' . $item['about_badge_icon2'];
+                $item['about_badge_icon2'] = $default_image;
+            }
+
+            if (!is_null($item['about_badge_icon3'])) {
+                $default_image = '/uploads/images/' . $item['about_badge_icon3'];
+                $item['about_badge_icon3'] = $default_image;
+            }
+
+            if (!is_null($item['about_badge_icon4'])) {
+                $default_image = '/uploads/images/' . $item['about_badge_icon4'];
+                $item['about_badge_icon4'] = $default_image;
+            }
+
+            if (!is_null($item['about_profile_image'])) {
+                $default_image = '/uploads/images/' . $item['about_profile_image'];
+                $item['about_profile_image'] = $default_image;
+            }
+
+            if (!is_null($item['about_signature_image'])) {
+                $default_image = '/uploads/images/' . $item['about_signature_image'];
+                $item['about_signature_image'] = $default_image;
+            }
+
             if (!is_null($item['file_1'])) {
                 $default_file = '/uploads/files/' . $item['file_1'];
                 $item['file_1'] = $default_file;
@@ -72,18 +88,22 @@ class AboutUsController extends Controller
 
 
 
-            if ($item['type'] == "section_1") {
-                $items["section_1"] = $item;
-            }elseif ($item['type'] == "section_2") {
-                $items["section_2"] = $item;
-            } elseif ($item['type'] == "activities_section") {
-                $items["activities_section"] = $item;
-            } elseif ($item['type'] == "politician_section") {
-                $items["politician_section"] = $item;
+            if ($item['type'] == "services") {
+                $items["services"] = $item;
+            } elseif ($item['type'] == "work") {
+                $items["work"] = $item;
+            } elseif ($item['type'] == "about") {
+                $items["about"] = $item;
+            } elseif ($item['type'] == "industry") {
+                $items["industry"] = $item;
+            } elseif ($item['type'] == "market") {
+                $items["market"] = $item;
+            } elseif ($item['type'] == "testimonials") {
+                $items["testimonials"] = $item;
 
-                $cmsBadge = CmsBadge::where('type', 'politician_section')->orderBy("id", "asc")->get()->toArray();
+                $cmsBadge = CmsBadge::where('type', 'testimonials')->orderBy("id", "asc")->get()->toArray();
 
-                $items['politician_section']["badge_data"] = [];
+                $items['testimonials']["badge_data"] = [];
 
                 foreach ($cmsBadge as $item2) {
 
@@ -109,30 +129,32 @@ class AboutUsController extends Controller
                         $item2['badge_image_1'] = $default_file;
                     }
 
-                    $items['politician_section']["badge_data"][] = $item2;
+                    $items['testimonials']["badge_data"][] = $item2;
                 }
-            }
-        }
+                //dd($items['testimonials']);
+            } elseif ($item['type'] == "faq") {
+                $items["faq"] = $item;
 
-        $data['page_data'] = $items;
+                $cmsBadge = CmsBadge::where('type', 'faq')->orderBy("id", "asc")->get()->toArray();
+
+                $items['faq']["badge_data"] = [];
+
+                foreach ($cmsBadge as $item2) {
 
 
-        // +++++++++++++++ | GALLERY | +++++++++++++++
-        $galleryData = Gallery::orderBy("id", "desc")->limit(5)->get()->toArray();
 
-        foreach ($galleryData as $item) {
 
-            if (!is_null($item['image'])) {
-                $default_image = '/uploads/images/' . $item['image'];
-                $item['image'] = $default_image;
-            }
 
-            array_push($data['gallery_data'], $item);
+                    $items['faq']["badge_data"][] = $item2;
+                }
+             } elseif ($item['type'] == "client") {
+                $items["client"] = $item;
+            } 
         }
 
         // dd($data);
 
 
-        return view('user.about_us', ['data' => $data]);
+        return view('user.about_us', ['data' => $data, 'homedata' => $items]);
     }
 }

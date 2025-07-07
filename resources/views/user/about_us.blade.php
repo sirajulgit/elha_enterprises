@@ -19,14 +19,13 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="heading mb-5">
-          <h2> About Our Company </h2>
+          {!! $homedata['about']['head_title'] !!}
           <span><img src="{{ asset('asset/frontend/images/three-dots.png')}}"> </span>
           </div>
 
           <div class="common-text">
-            <h3> Leading global logistic and transport agency </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem vitae sem vestibulum venenatis. Ut nec dapibus diam. Sed placerat condimentum nulla ac ultricies. Phasellus scelerisque facilisis arcu, et maximus justo porta volutpat. Duis placerat velit quam, vitae sodales velit volutpat sit amet. </p>
-            <p> Ut pretium vehicula pretium. Curabitur vulputate congue tellus nec commodo. Praesent dignissim vel orci et efficitur. Nulla gravida enim sapien, at imperdiet nunc convallis ac. Sed finibus nisl non auctor hendrerit. Morbi quis diam dui </p>
+           {!! $homedata['about']['title_1'] !!}
+                        {!! $homedata['about']['content'] !!}
            
           </div>
 
@@ -35,12 +34,12 @@
         <div class="col-lg-6">
           <div class="about-image-area position-relative">
             <div class="about-right text-end">
-              <img src="{{ asset('asset/frontend/images/about-right.png')}}">
-            </div>
+                            <img src="{{ $homedata['about']['image_2'] }}">
+                        </div>
 
-            <div class="about-left-image">
-              <img src="{{ asset('asset/frontend/images/about-left.png')}}" alt="">
-            </div>
+                        <div class="about-left-image">
+                            <img src="{{ $homedata['about']['image_1'] }}" alt="">
+                        </div>
 
 
           </div>
