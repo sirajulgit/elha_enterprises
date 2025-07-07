@@ -155,6 +155,8 @@ class HomeController extends Controller
 
                     $items['faq']["badge_data"][] = $item2;
                 }
+             } elseif ($item['type'] == "client") {
+                $items["client"] = $item;
             } elseif ($item['type'] == "video_section") {
                 $items["video_section"] = $item;
             } elseif ($item['type'] == "info_section") {
