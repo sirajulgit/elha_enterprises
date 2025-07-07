@@ -515,7 +515,12 @@
     </div>
 
 
-
+<div id="form-loader" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+    background-color: rgba(0,0,0,0.4); z-index: 9999; display: flex; justify-content: center; align-items: center;">
+    <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
 
 @endsection
 @section('script_content')
@@ -580,6 +585,7 @@
                         processData: false,
                         contentType: false,
                         beforeSend: function() {
+                         $('#form-loader').show();
                             $(form).find('input[type="submit"]').prop('disabled', true);
                         },
                         success: function(response) {
@@ -593,6 +599,7 @@
                             });
                         },
                         error: function(error) {
+                           $('#form-loader').hide();
                             console.log("error" + error);
                             Swal.fire({
                                 icon: "error",
@@ -603,6 +610,7 @@
                             });
                         },
                         complete: function() {
+                         $('#form-loader').hide();
                             form.reset();
                             $(form).find('input[type="submit"]').prop('disabled', false);
                         }
