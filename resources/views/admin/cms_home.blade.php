@@ -576,8 +576,8 @@
 
 
                 {{-- /////////////// how it work section /////////////////// --}}
-              
-                 <div class="col-lg-12 mb-5">
+
+                <div class="col-lg-12 mb-5">
                     <div class="card">
 
                         <div class="card-header" style="background-color: #3498db;">
@@ -608,15 +608,13 @@
                                     <div class="admin_upload">
                                         <label class="admin-upload-wrap">
                                             <input type="file" class="form-control mt-3 uploadFile" name="image_1"
-                                                id="image_1_work"
-                                                accept="image/png, image/jpg, image/jpeg, image/webp">
+                                                id="image_1_work" accept="image/png, image/jpg, image/jpeg, image/webp">
                                         </label>
 
                                         <div class="profile_image">
                                             @if ($items['work']['image_1'])
                                                 <img class="profile_img" id="thumbnail_show_image_1_work"
-                                                    src="{{ $items['work']['image_1'] }}" width="148px"
-                                                    height="221px">
+                                                    src="{{ $items['work']['image_1'] }}" width="148px" height="221px">
                                             @else
                                                 <img class="profile_img" id="thumbnail_show_image_1_work"
                                                     src="{{ asset('asset/images/default_image.png') }}" width="148px"
@@ -631,7 +629,7 @@
                                     <label for="image_1_text_1">Image 1 Text 1</label>
                                     <textarea id="work_image_1_text_1_1" name="image_1_text_1" class="form-control" rows="5">{{ $items['work']['image_1_text_1'] }}</textarea>
 
-                                </div>                              
+                                </div>
 
                                 <div class="form-group col-md-6">
                                     <label for="image">Image 2</label>
@@ -639,8 +637,7 @@
                                     <div class="admin_upload">
                                         <label class="admin-upload-wrap">
                                             <input type="file" class="form-control mt-3 uploadFile" name="image_2"
-                                                id="image_2_work"
-                                                accept="image/png, image/jpg, image/jpeg, image/webp">
+                                                id="image_2_work" accept="image/png, image/jpg, image/jpeg, image/webp">
 
 
                                         </label>
@@ -649,8 +646,7 @@
 
                                             @if ($items['work']['image_2'])
                                                 <img class="profile_img" id="thumbnail_show_image_2_work"
-                                                    src="{{ $items['work']['image_2'] }}" width="148px"
-                                                    height="221px">
+                                                    src="{{ $items['work']['image_2'] }}" width="148px" height="221px">
                                             @else
                                                 <img class="profile_img" id="thumbnail_show_image_2_work"
                                                     src="{{ asset('asset/images/default_image.png') }}" width="148px"
@@ -667,7 +663,7 @@
 
                                 </div>
 
-                                
+
 
 
                                 <div class="form-group col-md-6">
@@ -676,8 +672,7 @@
                                     <div class="admin_upload">
                                         <label class="admin-upload-wrap">
                                             <input type="file" class="form-control mt-3 uploadFile" name="image_3"
-                                                id="image_3_work"
-                                                accept="image/png, image/jpg, image/jpeg, image/webp">
+                                                id="image_3_work" accept="image/png, image/jpg, image/jpeg, image/webp">
 
 
                                         </label>
@@ -686,8 +681,7 @@
 
                                             @if ($items['work']['image_3'])
                                                 <img class="profile_img" id="thumbnail_show_image_3_work"
-                                                    src="{{ $items['work']['image_3'] }}" width="148px"
-                                                    height="221px">
+                                                    src="{{ $items['work']['image_3'] }}" width="148px" height="221px">
                                             @else
                                                 <img class="profile_img" id="thumbnail_show_image_3_work"
                                                     src="{{ asset('asset/images/default_image.png') }}" width="148px"
@@ -704,7 +698,7 @@
 
                                 </div>
 
-                              
+
 
                                 <div class="form-group col-md-6">
                                     <label for="image">Image 4</label>
@@ -712,8 +706,7 @@
                                     <div class="admin_upload">
                                         <label class="admin-upload-wrap">
                                             <input type="file" class="form-control mt-3 uploadFile" name="image_4"
-                                                id="image_4_work"
-                                                accept="image/png, image/jpg, image/jpeg, image/webp">
+                                                id="image_4_work" accept="image/png, image/jpg, image/jpeg, image/webp">
 
 
                                         </label>
@@ -722,8 +715,7 @@
 
                                             @if ($items['work']['image_4'])
                                                 <img class="profile_img" id="thumbnail_show_image_4_work"
-                                                    src="{{ $items['work']['image_4'] }}" width="148px"
-                                                    height="221px">
+                                                    src="{{ $items['work']['image_4'] }}" width="148px" height="221px">
                                             @else
                                                 <img class="profile_img" id="thumbnail_show_image_4_work"
                                                     src="{{ asset('asset/images/default_image.png') }}" width="148px"
@@ -750,7 +742,6 @@
                                         <div class="profile_image">
                                             @if ($items['work']['about_badge_icon1'])
                                                 <img class="profile_img" id="thumbnail_show_image_5_work"
-                                                    
                                                     src="{{ $items['work']['about_badge_icon1'] }}" width="148px"
                                                     height="221px">
                                             @else
@@ -779,7 +770,6 @@
                                         <div class="profile_image">
                                             @if ($items['work']['about_badge_icon2'])
                                                 <img class="profile_img" id="thumbnail_show_image_6_work"
-                                                   
                                                     src="{{ $items['work']['about_badge_icon2'] }}" width="148px"
                                                     height="221px">
                                             @else
@@ -808,7 +798,6 @@
                                         <div class="profile_image">
                                             @if ($items['work']['about_badge_icon3'])
                                                 <img class="profile_img" id="thumbnail_show_image_7_work"
-                                                    
                                                     src="{{ $items['work']['about_badge_icon3'] }}" width="148px"
                                                     height="221px">
                                             @else
@@ -928,7 +917,7 @@
                                         <div class="profile_image">
                                             @if ($items['market']['about_badge_icon2'])
                                                 <img class="profile_img" id="thumbnail_show_image_2_market"
-                                                   style="background-color: green"
+                                                    style="background-color: green"
                                                     src="{{ $items['market']['about_badge_icon2'] }}" width="148px"
                                                     height="221px">
                                             @else
@@ -1012,7 +1001,7 @@
                     </div>
                 </div>
 
-                  {{-- /////////////// Testimonials /////////////////// --}}
+                {{-- /////////////// Testimonials /////////////////// --}}
                 <div class="col-lg-12 mb-5">
                     <div class="card">
 
@@ -1039,11 +1028,11 @@
                                     <label for="title_1">Title</label>
                                     <textarea id="title_1_2" name="title_1" class="form-control" rows="5">{{ $items['testimonials']['title_1'] }}</textarea>
                                 </div>
-                               
+
 
 
                                 <div class="form-group col-md-12">
-                                   
+
                                     <button type="button" class="btn btn-primary mb-3" id="addInput">Add Field</button>
 
                                     <div id="inputContainer">
@@ -1060,12 +1049,13 @@
                                                     <div class="form-group col-md-4">
                                                         <input type="text"
                                                             class="form-control text-input badge_text_1_{{ $item['id'] }}"
-                                                            name="old_badge_text_1[]" value="{{ $item['badge_text_1'] }}"
+                                                            name="old_badge_text_1[]"
+                                                            value="{{ $item['badge_text_1'] }}"
                                                             placeholder="Client Name">
                                                     </div>
 
 
-                                                   
+
 
 
                                                     {{-- Client Message --}}
@@ -1075,7 +1065,7 @@
                                                     </div>
 
 
-                                                   
+
                                                     {{-- Client Image --}}
                                                     <div class="form-group col-md-4">
                                                         <label for="badge_image_1_{{ $item['id'] }}">Client
@@ -1086,8 +1076,9 @@
                                                             accept="image/png, image/jpg, image/jpeg, image/webp">
 
                                                         @if ($item['badge_image_1'])
-                                                            <img src="{{ asset($item['badge_image_1']) }}" alt=""
-                                                                width="200px" height="200px" class="mt-3" />
+                                                            <img src="{{ asset($item['badge_image_1']) }}"
+                                                                alt="" width="200px" height="200px"
+                                                                class="mt-3" />
                                                         @endif
                                                     </div>
 
@@ -1119,7 +1110,7 @@
                                                     <textarea name="badge_details_1[]" class="form-control" rows="5" placeholder="Client Message"></textarea>
                                                 </div>
 
-                                               
+
 
                                                 {{-- Client Image --}}
                                                 <div class="form-group col-md-4">
@@ -1149,7 +1140,7 @@
                     </div>
                 </div>
 
-                 {{-- /////////////// FAQ /////////////////// --}}
+                {{-- /////////////// FAQ /////////////////// --}}
                 <div class="col-lg-12 mb-5">
                     <div class="card">
 
@@ -1174,8 +1165,9 @@
 
 
                                 <div class="form-group col-md-12">
-                                   
-                                    <button type="button" class="btn btn-primary mb-3" id="addInputfaq">Add Field</button>
+
+                                    <button type="button" class="btn btn-primary mb-3" id="addInputfaq">Add
+                                        Field</button>
 
                                     <div id="inputContainerfaq">
                                         @if (count($items['faq']['badge_data']) > 0)
@@ -1189,15 +1181,15 @@
 
                                                     {{-- FAQ Question --}}
                                                     <div class="form-group col-md-4">
-                                                      
 
-                                                             <textarea name="old_badge_title_1[]" class="form-control badge_title_1_{{ $item['id'] }}" rows="5"
+
+                                                        <textarea name="old_badge_title_1[]" class="form-control badge_title_1_{{ $item['id'] }}" rows="5"
                                                             placeholder="FAQ Question">{{ $item['badge_title_1'] }}</textarea>
-                                                            
+
                                                     </div>
 
 
-                                                   
+
 
 
                                                     {{-- FAQ Description --}}
@@ -1207,8 +1199,8 @@
                                                     </div>
 
 
-                                                   
-                                                   
+
+
 
                                                     {{-- Category Action Button --}}
                                                     <div class="form-group col-md-4">
@@ -1238,7 +1230,7 @@
                                                     <textarea name="badge_details_1[]" class="form-control" rows="5" placeholder="FAQ Description"></textarea>
                                                 </div>
 
-                                               
+
                                                 {{-- Category Action Button --}}
                                                 <div class="form-group col-md-4">
                                                     <button type="button"
@@ -1249,6 +1241,160 @@
                                     </div>
 
                                 </div>
+
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                {{-- /////////////// Client Logo /////////////////// --}}
+
+                <div class="col-lg-12 mb-5">
+                    <div class="card">
+
+                        <div class="card-header" style="background-color: #3498db;">
+                            <h3 class="card-title badge badge-success font-weight-bold ">Client Logo</h3>
+                        </div>
+                        <!-- /.card-header -->
+
+                        <form id="aboutForm" action="{{ route('post_cms_home') }}" method="POST"
+                            enctype="multipart/form-data">
+                            @csrf
+
+
+                            <input type="hidden" name="id" value="{{ $items['client']['id'] }}" />
+
+                            <div class="card-body row">
+                                <div class="form-group col-md-6">
+                                    <label for="image">Image 1</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_1"
+                                                id="image_1_client" accept="image/png, image/jpg, image/jpeg, image/webp">
+                                        </label>
+
+                                        <div class="profile_image">
+                                            @if ($items['client']['image_1'])
+                                                <img class="profile_img" id="thumbnail_show_image_1_client"
+                                                    src="{{ $items['client']['image_1'] }}" width="148px"
+                                                    height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_1_client"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="image">Image 2</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_2"
+                                                id="image_2_client" accept="image/png, image/jpg, image/jpeg, image/webp">
+
+
+                                        </label>
+
+                                        <div class="profile_image">
+
+                                            @if ($items['client']['image_2'])
+                                                <img class="profile_img" id="thumbnail_show_image_2_client"
+                                                    src="{{ $items['client']['image_2'] }}" width="148px"
+                                                    height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_2_client"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group col-md-6">
+                                    <label for="image">Image 3</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_3"
+                                                id="image_3_client" accept="image/png, image/jpg, image/jpeg, image/webp">
+
+
+                                        </label>
+
+                                        <div class="profile_image">
+
+                                            @if ($items['client']['image_3'])
+                                                <img class="profile_img" id="thumbnail_show_image_3_client"
+                                                    src="{{ $items['client']['image_3'] }}" width="148px"
+                                                    height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_3_client"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="image">Image 4</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile" name="image_4"
+                                                id="image_4_client" accept="image/png, image/jpg, image/jpeg, image/webp">
+
+
+                                        </label>
+
+                                        <div class="profile_image">
+
+                                            @if ($items['client']['image_4'])
+                                                <img class="profile_img" id="thumbnail_show_image_4_client"
+                                                    src="{{ $items['client']['image_4'] }}" width="148px"
+                                                    height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_4_client"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="image">Image 5</label>
+
+                                    <div class="admin_upload">
+                                        <label class="admin-upload-wrap">
+                                            <input type="file" class="form-control mt-3 uploadFile"
+                                                name="about_badge_icon1" id="image_5_client"
+                                                accept="image/png, image/jpg, image/jpeg, image/webp">
+                                        </label>
+
+                                        <div class="profile_image">
+                                            @if ($items['client']['about_badge_icon1'])
+                                                <img class="profile_img" id="thumbnail_show_image_5_client"
+                                                    src="{{ $items['client']['about_badge_icon1'] }}" width="148px"
+                                                    height="221px">
+                                            @else
+                                                <img class="profile_img" id="thumbnail_show_image_5_client"
+                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
+                                                    height="221px">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
 
                             </div>
                             <!-- /.card-body -->
@@ -1345,37 +1491,37 @@
                 height: 100,
             });
 
-              $("#work_image_1_text_1_1").summernote({
+            $("#work_image_1_text_1_1").summernote({
                 height: 100,
             });
-              $("#work_image_2_text_1_1").summernote({
+            $("#work_image_2_text_1_1").summernote({
                 height: 100,
             });
-              $("#work_image_3_text_1_1").summernote({
+            $("#work_image_3_text_1_1").summernote({
                 height: 100,
             });
-              $("#work_image_4_text_1_1").summernote({
+            $("#work_image_4_text_1_1").summernote({
                 height: 100,
             });
-              $("#work_image_5_text_1_1").summernote({
+            $("#work_image_5_text_1_1").summernote({
                 height: 100,
             });
-              $("#work_image_6_text_1_1").summernote({
+            $("#work_image_6_text_1_1").summernote({
                 height: 100,
             });
-              $("#work_image_7_text_1_1").summernote({
+            $("#work_image_7_text_1_1").summernote({
                 height: 100,
             });
-             $("#market_image_1_text_1_1").summernote({
+            $("#market_image_1_text_1_1").summernote({
                 height: 100,
             });
-             $("#market_image_2_text_1_1").summernote({
+            $("#market_image_2_text_1_1").summernote({
                 height: 100,
             });
-             $("#market_image_3_text_1_1").summernote({
+            $("#market_image_3_text_1_1").summernote({
                 height: 100,
             });
-             $("#market_image_4_text_1_1").summernote({
+            $("#market_image_4_text_1_1").summernote({
                 height: 100,
             });
 
@@ -1654,7 +1800,7 @@
                 } else {
 
                     $('#thumbnail_show_image_1_service_icon').attr('src',
-                    '/asset/images/default_image.png');
+                        '/asset/images/default_image.png');
 
                 }
 
@@ -1679,7 +1825,7 @@
                 } else {
 
                     $('#thumbnail_show_image_2_service_icon').attr('src',
-                    '/asset/images/default_image.png');
+                        '/asset/images/default_image.png');
 
                 }
 
@@ -1705,7 +1851,7 @@
                 } else {
 
                     $('#thumbnail_show_image_3_service_icon').attr('src',
-                    '/asset/images/default_image.png');
+                        '/asset/images/default_image.png');
 
                 }
 
@@ -1730,7 +1876,7 @@
                 } else {
 
                     $('#thumbnail_show_image_4_service_icon').attr('src',
-                    '/asset/images/default_image.png');
+                        '/asset/images/default_image.png');
 
                 }
 
@@ -2010,9 +2156,9 @@
 
             })
 
-            
 
-           
+
+
 
             $("#image_1_4_info_section").on("change", function() {
                 var input = this;
@@ -2036,7 +2182,7 @@
 
                 }
             })
-             $('#image_1_market').on('change', function() {
+            $('#image_1_market').on('change', function() {
 
                 var input = this;
                 var url = $(this).val();
@@ -2132,6 +2278,130 @@
 
 
             })
+             $('#image_1_client').on('change', function() {
+
+                var input = this;
+                var url = $(this).val();
+                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
+                        ext == 'webp')) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $('#thumbnail_show_image_1_client').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    $("#jquery_form_error_msg").text("");
+
+                } else {
+
+                    $('#thumbnail_show_image_1_client').attr('src', '/asset/images/default_image.png');
+
+                }
+
+
+            })
+
+            $('#image_2_client').on('change', function() {
+
+                var input = this;
+                var url = $(this).val();
+                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
+                        ext == 'webp')) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $('#thumbnail_show_image_2_client').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    $("#jquery_form_error_msg").text("");
+
+                } else {
+
+                    $('#thumbnail_show_image_2_client').attr('src', '/asset/images/default_image.png');
+
+                }
+
+
+            })
+
+            $('#image_3_client').on('change', function() {
+
+                var input = this;
+                var url = $(this).val();
+                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
+                        ext == 'webp')) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $('#thumbnail_show_image_3_client').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    $("#jquery_form_error_msg").text("");
+
+                } else {
+
+                    $('#thumbnail_show_image_3_client').attr('src', '/asset/images/default_image.png');
+
+                }
+
+
+            })
+
+            $('#image_4_client').on('change', function() {
+
+                var input = this;
+                var url = $(this).val();
+                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
+                        ext == 'webp')) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $('#thumbnail_show_image_4_client').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    $("#jquery_form_error_msg").text("");
+
+                } else {
+
+                    $('#thumbnail_show_image_4_client').attr('src', '/asset/images/default_image.png');
+
+                }
+
+
+            })
+            $('#image_5_client').on('change', function() {
+
+                var input = this;
+                var url = $(this).val();
+                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+                if (input.files && input.files[0] && (ext == "png" || ext == "jpeg" || ext == "jpg" ||
+                        ext == 'webp')) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $('#thumbnail_show_image_5_client').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    $("#jquery_form_error_msg").text("");
+
+                } else {
+
+                    $('#thumbnail_show_image_5_work').attr('src', '/asset/images/default_image.png');
+
+                }
+
+
+            })
+
             ///////////////// end preview image  ////////////////////
 
 
@@ -2586,7 +2856,7 @@
             });
             ///////////////// End dynamic add more fields (testimonials) ////////////////////////////
 
-             ///////////////// dynamic add more fields (faq) ////////////////////////////////
+            ///////////////// dynamic add more fields (faq) ////////////////////////////////
             var pre_badge_count = "{{ count($items['faq']['badge_data']) }}";
             var badge_fields_current_length = (Number(pre_badge_count) != 0) ? Number(pre_badge_count) : 1;
             const badge_fields_max_length_faq = 16;
