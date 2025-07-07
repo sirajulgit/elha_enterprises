@@ -295,42 +295,42 @@
           <div class="col-lg-6">
             <div class="different-industry-sec">
               <div class="heading mb-5">
-                <h2 class="text-white mb-4"> We export/import to markets across the world  </h2>
-                <p class="text-white">Alteration in some form, lipsum is simply free text by injected humou or randomised words even believable.</p>
+                <h2 class="text-white mb-4"> {!! $homedata['market']['title_1'] !!} </h2>
+                <p class="text-white">{!! $homedata['market']['content'] !!}</p>
               </div>
 
               <div class="row">
                 
                 <div class="col-md-6 col-sm-6 mb-4">
                   <div class="expo-icon">
-                    <img src="{{ asset('asset/frontend/images/expo-icon-1.png')}}">
+                    <img src="{{ $homedata['market']['about_badge_icon1'] }}">
                   </div>
                   <div class="export-text">
-                    <p>Safety & Reliable Service</p>
+                    <p>{{ $homedata['market']['badge_1_text'] }}</p>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 mb-4">
                   <div class="expo-icon">
-                    <img src="{{ asset('asset/frontend/images/expo-icon-2.png')}}">
+                    <img src="{{ $homedata['market']['about_badge_icon2'] }}">
                   </div>
                   <div class="export-text">
-                    <p> Real Time Tracking System </p>
+                    <p>{{ $homedata['market']['badge_2_text'] }} </p>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 mb-4">
                   <div class="expo-icon">
-                    <img src="{{ asset('asset/frontend/images/expo-icon-3.png')}}">
+                    <img src="{{ $homedata['market']['about_badge_icon3'] }}">
                   </div>
                   <div class="export-text">
-                    <p> Easy Payment Methods </p>
+                    <p> {{ $homedata['market']['badge_3_text'] }} </p>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 mb-4">
                   <div class="expo-icon">
-                    <img src="{{ asset('asset/frontend/images/expo-icon-4.png')}}">
+                    <img src="{{ $homedata['market']['about_badge_icon4'] }}">
                   </div>
                   <div class="export-text">
-                    <p> Fast & Efficient Delivery </p>
+                    <p> {{ $homedata['market']['badge_4_text'] }} </p>
                   </div>
                 </div>
 
@@ -341,7 +341,7 @@
           
           <div class="col-lg-6 ">
             <div class="expo-image-area">
-              <img src="{{ asset('asset/frontend/images/expo-image.png')}}">
+              <img src="{{ $items['market']['image_1'] }}">
             </div>
           </div>
 
