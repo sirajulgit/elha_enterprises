@@ -427,7 +427,7 @@
                             @if (count($homedata['faq']['badge_data']) > 0)
                                 @foreach ($homedata['faq']['badge_data'] as $item)
                                     <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingOne">
+                                        <h2 class="accordion-header" id="heading{{$item['id']}}">
                                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                                 data-bs-target="#collapseOne" aria-expanded="true"
                                                 aria-controls="collapseOne">
@@ -435,7 +435,7 @@
                                             </button>
                                         </h2>
                                         <div id="collapseOne" class="accordion-collapse collapse"
-                                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            aria-labelledby="heading{{$item['id']}}" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
                                                {{ $item['badge_details_1'] }}
                                             </div>
