@@ -150,7 +150,7 @@
     <div class="container">
 
        <div class="heading text-center mb-5">
-            <h2 class="text-white"> Solution for different Industry  </h2>
+            <h2 class="text-white">  {!! $homedata['industry']['head_title'] !!}</h2>
             <div class="text-center">
               <span><img src="{{ asset('asset/frontend/images/three-dots.png')}}"> </span>
             </div>
@@ -161,11 +161,11 @@
         <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
           <div class="cover-industry">
             <div class="industry-image overflow-hidden">
-              <img src="{{ asset('asset/frontend/images/industry-image.png')}}">
+              <img src="{{ $homedata['industry']['image_1'] }}">
             </div>
             <div class="diffrent-text position-relative">
-              <h3>Importing</h3>
-              <p> Lorem ipsum dolor sit amet, Proin sed ex tristique  </p>
+              <h3>{!! $homedata['industry']['image_1_text_1'] !!}</h3>
+              <p> {!! $homedata['industry']['image_1_text_2'] !!}  </p>
               <a class="arrow-btn" href=""><i class="fa fa-arrow-right"></i></a>
             </div>
           </div>
@@ -174,11 +174,11 @@
         <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
           <div class="cover-industry">
             <div class="industry-image overflow-hidden">
-              <img src="{{ asset('asset/frontend/images/industry-image-2.png')}}">
+              <img src="{{ $homedata['industry']['image_2'] }}">
             </div>
             <div class="diffrent-text position-relative">
-              <h3>Exporting</h3>
-              <p> Lorem ipsum dolor sit amet, Proin sed ex tristique  </p>
+              <h3>{!! $homedata['industry']['image_2_text_1'] !!}</h3>
+              <p> {!! $homedata['industry']['image_2_text_2'] !!}  </p>
               <a class="arrow-btn" href=""><i class="fa fa-arrow-right"></i></a>
             </div>
           </div>
@@ -187,11 +187,11 @@
         <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
           <div class="cover-industry">
             <div class="industry-image overflow-hidden">
-              <img src="{{ asset('asset/frontend/images/industry-image-3.png')}}">
+              <img src="{{ $homedata['industry']['image_3'] }}">
             </div>
             <div class="diffrent-text position-relative">
-              <h3>logistics</h3>
-              <p> Lorem ipsum dolor sit amet, Proin sed ex tristique  </p>
+              <h3>{!! $homedata['industry']['image_3_text_1'] !!}</h3>
+              <p> {!! $homedata['industry']['image_3_text_2'] !!}  </p>
               <a class="arrow-btn" href=""><i class="fa fa-arrow-right"></i></a>
             </div>
           </div>
@@ -200,11 +200,11 @@
         <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
           <div class="cover-industry">
             <div class="industry-image overflow-hidden">
-              <img src="{{ asset('asset/frontend/images/industry-image-4.png')}}">
+              <img src="{{ $homedata['industry']['image_4'] }}">
             </div>
             <div class="diffrent-text position-relative">
-              <h3>Financial</h3>
-              <p> Lorem ipsum dolor sit amet, Proin sed ex tristique  </p>
+              <h3>{!! $homedata['industry']['image_4_text_1'] !!}</h3>
+              <p> {!! $homedata['industry']['image_4_text_2'] !!}  </p>
               <a class="arrow-btn" href=""><i class="fa fa-arrow-right"></i></a>
             </div>
           </div>
@@ -223,7 +223,7 @@
     <div class="container">
        
         <div class="heading text-center mb-5 pb-5">
-          <h2> How it works </h2>
+          <h2> {{ $homedata['work']['head_title'] }} </h2>
           <span><img src="{{ asset('asset/frontend/images/three-dots.png')}}"> </span>
         </div>
 
@@ -231,51 +231,51 @@
           <ul class="d-flex">
               <li>
                 <div class="icon-part">
-                  <img src="{{ asset('asset/frontend/images/weav-icon-1.png')}}">
+                  <img src="{{ $homedata['work']['image_1'] }}">
                 </div>
-                <p>Knowledge of international trade Laws </p>
+                <p>{!! $homedata['work']['image_1_text_1'] !!}</p>
               </li>
 
               <li>
                 <div class="icon-part">
-                  <img src="{{ asset('asset/frontend/images/weav-icon-2.png')}}">
+                  <img src="{{ $homedata['work']['image_2'] }}">
                 </div>
-                <p> Understanding tariffs & currency exchange </p>
+                <p> {!! $homedata['work']['image_2_text_1'] !!}</p>
               </li>
 
               <li>
                 <div class="icon-part">
-                  <img src="{{ asset('asset/frontend/images/weav-icon-3.png')}}">
+                  <img src="{{ $homedata['work']['image_3'] }}">
                 </div>
-                <p> Global market expertise </p>
+                <p> {!! $homedata['work']['image_3_text_1'] !!} </p>
               </li>
 
               <li>
                 <div class="icon-part">
-                  <img src="{{ asset('asset/frontend/images/weav-icon-4.png')}}">
+                  <img src="{{ $homedata['work']['image_4'] }}">
                 </div>
-                <p> International shipping </p>
+                <p> {!! $homedata['work']['image_4_text_1'] !!}</p>
               </li>
 
                <li>
                 <div class="icon-part">
-                  <img src="{{ asset('asset/frontend/images/weav-icon-5.png')}}">
+                  <img src="{{ $homedata['work']['about_badge_icon1'] }}">
                 </div>
-                <p> Export & import management services </p>
+                <p> {{ $homedata['work']['badge_1_text'] }} </p>
               </li>
 
               <li>
                 <div class="icon-part">
-                  <img src="{{ asset('asset/frontend/images/weav-icon-6.png')}}">
+                  <img src="{{ $homedata['work']['about_badge_icon2'] }}">
                 </div>
-                <p> Legal documentation </p>
+                <p> {{ $homedata['work']['badge_2_text'] }}</p>
               </li>
 
               <li>
                 <div class="icon-part">
-                  <img src="{{ asset('asset/frontend/images/weav-icon-7.png')}}">
+                  <img src="{{ $homedata['work']['about_badge_icon3'] }}">
                 </div>
-                <p> Logistics establishment </p>
+                <p>{{ $homedata['work']['badge_3_text'] }}</p>
               </li>
 
           </ul>
