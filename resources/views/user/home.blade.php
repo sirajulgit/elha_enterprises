@@ -427,17 +427,18 @@
                             @if (count($homedata['faq']['badge_data']) > 0)
                                 @foreach ($homedata['faq']['badge_data'] as $item)
                                     <div class="accordion-item">
-                                        <h2 class="accordion-header" id="heading{{$item['id']}}">
+                                        <h2 class="accordion-header" id="heading{{ $item['id'] }}">
                                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapse{{$item['id']}}" aria-expanded="true"
-                                                aria-controls="collapse{{$item['id']}}">
-                                               {{ $item['badge_title_1'] }}
+                                                data-bs-target="#collapse{{ $item['id'] }}" aria-expanded="true"
+                                                aria-controls="collapse{{ $item['id'] }}">
+                                                {{ $item['badge_title_1'] }}
                                             </button>
                                         </h2>
-                                        <div id="collapse{{$item['id']}}" class="accordion-collapse collapse"
-                                            aria-labelledby="heading{{$item['id']}}" data-bs-parent="#accordionExample">
+                                        <div id="collapse{{ $item['id'] }}" class="accordion-collapse collapse"
+                                            aria-labelledby="heading{{ $item['id'] }}"
+                                            data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
-                                               {{ $item['badge_details_1'] }}
+                                                {{ $item['badge_details_1'] }}
                                             </div>
                                         </div>
                                     </div>
@@ -456,26 +457,41 @@
                         <div class="text-center mb-5">
                             <h3>Request A Quote</h3>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 mb-4">
-                                <input class="form-control" type="text" placeholder="Your Name">
+                        <form id="contact_form" method="POST">
+                            @csrf
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 mb-4">
+                                    <input class="form-control" type="text" placeholder="Your Name" name="name">
+                                    @if ($errors->has('name'))
+                                        <span class="form_error">{{ $errors->first('name') }}</span>
+                                    @endif
+                                </div>
+                                <div class="col-lg-6 col-md-6 mb-4">
+                                    <input class="form-control" type="email" placeholder="Your Email" name="email">
+                                     @if ($errors->has('email'))
+                                        <span class="form_error">{{ $errors->first('email') }}</span>
+                                    @endif
+                                </div>
+                                <div class="col-lg-6 col-md-6 mb-4">
+                                    <input class="form-control" type="tel" placeholder="Mobile Number" name="phone">
+                                     @if ($errors->has('phone'))
+                                        <span class="form_error">{{ $errors->first('phone') }}</span>
+                                    @endif
+                                </div>
+                                <div class="col-lg-6 col-md-6 mb-4">
+                                    <input class="form-control" type="text" placeholder="Subject">
+                                </div>
+                                <div class="col-lg-12 mb-4">
+                                    <textarea class="form-control" name="message"></textarea>
+                                     @if ($errors->has('message'))
+                                        <span class="form_error">{{ $errors->first('message') }}</span>
+                                    @endif
+                                </div>
+                                <div class="col-lg-12">
+                                    <input class="sub-btn" type="submit" value="Submit">
+                                </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 mb-4">
-                                <input class="form-control" type="email" placeholder="Your Email">
-                            </div>
-                            <div class="col-lg-6 col-md-6 mb-4">
-                                <input class="form-control" type="text" placeholder="Subject">
-                            </div>
-                            <div class="col-lg-6 col-md-6 mb-4">
-                                <input class="form-control" type="tel" placeholder="Subject">
-                            </div>
-                            <div class="col-lg-12 mb-4">
-                                <textarea class="form-control"></textarea>
-                            </div>
-                            <div class="col-lg-12">
-                                <input class="sub-btn" type="submit" value="Submit">
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
 
@@ -501,4 +517,100 @@
 
 
 
+@endsection
+@section('script_content')
+    <script>
+        $(document).ready(function() {
+
+            ////////////// form validation ////////////////////////
+            $('#contact_form').validate({
+                rules: {
+                    name: {
+                        required: true,
+                    },
+                    email: {
+                        required: true,
+                        email: true,
+                    },
+                    phone: {
+                        required: true,
+                        number: true,
+                    },
+                    message: {
+                        required: true
+                    },
+                },
+                messages: {
+                    name: "Please enter your name",
+                    email: {
+                        required: "Please enter your email",
+                        email: "Please enter a valid email address"
+                    },
+                    phone: {
+                        required: "Please enter your phone number",
+                        number: "Please enter a valid phone number"
+                    },
+                    message: "Please enter your message"
+                },
+                errorElement: 'span',
+                errorClass: 'form_error text-danger',
+                errorPlacement: function(error, element) {
+                    element.closest('.form-group').append(error);
+                },
+                highlight: function(element) {
+                    $(element).addClass('is-invalid');
+                },
+                unhighlight: function(element) {
+                    $(element).removeClass('is-invalid');
+                },
+                submitHandler: function(form, event) {
+                    event.preventDefault();
+
+                    const formData = new FormData(form);
+                    const url = "{{ route('post_contact_us') }}";
+
+                    // ++++++++++++++ | form submit | +++++++++++++++
+                    $.ajax({
+                        headers: {
+                            'X-CSRF-TOKEN': "{{ csrf_token() }}"
+                        },
+                        url: url,
+                        method: "POST",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        beforeSend: function() {
+                            $(form).find('input[type="submit"]').prop('disabled', true);
+                        },
+                        success: function(response) {
+                            console.log(response);
+                            Swal.fire({
+                                icon: "success",
+                                title: "Success",
+                                text: "Thank you for contacting us.",
+                                showConfirmButton: true,
+                                confirmButtonText: "OK",
+                            });
+                        },
+                        error: function(error) {
+                            console.log("error" + error);
+                            Swal.fire({
+                                icon: "error",
+                                title: "Error",
+                                text: "Something went wrong!",
+                                showConfirmButton: true,
+                                confirmButtonText: "OK",
+                            });
+                        },
+                        complete: function() {
+                            form.reset();
+                            $(form).find('input[type="submit"]').prop('disabled', false);
+                        }
+                    });
+                }
+            });
+            ////////////// end form validation ////////////////////
+
+        });
+    </script>
 @endsection
