@@ -429,12 +429,12 @@
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="heading{{$item['id']}}">
                                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseOne" aria-expanded="true"
-                                                aria-controls="collapseOne">
+                                                data-bs-target="#collapse{{$item['id']}}" aria-expanded="true"
+                                                aria-controls="collapse{{$item['id']}}">
                                                {{ $item['badge_title_1'] }}
                                             </button>
                                         </h2>
-                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                        <div id="collapse{{$item['id']}}" class="accordion-collapse collapse"
                                             aria-labelledby="heading{{$item['id']}}" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
                                                {{ $item['badge_details_1'] }}
