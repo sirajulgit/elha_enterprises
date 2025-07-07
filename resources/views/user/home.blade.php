@@ -341,7 +341,7 @@
           
           <div class="col-lg-6 ">
             <div class="expo-image-area">
-              <img src="{{ $items['market']['image_1'] }}">
+              <img src="{{ $homedata['market']['image_1'] }}">
             </div>
           </div>
 
