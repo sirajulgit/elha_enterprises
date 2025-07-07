@@ -504,11 +504,11 @@
         <div class="container">
 
             <ul class="d-flex justify-content-between align-items-center">
-                <li><img src="{{ asset('asset/frontend/images/sponcer-1.png') }}"></li>
-                <li><img src="{{ asset('asset/frontend/images/image-12.png') }}"></li>
-                <li><img src="{{ asset('asset/frontend/images/image-13.png') }}"></li>
-                <li><img src="{{ asset('asset/frontend/images/image-14.png') }}"></li>
-                <li><img src="{{ asset('asset/frontend/images/image-15.png') }}"></li>
+                <li><img src="{{ $items['client']['image_1'] }}"></li>
+                <li><img src="{{ $items['client']['image_2'] }}"></li>
+                <li><img src="{{ $items['client']['image_3'] }}"></li>
+                <li><img src="{{ $items['client']['image_4'] }}"></li>
+                <li><img src="{{ $items['client']['about_badge_icon1'] }}"></li>
             </ul>
 
         </div>
