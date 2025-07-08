@@ -3,10 +3,8 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
-use App\Models\CmsBadge;
-use App\Models\CmsBanner;
-use App\Models\CmsHomePage;
-use App\Models\Gallery;
+use App\Models\Service;
+
 use Illuminate\Http\Request;
 
 
@@ -23,6 +21,20 @@ class ServicesController extends Controller
             'page_data' => [],
             'gallery_data' => [],
         ];
+        $items = Service::orderBy("id", "desc")->get();
+
+        $temp_arr = [];
+        foreach ($items as $item) {
+
+            $default_image = '/uploads/images/' . $item['image'];
+
+            $item->image = $default_image;
+
+            array_push($temp_arr, $item);
+        }
+
+
+        $data['services'] = $temp_arr;
 
       
 
