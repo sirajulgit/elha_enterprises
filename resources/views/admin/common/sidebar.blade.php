@@ -141,7 +141,13 @@
                 </li>
 
 
-
+                <li class="nav-item">
+                    <a href="{{ route('service_list') }}"
+                        class="nav-link {{ $data['activePageName'] == 'service' ? 'active' : '' }}">
+                        <i class="nav-icon fa fa-rss"></i>
+                        <p>Services</p>
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a href="{{ route('blog_list') }}"
                         class="nav-link {{ $data['activePageName'] == 'blog' ? 'active' : '' }}">
