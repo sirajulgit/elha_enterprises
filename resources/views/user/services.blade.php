@@ -31,7 +31,7 @@
                             </div>
                         
                             <div class="service-content-area-new text-center matchHeight">
-                                <h3> <a href="{{ route('service_details', $item['slug']) }}"> {{$item['title'] }}</a> </h3>
+                                <h3>  {{$item['title'] }} </h3>
                                  @if ($item['short_description'])
                                     {!! \Illuminate\Support\Str::limit($item['short_description'], 100, '...') !!}
                                 @endif
