@@ -26,12 +26,12 @@
                         <div class="logistic mb-4">
                             <div class="pic">
                                 <img src="{{ asset('asset/frontend/images/rashio-image.jpg') }}" alt="Blank Image">
-                                <a class="holder" href=""
+                                <a class="holder" href="{{ route('service_details', $item['slug']) }}"
                                     style="background-image:url({{ asset($item['image']) }});"></a>
                             </div>
                         
                             <div class="service-content-area-new text-center matchHeight">
-                                <h3> {{ $item['title'] }} </h3>
+                                <h3> <a href="{{ route('service_details', $item['slug']) }}"> {{$item['title'] }}</a> </h3>
                                  @if ($item['short_description'])
                                     {!! \Illuminate\Support\Str::limit($item['short_description'], 100, '...') !!}
                                 @endif
