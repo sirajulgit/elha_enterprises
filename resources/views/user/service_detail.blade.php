@@ -6,7 +6,7 @@
     <div class="inner-banner position-relative" style="background-image:url({{ asset('asset/frontend/images/banner.jpg')}});">
         <div class="container">
             <div class="text-center">
-                <strong> {{ $data['blog_data']['title'] }} </strong>
+                <strong> {{ $data['Service_data']['title'] }} </strong>
             </div>
         </div>
     </div>
@@ -21,12 +21,12 @@
                     <div class="common-text">
 
 
-                        @if ($data['blog_data']['image'])
-                            <img src="{{ asset($data['blog_data']['image']) }}">
+                        @if ($data['Service_data']['image'])
+                            <img src="{{ asset($data['Service_data']['image']) }}">
                         @endif
-                        <h3>{{ $data['blog_data']['title'] }}</h3>
+                        <h3>{{ $data['Service_data']['title'] }}</h3>
 
-                        {!! $data['blog_data']['long_description'] !!}
+                        {!! $data['Service_data']['long_description'] !!}
 
 
                     </div>
