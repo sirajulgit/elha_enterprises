@@ -758,6 +758,25 @@ transition: all 0.5s ease-in-out;
     margin-bottom: 10px;
 }
 
+.service-content-area-new {
+    background: #FFF;
+    box-shadow: 0 5px 15px #c1c1c1;
+    border-radius: 15px;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: -45px;
+    position: relative;
+    z-index: 9;
+    padding: 15px;
+    padding-top: 20px;
+}
+
+.service-content-area-new h3 
+{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
 
 .service 
 {

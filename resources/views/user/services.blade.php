@@ -30,7 +30,7 @@
                                     style="background-image:url({{ asset($item['image']) }});"></a>
                             </div>
                         
-                            <div class="service-content-area text-center matchHeight">
+                            <div class="service-content-area-new text-center matchHeight">
                                 <h3> {{ $item['title'] }} </h3>
                                  @if ($item['short_description'])
                                     {!! \Illuminate\Support\Str::limit($item['short_description'], 100, '...') !!}
