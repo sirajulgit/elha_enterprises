@@ -60,7 +60,7 @@ class ServicesController extends Controller
             $blogData->image = $default_image;
         }
 
-        $data['service_data'] = $blogData;
+        $data['Service_data'] = $blogData;
 
         return view('user.service_detail', ['data' => $data]);
     }
