@@ -35,6 +35,7 @@
                                  @if ($item['short_description'])
                                     {!! \Illuminate\Support\Str::limit($item['short_description'], 100, '...') !!}
                                 @endif
+                                <a class="arrow-btn" href=""><i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
