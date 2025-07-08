@@ -82,6 +82,7 @@ Route::middleware('isGuest')->group(function () {
     Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact_us');
     Route::post('/contact-us', [ContactUsController::class, 'post_contact_us'])->name('post_contact_us');
     Route::get('/services', [ServicesController::class, 'index'])->name('services');
+    Route::get('/services/{slug}', [ServicesController::class, 'service_details'])->name('service_details');
      Route::get('/resources', [ResourcesController::class, 'index'])->name('resources');
     
     // Route::post('/login', [AuthController::class, 'post_login'])->name('post_user_login');

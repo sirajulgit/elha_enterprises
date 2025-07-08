@@ -40,4 +40,28 @@ class ServicesController extends Controller
 
         return view('user.services', ['data' => $data]);
     }
+    public function service_details($slug)
+    {
+
+        $data = [
+            'page_title' => 'Service Details',
+            'activePageName' => 'service',
+        ];
+
+
+        $blogData = Service::where('slug', $slug)->first();
+
+        if(!$blogData){
+            return redirect()->back()->with('error', 'Service not found');
+        }
+
+        if($blogData->image){
+            $default_image = '/uploads/images/' . $blogData->image;
+            $blogData->image = $default_image;
+        }
+
+        $data['service_data'] = $blogData;
+
+        return view('user.service_detail', ['data' => $data]);
+    }
 }
