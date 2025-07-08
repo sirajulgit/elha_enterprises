@@ -54,7 +54,7 @@ class ServiceController extends Controller
 
         $request->validate([
             'title' => 'required',
-            'slug' => 'required|unique:Services,slug',
+            'slug' => 'required|unique:services,slug',
             'image' => 'required|image|mimes:jpeg,png,jpg,webp',
             'short_description' => 'required',
             'long_description' => 'required',
