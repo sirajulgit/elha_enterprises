@@ -21,6 +21,7 @@ use App\Http\Controllers\admin\SettingController;
 use App\Http\Controllers\admin\CmsContactController;
 use App\Http\Controllers\admin\GalleryController;
 use App\Http\Controllers\admin\ContactQueryController;
+use App\Http\Controllers\admin\ServiceController;
 
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\admin\ProductController;
@@ -303,6 +304,14 @@ Route::prefix('admin')->middleware(['admin.auth'])->group(function () {
     Route::get('/blog-edit/{id}', [BlogController::class, 'update'])->name('blog_edit');
     Route::post('/blog-edit/{id}', [BlogController::class, 'post_update'])->name('post_blog_edit');
     Route::post('/blog-delete', [BlogController::class, 'delete'])->name('blog_delete');
+
+    // ############ | Service | ################
+    Route::get('/service', [ServiceController::class, 'index'])->name('service_list');
+    Route::get('/service-create', [ServiceController::class, 'create'])->name('service_create');
+    Route::post('/service-create', [ServiceController::class, 'post_create'])->name('post_service_create');
+    Route::get('/service-edit/{id}', [ServiceController::class, 'update'])->name('service_edit');
+    Route::post('/service-edit/{id}', [ServiceController::class, 'post_update'])->name('post_service_edit');
+    Route::post('/service-delete', [ServiceController::class, 'delete'])->name('service_delete');
 
 
     // ############ | gallery | ################
