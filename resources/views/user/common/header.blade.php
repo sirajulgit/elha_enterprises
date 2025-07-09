@@ -39,9 +39,9 @@
                            <li class="{{ $data['activePageName'] == 'services' ? 'current-menu-item' : '' }}">
                                <a href="{{ route('services') }}"> Services </a>
                            </li>
-                            <li class="{{ $data['activePageName'] == 'resources' ? 'current-menu-item' : '' }}">
+                            <li class="{{ $data['activePageName'] == 'resources' ? 'current-menu-item' : '' }} ">
                                <a href="{{ route('resources') }}"> Resources </a>
-                               <ul>
+                               <ul class="sub-menu">
                                 <li>
                                     <a href="{{ route('import_export_guideline') }}"> Import  and export Guides </a>
                                 </li>
