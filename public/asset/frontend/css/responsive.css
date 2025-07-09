@@ -202,6 +202,13 @@ header .nav>ul>li:hover>a, header .nav>ul>li.current-menu-item>a, header .nav>ul
     font-size: 25px;
 }
 
+.drop a 
+{
+    width: 80%;
+}
+
+ 
+
 
     /*******************************
 ********NAV BAR*****************
