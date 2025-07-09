@@ -41,7 +41,7 @@ jQuery(document).ready(function ($) {
     $('.mobile-hide').hide();
     $(".mobile-toggle").click(function () {
         $('.sub-menu').slideUp();
-        $(this).siblings('.sub-menu').Toggle();
+        $(this).siblings('.sub-menu').slideToggle();
     });
 
     //menu
