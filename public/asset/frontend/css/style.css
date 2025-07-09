@@ -284,6 +284,11 @@ page scrool
 }
 
 
+.arrow-icon {
+    position: absolute;
+    top: 19px;
+    right: -15px;
+}
 
 /*******************************
 ********NAV BAR*****************
