@@ -33,7 +33,7 @@ jQuery(document).ready(function ($) {
     });
 
     $('.nav ul li').find(".sub-menu").parent().addClass("drop");
-    $(".drop").append('<span class="arrow-icon"> <i class="fa fa-angle-down"></i> </span>');
+    $(".drop").prepend('<span class="arrow-icon"> <i class="fa fa-angle-down"></i> </span>');
     if ($(window).width() < 991.98) {
         $(".arrow-icon").addClass("mobile-toggle");
         $(".sub-menu").addClass("mobile-hide");
@@ -43,7 +43,7 @@ jQuery(document).ready(function ($) {
         $('.sub-menu').slideUp();
         $(this).siblings('.sub-menu').slideToggle();
     });
-    
+
     //menu
     // var pull = jQuery('#pull');
     // menu = jQuery('#menu-bg');
