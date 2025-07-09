@@ -61,7 +61,7 @@
                                     <a href="{{ route('us_customs_declarations') }}"> USA Customs Declarations</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('incoterms') }}"> Incoterms</a>
+                                    <a href="{{ route('international_payment_methods') }}"> International Payment Methods</a>
                                 </li>
                                </ul>
                            </li>
