@@ -96,7 +96,7 @@
                 <div class="col-lg-5">
                     <div class="from-area">
                         <div class="text-center mb-5">
-                            <h3>Request A Quote</h3>
+                            <h3>Get in touch</h3>
                         </div>
                         <form id="contact_form" method="POST">
                             @csrf
