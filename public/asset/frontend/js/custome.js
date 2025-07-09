@@ -40,7 +40,7 @@ jQuery(document).ready(function ($) {
     }
     $('.mobile-hide').hide();
     $(".mobile-toggle").click(function () {
-        $('.sub-menu').slideUp();
+        // $('.sub-menu').slideUp();
         $(this).siblings('.sub-menu').slideToggle();
     });
 
