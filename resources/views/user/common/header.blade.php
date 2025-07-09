@@ -45,6 +45,24 @@
                                 <li>
                                     <a href="{{ route('import_export_guideline') }}"> Import  and export Guides </a>
                                 </li>
+                                <li>
+                                    <a href="{{ route('sourcing_importing_products') }}"> Sourcing and Importing Products </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('customs_clearance') }}"> Customs Clearance </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('duty_payments') }}"> Duty Payments</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('incoterms') }}"> Incoterms</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('us_customs_declarations') }}"> USA Customs Declarations</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('incoterms') }}"> Incoterms</a>
+                                </li>
                                </ul>
                            </li>
                            

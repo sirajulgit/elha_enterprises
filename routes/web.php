@@ -90,6 +90,8 @@ Route::middleware('isGuest')->group(function () {
     Route::get('/duty-payments', [ResourcesController::class, 'duty_payments'])->name('duty_payments');
     Route::get('/incoterms', [ResourcesController::class, 'incoterms'])->name('incoterms');
      Route::get('/us-customs-declarations', [ResourcesController::class, 'us_customs_declarations'])->name('us_customs_declarations');
+     Route::get('/international-payment-methods', [ResourcesController::class, 'international_payment_methods'])->name('international_payment_methods');
+     
     
     // Route::post('/login', [AuthController::class, 'post_login'])->name('post_user_login');
     // Route::get('/register', [AuthController::class, 'register'])->name('user_register');
