@@ -11,9 +11,27 @@ jQuery(document).ready(function ($) {
     }
     // Hamburgers
     // Side Menu 
+    // $('#pull').click(function () {
+    //     $('.nav').toggleClass("menutogg");
+    // });
+    // $('.nav ul li').find(".sub-menu").parent().addClass("drop");
+    // $(".drop").append('<span class="arrow-icon"> <i class="fa fa-angle-down"></i> </span>');
+    // if ($(window).width() < 991.98) {
+    //     $(".arrow-icon").addClass("mobile-toggle");
+    //     $(".sub-menu").addClass("mobile-hide");
+    // }
+    // $('.mobile-hide').hide();
+    // $(".mobile-toggle").click(function () {
+    //     $('.sub-menu').slideUp();
+    //     $(this).siblings('.sub-menu').slideToggle();
+    // });
+
+    // Side Menu 
+
     $('#pull').click(function () {
         $('.nav').toggleClass("menutogg");
     });
+
     $('.nav ul li').find(".sub-menu").parent().addClass("drop");
     $(".drop").append('<span class="arrow-icon"> <i class="fa fa-angle-down"></i> </span>');
     if ($(window).width() < 991.98) {
@@ -25,6 +43,7 @@ jQuery(document).ready(function ($) {
         $('.sub-menu').slideUp();
         $(this).siblings('.sub-menu').slideToggle();
     });
+    
     //menu
     // var pull = jQuery('#pull');
     // menu = jQuery('#menu-bg');
