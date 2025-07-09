@@ -350,11 +350,8 @@ header .nav>ul>li>a {
     font-family: "KoHo", sans-serif;
 }
 
-header .nav>ul>li:hover>a,
-header .nav>ul>li.current-menu-item>a,
-header .nav>ul>li.current-menu-parent>a,
-header .nav>ul>li.current-menu-ancestor>a {
-    color: var(--orange-color);
+header .nav > ul > li:hover > a, header .nav > ul > li.current-menu-item > a, header .nav > ul > li.current-menu-parent > a, header .nav > ul > li.current-menu-ancestor > a {
+  color: var(--blue-color);
 }
 
 header .nav>ul>li>ul {
