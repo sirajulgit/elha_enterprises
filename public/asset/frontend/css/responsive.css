@@ -204,7 +204,7 @@ header .nav>ul>li:hover>a, header .nav>ul>li.current-menu-item>a, header .nav>ul
 
 .drop > a 
 {
-    width: 80%;
+    width: 80% !important;
 }
 
  
