@@ -29,4 +29,18 @@ class ResourcesController extends Controller
 
         return view('user.resources', ['data' => $data]);
     }
+    public function import_export_guideline(){
+        $data = [
+            'page_title' => 'Guidance for Importers and Exporters',
+            'activePageName' => 'resources',
+          
+            'page_data' => [],
+          
+        ];
+
+       
+
+
+        return view('user.import_export_guidelines', ['data' => $data]);
+    }
 }

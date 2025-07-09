@@ -84,6 +84,7 @@ Route::middleware('isGuest')->group(function () {
     Route::get('/services', [ServicesController::class, 'index'])->name('services');
     Route::get('/services/{slug}', [ServicesController::class, 'service_details'])->name('service_details');
     Route::get('/resources', [ResourcesController::class, 'index'])->name('resources');
+    Route::get('/import-and-export-procedure-guides', [ResourcesController::class, 'import_export_guideline'])->name('import_export_guideline');
     
     // Route::post('/login', [AuthController::class, 'post_login'])->name('post_user_login');
     // Route::get('/register', [AuthController::class, 'register'])->name('user_register');
