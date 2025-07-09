@@ -194,6 +194,13 @@ header .nav>ul>li:hover>a, header .nav>ul>li.current-menu-item>a, header .nav>ul
         color: #FFF;
     }
 
+    .arrow-icon {
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    color: #FFF;
+    font-size: 25px;
+}
 
 
     /*******************************
