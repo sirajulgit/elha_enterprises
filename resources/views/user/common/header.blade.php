@@ -41,6 +41,11 @@
                            </li>
                             <li class="{{ $data['activePageName'] == 'resources' ? 'current-menu-item' : '' }}">
                                <a href="{{ route('resources') }}"> Resources </a>
+                               <ul>
+                                <li>
+                                    <a href="{{ route('import_export_guideline') }}"> Import  and export Guides </a>
+                                </li>
+                               </ul>
                            </li>
                            
                            <li class="{{ $data['activePageName'] == 'blog' ? 'current-menu-item' : '' }}">
