@@ -215,6 +215,9 @@ header .nav>ul>li >ul {
     visibility: visible;
 }
 
+header .nav>ul>li>ul>li>a, header .nav>ul>li>ul>li>ul>li>a {
+    padding: 9px 15px 10px 15px;
+}
  
 
 
