@@ -207,11 +207,7 @@ header .nav>ul>li:hover>a, header .nav>ul>li.current-menu-item>a, header .nav>ul
     width: 80% !important;
 }
 
-header .nav>ul>li:hover>ul {
-    top: 100%;
-    opacity: 1;
-    visibility: hidden;
-}
+
 
 header .nav>ul>li >ul {
     top: 100%;
