@@ -74,7 +74,7 @@
                            </li>
 
                            <li class="{{ $data['activePageName'] == 'contact_us' ? 'current-menu-item' : '' }}">
-                               <a href="{{ route('contact_us') }}"> Contact Me </a>
+                               <a href="{{ route('contact_us') }}"> Contact US </a>
                            </li>
                        </ul>
                    </div>
