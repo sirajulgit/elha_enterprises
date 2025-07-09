@@ -86,6 +86,10 @@ Route::middleware('isGuest')->group(function () {
     Route::get('/resources', [ResourcesController::class, 'index'])->name('resources');
     Route::get('/import-and-export-procedure-guides', [ResourcesController::class, 'import_export_guideline'])->name('import_export_guideline');
     Route::get('/sourcing-importing-products', [ResourcesController::class, 'sourcing_importing_products'])->name('sourcing_importing_products');
+    Route::get('/customs-clearance', [ResourcesController::class, 'customs_clearance'])->name('customs_clearance');
+    Route::get('/duty-payments', [ResourcesController::class, 'duty_payments'])->name('duty_payments');
+    Route::get('/incoterms', [ResourcesController::class, 'incoterms'])->name('incoterms');
+     Route::get('/us-customs-declarations', [ResourcesController::class, 'us_customs_declarations'])->name('us_customs_declarations');
     
     // Route::post('/login', [AuthController::class, 'post_login'])->name('post_user_login');
     // Route::get('/register', [AuthController::class, 'register'])->name('user_register');
