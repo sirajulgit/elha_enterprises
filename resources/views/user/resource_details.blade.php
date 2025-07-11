@@ -5,7 +5,7 @@
  <div class="inner-banner position-relative" style="background-image:url({{ asset('asset/frontend/images/banner.jpg')}});">
     <div class="container">
       <div class="text-center">
-        <strong> Resources / Import and Export Guides</strong>
+        <strong> Resources / {{ $data['resource_data']['title']}} </strong>
       </div>
     </div>
   </div>

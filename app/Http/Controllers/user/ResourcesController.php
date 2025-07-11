@@ -47,7 +47,7 @@ class ResourcesController extends Controller
         ];
 
       
-        $data['blog_data'] = $blogData;
+        $data['resource_data'] = $blogData;
      
 
          $cmsHome = CmsHomePage::where('page_type', 'home_page')->orderBy("id", "asc")->get()->toArray();
