@@ -55,26 +55,16 @@ class ResourceController extends Controller
 
         $request->validate([
             'title' => 'required',
-            'slug' => 'required|unique:resources,slug',
-            'image' => 'required|image|mimes:jpeg,png,jpg,webp',
-            'short_description' => 'required',
+            'slug' => 'required|unique:resources,slug',         
             'long_description' => 'required',
         ]);
 
-        // return response()->json(['status' => true, 'validData' => $validData]);
-
-        // dd($request->all());
-
-        $imageName = image_convert_webp($request->image);
-
-        // image_resize($imageName, 148, 221);
+      
 
 
         $data = new Resource();
         $data->title = $request->title;
-        $data->slug = $request->slug;
-        $data->image = $imageName;
-        $data->short_description = $request->short_description;
+        $data->slug = $request->slug;       
         $data->long_description = $request->long_description;
         $data->save();
 
@@ -88,10 +78,7 @@ class ResourceController extends Controller
 
         $item = Resource::find($request->id);
 
-        $default_image = '/uploads/images/' . $item->image;
-
-        $item->image = $default_image;
-
+       
 
         $data = array();
         $data['pageTitle'] = 'Resource';
@@ -110,40 +97,16 @@ class ResourceController extends Controller
         $request->validate([
             'title' => 'required',
             'slug' => 'required|unique:resources,slug,' . $request->id,
-            'image' => 'image|mimes:jpeg,png,jpg,webp',
-            'short_description' => 'required',
+           
             'long_description' => 'required',
             'status' => 'required',
         ]);
 
-        $old_image_name = Resource::find($request->id)->image;
-
-        if ($request->image) {
-
-            $imageName = image_convert_webp($request->image);
-
-            // image_resize($imageName, 148, 221);
-
-            $image_path = public_path('uploads/images/' . $old_image_name);
-            $resize_image_path = public_path('uploads/images/resize' . $old_image_name);
-
-            if (file_exists($image_path)) {
-                unlink($image_path);
-            }
-
-            if (file_exists($resize_image_path)) {
-                unlink($resize_image_path);
-            }
-        } else {
-
-            $imageName = $old_image_name;
-        }
 
         Resource::where("id", $request->id)->update([
             'title' => $request->title,
             'slug' => $request->slug,
-            'image' => $imageName,
-            'short_description' => $request->short_description,
+            
             'long_description' => $request->long_description,
             'status' => $request->status,
         ]);
@@ -158,16 +121,6 @@ class ResourceController extends Controller
         $item = Resource::find($request->id);
 
 
-        $image_path = public_path('uploads/images/' . $item->image);
-        $resize_image_path = public_path('uploads/images/resize' . $item->image);
-
-        if (file_exists($image_path)) {
-            unlink($image_path);
-        }
-
-        if (file_exists($resize_image_path)) {
-            unlink($resize_image_path);
-        }
 
 
 
