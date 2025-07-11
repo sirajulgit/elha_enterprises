@@ -5,6 +5,7 @@ namespace App\Http\Controllers\user;
 use App\Http\Controllers\Controller;
 use App\Models\Service;
 use App\Models\CmsHomePage;
+use App\Models\CmsBadge;
 use Illuminate\Http\Request;
 
 
