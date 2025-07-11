@@ -4,6 +4,7 @@ namespace App\Providers;
 use App\Models\Cms;
 use App\Models\CmsContact;
 use App\Models\Resource;
+use App\Models\Service;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 class AppServiceProvider extends ServiceProvider
@@ -33,6 +34,7 @@ class AppServiceProvider extends ServiceProvider
     $contact_no_data = CmsContact::first();
 
     $items = Resource::orderBy("id", "desc")->get();
+     $Service_data = Service::orderBy("id", "desc")->get();
 
 
     $setting_data = [
@@ -45,6 +47,7 @@ class AppServiceProvider extends ServiceProvider
         "contact_no"  => optional($contact_no_data)->phone,
          "address"  => optional($contact_no_data)->address,
         "resources" => $items,
+        "services" => $Service_data,
     ];
 
     $view->with('settings', $setting_data);

@@ -38,9 +38,20 @@
                            </li>
                            <li class="{{ $data['activePageName'] == 'services' ? 'current-menu-item' : '' }}">
                                <a href="{{ route('services') }}"> Services </a>
+                               <ul class="sub-menu">
+                          
+                                 @foreach ($settings['services'] as $item)
+                                    <li>
+                                        <a href="{{ route('service_details', $item->slug) }}">{{ $item->title }}</a>
+                                    </li>
+                                     
+                                 @endforeach
+                               
+                                
+                               </ul>
                            </li>
                             <li class="{{ $data['activePageName'] == 'resources' ? 'current-menu-item' : '' }} ">
-                               <a href="{{ route('resources') }}"> Resources </a>
+                               <a href="#"> Resources </a>
                                <ul class="sub-menu">
                           
                                  @foreach ($settings['resources'] as $item)
