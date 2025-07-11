@@ -91,7 +91,7 @@ jQuery(document).ready(function ($) {
 
     //   Slider
     $('.banner-area').slick({
-        autoplay: false,
+        autoplay: true,
         speed: 800,
         lazyLoad: 'progressive',
         arrows: false,
