@@ -42,27 +42,15 @@
                             <li class="{{ $data['activePageName'] == 'resources' ? 'current-menu-item' : '' }} ">
                                <a href="{{ route('resources') }}"> Resources </a>
                                <ul class="sub-menu">
-                                <li>
-                                    <a href="{{ route('import_export_guideline') }}"> Import  and export Guides </a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('sourcing_importing_products') }}"> Sourcing and Importing Products </a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('customs_clearance') }}"> Customs Clearance </a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('duty_payments') }}"> Duty Payments</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('incoterms') }}"> Incoterms</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('us_customs_declarations') }}"> USA Customs Declarations</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('international_payment_methods') }}"> International Payment Methods</a>
-                                </li>
+                          
+                                 @foreach ($settings['resources'] as $item)
+                                    <li>
+                                        <a href="{{ route('resource_details', $item->slug) }}">{{ $item->title }}</a>
+                                    </li>
+                                     
+                                 @endforeach
+                               
+                                
                                </ul>
                            </li>
                            

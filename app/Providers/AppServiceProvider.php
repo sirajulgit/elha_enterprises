@@ -3,7 +3,7 @@
 namespace App\Providers;
 use App\Models\Cms;
 use App\Models\CmsContact;
-
+use App\Models\Resource;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 class AppServiceProvider extends ServiceProvider
@@ -32,6 +32,9 @@ class AppServiceProvider extends ServiceProvider
     $youtube_link_data = Cms::where('type', 'youtube_link')->first();
     $contact_no_data = CmsContact::first();
 
+    $items = Resource::orderBy("id", "desc")->get();
+
+
     $setting_data = [
         "contact_email" => optional($contact_no_data)->email,
         "gmail_link"    => optional($gmail_link_data)->details,
@@ -41,6 +44,7 @@ class AppServiceProvider extends ServiceProvider
         "youtube_link"  => optional($youtube_link_data)->details,
         "contact_no"  => optional($contact_no_data)->phone,
          "address"  => optional($contact_no_data)->address,
+        "resources" => $items,
     ];
 
     $view->with('settings', $setting_data);
