@@ -96,8 +96,8 @@ jQuery(document).ready(function ($) {
         lazyLoad: 'progressive',
         arrows: false,
         dots: false,
-        // prevArrow: '<div class="slick-nav prev-arrow"><i></i><svg><use xlink:href="#circle"></svg></div>',
-        // nextArrow: '<div class="slick-nav next-arrow"><i></i><svg><use xlink:href="#circle"></svg></div>',
+        prevArrow: '<div class="slick-nav prev-arrow"><i></i><svg><use xlink:href="#circle"></svg></div>',
+        nextArrow: '<div class="slick-nav next-arrow"><i></i><svg><use xlink:href="#circle"></svg></div>',
     }).slickAnimation();
     $('.slick-nav').on('click touch', function (e) {
         e.preventDefault();
