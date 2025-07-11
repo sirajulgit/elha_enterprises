@@ -327,7 +327,7 @@ Route::prefix('admin')->middleware(['admin.auth'])->group(function () {
 
     // ############ | Resource | ################
     Route::get('/resource', [ResourceController::class, 'index'])->name('resource_list');
-    Route::get('/resource-create', [ResourceController::class, 'create'])->name('service_create');
+    Route::get('/resource-create', [ResourceController::class, 'create'])->name('resource_create');
     Route::post('/resource-create', [ResourceController::class, 'post_create'])->name('post_resource_create');
     Route::get('/resource-edit/{id}', [ResourceController::class, 'update'])->name('resource_edit');
     Route::post('/resource-edit/{id}', [ResourceController::class, 'post_update'])->name('post_resource_edit');
