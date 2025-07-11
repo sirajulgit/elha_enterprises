@@ -286,8 +286,14 @@ page scrool
 
 .arrow-icon {
     position: absolute;
-    top: 19px;
+    top: 22px;
     right: -15px;
+}
+
+header .nav>ul>li>ul {
+     
+    transition: all auto ease-in-out !important;
+    -webkit-transition: all auto ease-in-out !important;
 }
 
 /*******************************

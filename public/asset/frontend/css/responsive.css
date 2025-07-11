@@ -194,6 +194,35 @@ header .nav>ul>li:hover>a, header .nav>ul>li.current-menu-item>a, header .nav>ul
         color: #FFF;
     }
 
+    .arrow-icon {
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    color: #FFF;
+    font-size: 25px;
+}
+
+.drop > a 
+{
+    width: 80% !important;
+}
+
+
+
+header .nav>ul>li >ul {
+    top: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+header .nav>ul>li>ul>li>a, header .nav>ul>li>ul>li>ul>li>a {
+    padding: 9px 15px 10px 15px !important;
+}
+
+header .nav>ul>li>ul {
+    position: relative; 
+}
+ 
 
 
     /*******************************
