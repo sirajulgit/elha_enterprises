@@ -6,7 +6,7 @@ use App\Http\Controllers\admin\AuthController as AdminAuthController;
 use App\Http\Controllers\admin\BookController;
 use App\Http\Controllers\admin\CmsHomePageController;
 use App\Http\Controllers\admin\CmsAboutPageController;
-use App\Http\Controllers\admin\CmsResourcePageController;
+use App\Http\Controllers\admin\ResourceController;
 use App\Http\Controllers\admin\CmsBannerController;
 use App\Http\Controllers\admin\CmsController;
 use App\Http\Controllers\admin\CmsBookController;
@@ -245,11 +245,7 @@ Route::prefix('admin')->middleware(['admin.auth'])->group(function () {
     Route::post('/cms-about-badge-update', [CmsAboutPageController::class, 'post_badge_update'])->name('post_cms_about_badge_update');
     Route::post('/cms-about-badge-delete', [CmsAboutPageController::class, 'post_badge_delete'])->name('post_cms_about_badge_delete');
 
-        // ############ | cms Resource page | ################
-    Route::get('/cms-resource', [CmsResourcePageController::class, 'resource_page'])->name('cms_resource');
-    Route::post('/cms-resource', [CmsResourcePageController::class, 'post_update'])->name('post_cms_resource');
-    Route::post('/cms-resource-badge-update', [CmsResourcePageController::class, 'post_badge_update'])->name('post_cms_resource_badge_update');
-    Route::post('/cms-resource-badge-delete', [CmsResourcePageController::class, 'post_badge_delete'])->name('post_cms_resource_badge_delete');
+       
 
 
     Route::get('/cms-banner', [CmsBannerController::class, 'index'])->name('cms_banner_list');
@@ -328,6 +324,14 @@ Route::prefix('admin')->middleware(['admin.auth'])->group(function () {
     Route::get('/service-edit/{id}', [ServiceController::class, 'update'])->name('service_edit');
     Route::post('/service-edit/{id}', [ServiceController::class, 'post_update'])->name('post_service_edit');
     Route::post('/service-delete', [ServiceController::class, 'delete'])->name('service_delete');
+
+    // ############ | Resource | ################
+    Route::get('/resource', [ResourceController::class, 'index'])->name('resource_list');
+    Route::get('/resource-create', [ResourceController::class, 'create'])->name('service_create');
+    Route::post('/resource-create', [ResourceController::class, 'post_create'])->name('post_resource_create');
+    Route::get('/resource-edit/{id}', [ResourceController::class, 'update'])->name('resource_edit');
+    Route::post('/resource-edit/{id}', [ResourceController::class, 'post_update'])->name('post_resource_edit');
+    Route::post('/resource-delete', [ResourceController::class, 'delete'])->name('resource_delete');
 
 
     // ############ | gallery | ################

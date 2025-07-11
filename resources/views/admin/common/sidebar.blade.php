@@ -121,20 +121,14 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{ route('cms_about') }}"
                                 class="nav-link {{ $data['activeSubMenu'] == 'cms_about_page' ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>About Page</p>
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('cms_resource') }}"
-                                class="nav-link {{ $data['activeSubMenu'] == 'cms_resource_page' ? 'active' : '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Resource Page</p>
-                            </a>
-                        </li>
+                        </li> --}}
+                      
 
                         <li class="nav-item">
                             <a href="{{ route('cms_contact') }}"
@@ -153,6 +147,13 @@
                         class="nav-link {{ $data['activePageName'] == 'service' ? 'active' : '' }}">
                         <i class="nav-icon fa fa-rss"></i>
                         <p>Services</p>
+                    </a>
+                </li>
+                 <li class="nav-item">
+                    <a href="{{ route('resource_list') }}"
+                        class="nav-link {{ $data['activePageName'] == 'resource' ? 'active' : '' }}">
+                        <i class="nav-icon fa fa-rss"></i>
+                        <p>Resources</p>
                     </a>
                 </li>
                 <li class="nav-item">
