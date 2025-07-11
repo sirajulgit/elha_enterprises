@@ -6,12 +6,12 @@
         <div class="container-fluid">
             <div class="row">
 
-                {{-- /////////////// section_1 /////////////////// --}}
+                {{-- /////////////// Import and Export Guides /////////////////// --}}
                 <div class="col-lg-12 mb-5">
                     <div class="card">
 
                         <div class="card-header" style="background-color: #3498db;">
-                            <h3 class="card-title badge badge-success font-weight-bold ">Section 1</h3>
+                            <h3 class="card-title badge badge-success font-weight-bold ">Import and Export Guides</h3>
                         </div>
                         <!-- /.card-header -->
 
@@ -24,40 +24,20 @@
 
                             <div class="card-body row">
 
-                                <div class="form-group col-md-12">
-                                    <label for="content">Details</label>
-                                    <textarea id="content1" name="content" class="form-control" rows="5">{{ $items['section_1']['content'] }}</textarea>
-                                </div>
-
-                                <div class="form-group col-md-12">
-                                    <label for="title_1_1">Sub Details</label>
+                                 <div class="form-group col-md-12">
+                                    <label for="title_1_1">Title</label>
                                     <textarea id="title_1_1" name="title_1" class="form-control" rows="5">{{ $items['section_1']['title_1'] }}</textarea>
                                 </div>
 
-
-                                <div class="form-group col-md-6">
-                                    <label for="image">Image 1</label>
-
-                                    <div class="admin_upload">
-                                        <label class="admin-upload-wrap">
-                                            <input type="file" class="form-control mt-3 uploadFile" name="image_1"
-                                                id="image_1_section_1"
-                                                accept="image/png, image/jpg, image/jpeg, image/webp">
-                                        </label>
-
-                                        <div class="profile_image">
-                                            @if ($items['section_1']['image_1'])
-                                                <img class="profile_img" id="thumbnail_show_image_1_section_1"
-                                                    src="{{ $items['section_1']['image_1'] }}" width="148px"
-                                                    height="221px">
-                                            @else
-                                                <img class="profile_img" id="thumbnail_show_image_1_section_1"
-                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
-                                                    height="221px">
-                                            @endif
-                                        </div>
-                                    </div>
+                                <div class="form-group col-md-12">
+                                    <label for="content">Content</label>
+                                    <textarea id="content1" name="content" class="form-control" rows="5">{{ $items['section_1']['content'] }}</textarea>
                                 </div>
+
+                               
+
+
+                               
 
                             </div>
                             <!-- /.card-body -->
@@ -68,7 +48,7 @@
                     </div>
                 </div>
 
-                {{-- /////////////// section_2 /////////////////// --}}
+                {{-- /////////////// Sourcing and Importing Products /////////////////// --}}
                 <div class="col-lg-12 mb-5">
                     <div class="card">
 
@@ -87,38 +67,16 @@
                             <div class="card-body row">
 
                                 <div class="form-group col-md-12">
-                                    <label for="title_1_2">Sub Details</label>
+                                    <label for="title_1_2">Title</label>
                                     <textarea id="title_1_2" name="title_1" class="form-control" rows="5">{{ $items['section_2']['title_1'] }}</textarea>
                                 </div>
 
                                 <div class="form-group col-md-12">
-                                    <label for="content2">Details</label>
+                                    <label for="content2">Content</label>
                                     <textarea id="content2" name="content" class="form-control" rows="5">{{ $items['section_2']['content'] }}</textarea>
                                 </div>
 
-                                <div class="form-group col-md-6">
-                                    <label for="image">Image 1</label>
-
-                                    <div class="admin_upload">
-                                        <label class="admin-upload-wrap">
-                                            <input type="file" class="form-control mt-3 uploadFile" name="image_1"
-                                                id="image_1_section_2"
-                                                accept="image/png, image/jpg, image/jpeg, image/webp">
-                                        </label>
-
-                                        <div class="profile_image">
-                                            @if ($items['section_2']['image_1'])
-                                                <img class="profile_img" id="thumbnail_show_image_1_section_2"
-                                                    src="{{ $items['section_2']['image_1'] }}" width="148px"
-                                                    height="221px">
-                                            @else
-                                                <img class="profile_img" id="thumbnail_show_image_1_section_2"
-                                                    src="{{ asset('asset/images/default_image.png') }}" width="148px"
-                                                    height="221px">
-                                            @endif
-                                        </div>
-                                    </div>
-                                </div>
+                              
 
                             </div>
                             <!-- /.card-body -->
