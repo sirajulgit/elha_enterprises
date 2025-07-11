@@ -4,7 +4,7 @@ namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
 use App\Models\Service;
-
+use App\Models\CmsHomePage;
 use Illuminate\Http\Request;
 
 
@@ -189,6 +189,6 @@ class ServicesController extends Controller
             } 
         }
 
-        return view('user.service_detail', ['data' => $data]);
+        return view('user.service_detail', ['data' => $data, 'homedata' => $items]);
     }
 }
