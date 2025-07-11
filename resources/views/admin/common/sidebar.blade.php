@@ -128,6 +128,13 @@
                                 <p>About Page</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('cms_resource') }}"
+                                class="nav-link {{ $data['activeSubMenu'] == 'cms_resource_page' ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Resource Page</p>
+                            </a>
+                        </li>
 
                         <li class="nav-item">
                             <a href="{{ route('cms_contact') }}"
