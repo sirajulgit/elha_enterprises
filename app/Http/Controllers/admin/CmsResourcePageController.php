@@ -15,12 +15,12 @@ class CmsResourcePageController extends Controller
     //
 
     // About page
-    public function about_page()
+    public function resource_page()
     {
         $data = array();
-        $data['pageTitle'] = 'Cms About';
+        $data['pageTitle'] = 'Cms Resource';
         $data['activePageName'] = 'cms';
-        $data['activeSubMenu'] = 'cms_about_page';
+        $data['activeSubMenu'] = 'cms_resource_page';
 
 
         $cmsHome = CmsHomePage::where('page_type','about_page')->orderBy("id", "asc")->get()->toArray();
