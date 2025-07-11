@@ -449,6 +449,11 @@ footer {
     {
         display: none !important;
     }
+
+    .banner-area .slick-arrow 
+    {
+        display: none !important;
+    }
  
 
     .about-left-image {
