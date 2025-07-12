@@ -90,7 +90,7 @@
 
 
                 {{-- /////////////// footer_logo /////////////////// --}}
-                <div class="col-lg-12 mb-5">
+                {{-- <div class="col-lg-12 mb-5">
                     <div class="card">
 
                         <div class="card-header">
@@ -135,7 +135,7 @@
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> --}}
 
 
             </div>
