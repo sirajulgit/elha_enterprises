@@ -64,41 +64,7 @@
                                 <p>Home Banner</p>
                             </a>
                         </li>
-                          <li class="nav-item">
-                            <a href="{{ route('cms_book_banner_list') }}"
-                                class="nav-link {{ $data['activeSubMenu'] == 'cms_book_banner' ? 'active' : '' }} ">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>About Banner</p>
-                            </a>
-                        </li>
-                      <li class="nav-item">
-                            <a href="{{ route('cms_bibliography_banner_list') }}"
-                                class="nav-link {{ $data['activeSubMenu'] == 'cms_bibliography_banner' ? 'active' : '' }} ">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Contact Banner</p>
-                            </a>
-                        </li>
-                         <li class="nav-item">
-                            <a href="{{ route('cms_awardHonors_banner_list') }}"
-                                class="nav-link {{ $data['activeSubMenu'] == 'cms_awardHonors_banner' ? 'active' : '' }} ">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Gallery Banner</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('cms_newsEvents_banner_list') }}"
-                                class="nav-link {{ $data['activeSubMenu'] == 'cms_newsEvents_banner' ? 'active' : '' }} ">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>News & Events Banner</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('cms_blogs_banner_list') }}"
-                                class="nav-link {{ $data['activeSubMenu'] == 'cms_blogs_banner' ? 'active' : '' }} ">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Blogs Banner</p>
-                            </a>
-                        </li>
+                          
                     </ul>
                 </li>
 
@@ -172,13 +138,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="{{ route('gallery_list') }}"
-                        class="nav-link {{ $data['activePageName'] == 'gallery' ? 'active' : '' }}">
-                        <i class="nav-icon fa fa-rss"></i>
-                        <p>Gallery</p>
-                    </a>
-                </li>
+             
 
                 <li class="nav-item">
                     <a href="{{ route('contact_query_list') }}"
