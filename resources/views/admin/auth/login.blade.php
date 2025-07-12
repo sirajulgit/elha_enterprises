@@ -22,7 +22,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="/"><b>Admin</b></a>
+            <img src="{{ asset('asset/frontend/images/logo.png') }}" alt="Logo" style="width: 100px; height: auto;">
         </div>
         <!-- /.login-logo -->
         <div class="card">
