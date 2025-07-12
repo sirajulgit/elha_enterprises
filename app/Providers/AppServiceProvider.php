@@ -5,6 +5,7 @@ use App\Models\Cms;
 use App\Models\CmsContact;
 use App\Models\Resource;
 use App\Models\Service;
+use App\Models\Logo;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 class AppServiceProvider extends ServiceProvider
@@ -35,7 +36,10 @@ class AppServiceProvider extends ServiceProvider
 
     $items = Resource::orderBy("id", "desc")->get();
      $Service_data = Service::orderBy("id", "desc")->get();
-
+    $logo_data = Logo::where('type', 'header_logo')->first();
+   
+    $logo_image = '/uploads/images/' . $logo_data['image'];
+              
 
     $setting_data = [
         "contact_email" => optional($contact_no_data)->email,
@@ -48,6 +52,7 @@ class AppServiceProvider extends ServiceProvider
          "address"  => optional($contact_no_data)->address,
         "resources" => $items,
         "services" => $Service_data,
+        "logo" => $logo_image,
     ];
 
     $view->with('settings', $setting_data);

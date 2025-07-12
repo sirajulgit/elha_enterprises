@@ -26,7 +26,11 @@
                    </span>
                    <div class="nav">
                        <div class="mob-logo d-none">
-                           <img src="{{ asset('asset/frontend/images/logo.png') }}" alt="" title="">
+                        @if ($settings['logo'])
+                           <img src="{{ asset($settings['logo']) }}" alt="" title="">
+                            
+                        @endif
+                           
                        </div>
                        <ul id="menu-bg">
 
