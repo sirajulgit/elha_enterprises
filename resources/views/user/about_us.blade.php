@@ -6,7 +6,7 @@
         style="background-image:url({{ asset('asset/frontend/images/banner.jpg') }});">
         <div class="container">
             <div class="text-center">
-                <strong> About us </strong>
+                <strong> About Us </strong>
             </div>
         </div>
     </div>
