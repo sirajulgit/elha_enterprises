@@ -53,7 +53,7 @@
 
 
 
-    <section class="faq-area gap-bottom gap-top">
+    {{-- <section class="faq-area gap-bottom gap-top">
         <div class="container">
             <div class="row align-items-center">
 
@@ -138,7 +138,7 @@
 
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
 
@@ -146,7 +146,7 @@
 
 
 
-    <section class="testimonial gap-top gap-bottom">
+    {{-- <section class="testimonial gap-top gap-bottom">
         <div class="container">
             <div class="heading text-center">
                 <h2> {!! $homedata['testimonials']['head_title'] !!} </h2>
@@ -195,11 +195,11 @@
 
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
 
-    <div class="logo-area gap-bottom gap-top">
+    {{-- <div class="logo-area gap-bottom gap-top">
         <div class="container">
 
             <ul class="d-flex justify-content-between align-items-center">
@@ -211,7 +211,7 @@
             </ul>
 
         </div>
-    </div>
+    </div> --}}
 
 <div id="form-loader" style="display: none !important; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
     background-color: rgba(0,0,0,0.4); z-index: 9999; display: flex; justify-content: center; align-items: center;">
