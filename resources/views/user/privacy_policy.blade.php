@@ -32,8 +32,9 @@
 
                             By accessing our website or engaging with our services, you agree to the practices described in
                             this policy.</p>
-                            <p>1. Information We Collect
-We may collect the following types of information:
+                            <h4>1. Information We Collect</h4>
+                            <p>
+<b>We may collect the following types of information:</b>
 
 Personal Information: Name, email address, phone number, business name, address, and other contact details provided through forms or inquiries.
 
