@@ -20,18 +20,57 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="heading mb-5">
-                       
-                       
+                        <h2> Disclaimer </h2>
+
+
                     </div>
 
                     <div class="common-text">
-                       
+                        <p>The information provided by Elha-Enterprises LLC (“we,” “our,” or “us”) on this website and
+                            through our consulting services is for general informational purposes only. All content is
+                            provided in good faith; however, we make no representation or warranty of any kind—express or
+                            implied—regarding the accuracy, adequacy, validity, reliability, availability, or completeness
+                            of any information.</p>
+
+                        <h4>1. Professional Advice</h4>
+                        <p>
+                            The content on our website and any consulting advice provided should not be considered legal,
+                            financial, or tax advice. All services and recommendations are based on industry knowledge and
+                            international trade experience but are not a substitute for professional legal or financial
+                            consultation. We encourage clients to seek qualified legal or financial counsel where necessary.
+                        </p>
+
+                        <h4>2. Regulatory Compliance</h4>
+                        <p>
+                            While Elha-Enterprises LLC strives to ensure all information complies with applicable U.S. and
+                            international trade laws, we are not responsible for any errors, omissions, or changes in
+                            regulatory policies. It is the client’s responsibility to ensure compliance with relevant
+                            government agencies and regulatory bodies.</p>
+
+                        <h4>3. Third-Party Links and Services</h4>
+                        <p>
+                            Our website may contain links to third-party websites or references to third-party services.
+                            These links are provided for convenience only. Elha-Enterprises LLC does not endorse or
+                            guarantee the accuracy of content on external sites and is not liable for any loss or damage
+                            arising from their use.</p>
+
+                        <h4>4. Limitation of Liability</h4>
+                        <p>
+                            Under no circumstances shall Elha-Enterprises LLC be held liable for any direct, indirect,
+                            incidental, consequential, or special damages that result from the use of, or inability to use,
+                            the information or services provided—even if we have been advised of the possibility of such
+                            damages.</p>
+
+                        <h4>5. Service Changes</h4>
+                        <p>
+                            We reserve the right to modify, suspend, or discontinue any part of our website or services at
+                            any time without notice or liability.</p>
 
                     </div>
 
                 </div>
 
-               
+
             </div>
         </div>
     </section>
@@ -199,13 +238,13 @@
         </div>
     </div> --}}
 
-<div id="form-loader" style="display: none !important; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+    <div id="form-loader"
+        style="display: none !important; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
     background-color: rgba(0,0,0,0.4); z-index: 9999; display: flex; justify-content: center; align-items: center;">
-    <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
-        <span class="visually-hidden">Loading...</span>
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
     </div>
-</div>
-
 @endsection
 @section('script_content')
     <script>
@@ -269,7 +308,7 @@
                         processData: false,
                         contentType: false,
                         beforeSend: function() {
-                         $('#form-loader').show();
+                            $('#form-loader').show();
                             $(form).find('input[type="submit"]').prop('disabled', true);
                         },
                         success: function(response) {
@@ -283,7 +322,7 @@
                             });
                         },
                         error: function(error) {
-                           $('#form-loader').hide();
+                            $('#form-loader').hide();
                             console.log("error" + error);
                             Swal.fire({
                                 icon: "error",
@@ -294,7 +333,7 @@
                             });
                         },
                         complete: function() {
-                         $('#form-loader').hide();
+                            $('#form-loader').hide();
                             form.reset();
                             $(form).find('input[type="submit"]').prop('disabled', false);
                         }
