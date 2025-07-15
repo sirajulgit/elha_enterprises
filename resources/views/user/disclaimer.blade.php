@@ -14,14 +14,14 @@
 
     <!-- About  -->
 
-    <section class="about-part gap-top gap-bottom">
+    <section class="gap-top gap-bottom">
         <div class="container">
 
             <div class="row">
                 <div class="col-lg-12">
                     <div class="heading mb-5">
                        
-                        <span><img src="{{ asset('asset/frontend/images/three-dots.png') }}"> </span>
+                       
                     </div>
 
                     <div class="common-text">

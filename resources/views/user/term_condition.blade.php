@@ -14,19 +14,46 @@
 
     <!-- About  -->
 
-    <section class="about-part gap-top gap-bottom">
+    <section class="gap-top gap-bottom">
         <div class="container">
 
             <div class="row">
                 <div class="col-lg-12">
                     <div class="heading mb-5">
-                       
-                        <span><img src="{{ asset('asset/frontend/images/three-dots.png') }}"> </span>
+                       <h3> Terms & Conditions </h3>
+                      
                     </div>
 
                     <div class="common-text">
                        
+                       <p> Welcome to Elha-Enterprises LLC. By accessing or using our website, services, or engaging with our consulting offerings, you agree to comply with the following Terms & Conditions. Please read them carefully.</p>
 
+<p>1. Services Offered
+Elha-Enterprises LLC provides import-export consulting services, including but not limited to logistics support, trade documentation assistance, compliance guidance, financial consulting, and gold import advisory. All services are offered in accordance with applicable U.S. and international laws.</p>
+
+<p>2. Use of Website
+By using our website, you agree not to misuse any content, engage in unauthorized access, or disrupt service operation. All information provided on this website is for general informational purposes only and may be updated or modified without notice.</p>
+
+<p>3. Client Responsibilities
+Clients are responsible for providing accurate and complete information related to their business operations. Elha-Enterprises LLC is not liable for delays, errors, or regulatory issues resulting from false or incomplete data provided by the client.</p>
+
+<p>4. Compliance
+Clients must comply with all applicable trade laws, customs regulations, and anti-money laundering policies. Elha-Enterprises LLC does not participate in or support any unlawful or unethical trade activity.</p>
+
+<p>5. Payments & Fees
+All service fees will be outlined in a formal proposal or agreement prior to engagement. Payment terms must be followed as agreed. Late payments may result in delays or suspension of services.</p>
+
+<p>6. Confidentiality
+All client information and documentation are treated as confidential and will not be shared with third parties except as required by law or with the client’s explicit consent.</p>
+
+<p>7. Limitation of Liability
+Elha-Enterprises LLC will not be held liable for indirect, incidental, or consequential damages arising from the use of our services. Our liability is limited to the value of the services provided under the relevant agreement.</p>
+
+<p>8. Termination
+We reserve the right to terminate or refuse services if we determine, at our discretion, that a client has violated these terms or engaged in unlawful activity.</p>
+
+<p>9. Governing Law
+These Terms & Conditions are governed by the laws of the State of Florida, USA. Any disputes arising will be subject to the exclusive jurisdiction of the courts in that state.</p>
                     </div>
 
                 </div>
