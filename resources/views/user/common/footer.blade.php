@@ -29,7 +29,7 @@
 
     </div>
 
-    {{-- <div class="row pt-4 pb-4">
+    <div class="row pt-4 pb-4">
       
       <div class="col-lg-2 col-md-6">
         <div class="footer-holder">
@@ -50,11 +50,9 @@
         <div class="footer-holder">
           <h3> Useful Links </h3>
           <ul>
-            <li><a href=""> Consulting gold </a></li>
-            <li><a href=""> Minerals Import & Export </a></li>
-            <li><a href=""> Trade </a></li>
-            <li><a href=""> Logistics </a></li>
-            <li><a href=""> Financial </a></li>
+            <li><a href=""> Disclaimer </a></li>
+            <li><a href=""> Privacy Policy </a></li>
+            <li><a href=""> Terms & Conditions </a></li>
           </ul>
         </div>
       </div>
@@ -63,12 +61,12 @@
       <div class="col-lg-3 col-md-6">
         <div class="footer-holder">
           <h3> About Us </h3>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  </p>
+          <p>Elha-Enterprises LLC is a U.S.-based import and export consulting company dedicated to empowering businesses to expand globally with confidence and compliance. With a strong foundation in international trade laws, market intelligence, and logistics management, we provide end-to-end solutions that streamline cross-border transactions.</p>
         </div>
       </div>
 
 
-    </div> --}}
+    </div>
 
 
     <div class="copy-right mt-4">
