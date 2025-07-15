@@ -29,7 +29,7 @@
 
     </div>
 
-    <div class="row pt-4 pb-4">
+    {{-- <div class="row pt-4 pb-4">
       
       <div class="col-lg-2 col-md-6">
         <div class="footer-holder">
@@ -68,7 +68,7 @@
       </div>
 
 
-    </div>
+    </div> --}}
 
 
     <div class="copy-right mt-4">
