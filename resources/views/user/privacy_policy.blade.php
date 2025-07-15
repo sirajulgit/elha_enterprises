@@ -41,9 +41,9 @@ Personal Information: Name, email address, phone number, business name, address,
 Business Information: Trade documents, contracts, shipping details, and financial information necessary for consulting services.
 
 Usage Data: IP address, browser type, pages visited, and interaction data collected via cookies and analytics tools.</p>
-
-<p>2. How We Use Your Information
-We use your information to:
+<h4>2. How We Use Your Information</h4>
+<p>
+<b>We use your information to:</b>
 
 Provide and manage consulting services
 
@@ -54,8 +54,8 @@ Improve website performance and user experience
 Comply with legal obligations and regulations
 
 Communicate updates, service offerings, or company news (only if you opt in)</p>
-
-<p>3. Sharing Your Information
+<h4>3. Sharing Your Information</h4>
+<p>
 We do not sell, rent, or trade your personal information. We may share information with:
 
 Trusted third-party service providers who assist with logistics, legal, or financial services under confidentiality agreements
@@ -63,14 +63,14 @@ Trusted third-party service providers who assist with logistics, legal, or finan
 Government or regulatory authorities, if legally required
 
 Internal employees or agents who need access to perform company-related services</p>
-
-<p>4. Data Security
+<h4>4. Data Security</h4>
+<p>
 We use industry-standard security measures (SSL, data encryption, and secure storage) to protect your information. While we take all reasonable steps, no online data transmission is 100% secure, and we cannot guarantee absolute protection.</p>
-
-<p>5. Cookies and Tracking Technologies
+<h4>5. Cookies and Tracking Technologies</h4>
+<p>
 Our website uses cookies to improve user experience, analyze traffic, and enhance performance. You may disable cookies in your browser settings, though some features may not function properly.</p>
-
-<p>6. Your Rights
+<h4>6. Your Rights</h4>
+<p>
 You have the right to:
 
 Access the personal data we hold about you
@@ -80,11 +80,11 @@ Request correction or deletion of your information
 Withdraw consent for data processing (where applicable)
 
 To exercise these rights, please contact us using the details below.</p>
-
-<p>7. Third-Party Links
+<h4>7. Third-Party Links</h4>
+<p>
 Our website may contain links to third-party websites. We are not responsible for their privacy practices or content. Please review their privacy policies separately.</p>
-
-<p>8. Policy Updates
+<h4>8. Policy Updates</h4>
+<p>
 We may update this Privacy Policy from time to time. Changes will be posted on this page with a revised "15 July 2025" </p>
 
 
