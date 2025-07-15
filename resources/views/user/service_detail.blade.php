@@ -25,7 +25,7 @@
                         @if ($data['Service_data']['image'])
                             <img src="{{ asset($data['Service_data']['image']) }}">
                         @endif
-                        <h3>{{ $data['Service_data']['short_description'] }}</h3>
+                        <h3>{!! $data['Service_data']['short_description'] !!}</h3>
 
                         {!! $data['Service_data']['long_description'] !!}
 
