@@ -391,9 +391,7 @@
                                                 <img src="{{ asset('asset/frontend/images/inverted-blue.png') }}">
                                                 <p>{{ $item['badge_details_1'] }}</p>
                                                 <div class="client-details">
-                                                    <div class="client-image">
-                                                        <img src="{{ asset($item['badge_image_1']) }}">
-                                                    </div>
+                                                    
                                                     <strong>{{ $item['badge_text_1'] }}</strong>
                                                 </div>
                                             </div>
