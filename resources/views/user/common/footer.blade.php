@@ -50,9 +50,9 @@
         <div class="footer-holder">
           <h3> Useful Links </h3>
           <ul>
-            <li><a href=""> Disclaimer </a></li>
-            <li><a href=""> Privacy Policy </a></li>
-            <li><a href=""> Terms & Conditions </a></li>
+            <li><a href="{{ route('disclaimer')}}"> Disclaimer </a></li>
+            <li><a href="{{route('privacy_policy')}}"> Privacy Policy </a></li>
+            <li><a href="{{route('terms_conditions')}}"> Terms & Conditions </a></li>
           </ul>
         </div>
       </div>

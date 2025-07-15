@@ -50,6 +50,9 @@ use App\Http\Controllers\user\EventsController as UserEventsController;
 use App\Http\Controllers\user\GalleryController as UserGalleryController;
 use App\Http\Controllers\user\ServicesController;
 use App\Http\Controllers\user\ResourcesController;
+use App\Http\Controllers\user\TermConditionController;
+use App\Http\Controllers\user\PrivacyPolicyController;
+use App\Http\Controllers\user\DisclaimerController;
 
 
 
@@ -86,6 +89,9 @@ Route::middleware('isGuest')->group(function () {
     Route::get('/services/{slug}', [ServicesController::class, 'service_details'])->name('service_details');
     Route::get('/resources', [ResourcesController::class, 'index'])->name('resources');
     Route::get('/resources/{slug}', [ResourcesController::class, 'resource_details'])->name('resource_details');
+     Route::get('/privacy-policy', [PrivacyPolicyController::class, 'index'])->name('privacy_policy');
+      Route::get('/terms-conditions', [TermConditionController::class, 'index'])->name('terms_conditions');
+       Route::get('/disclaimer', [DisclaimerController::class, 'index'])->name('disclaimer');
     
     // Route::post('/login', [AuthController::class, 'post_login'])->name('post_user_login');
     // Route::get('/register', [AuthController::class, 'register'])->name('user_register');
