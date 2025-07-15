@@ -35,11 +35,12 @@
         <div class="footer-holder">
           <h3> Services </h3>
           <ul>
-            <li><a href=""> Consulting Gold </a></li>
-            <li><a href=""> Minerals Import & Export </a></li>
-            <li><a href=""> Trade </a></li>
-            <li><a href=""> Logistics </a></li>
-            <li><a href=""> Financial </a></li>
+            @foreach ($settings['services'] as $item)
+              <li>
+                <a href="{{ route('service_details', $item->slug) }}">{{ $item->title }}</a>
+              </li>
+            @endforeach
+           
           </ul>
         </div>
       </div>
@@ -58,17 +59,7 @@
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6">
-        <div class="footer-holder">
-          <h3> Newsletter </h3>
-          <p> Subscribe our newsletter to get our latest update & news </p>
-          <div class="submit-area d-flex mt-4">
-            <input class="form-control" type="email" placeholder="Enter Your Email Id">
-            <input class="foot-submit" type="submit" value="Submit">
-          </div>
-        </div>
-      </div>
-
+   
       <div class="col-lg-3 col-md-6">
         <div class="footer-holder">
           <h3> About Us </h3>
