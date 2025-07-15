@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="heading mb-5">
-                       <h3> Terms & Conditions </h3>
+                       <h2> Terms & Conditions </h2>
                       
                     </div>
 

@@ -20,18 +20,78 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="heading mb-5">
-                       
-                        
+                        <h2> Privacy Policy </h2>
+
                     </div>
 
                     <div class="common-text">
-                       
+                        <p>At Elha-Enterprises LLC, we are committed to protecting the privacy and personal information of
+                            our clients, website visitors, and business partners. This Privacy Policy explains how we
+                            collect, use, disclose, and safeguard your information when you visit our website or use our
+                            services.
+
+                            By accessing our website or engaging with our services, you agree to the practices described in
+                            this policy.</p>
+                            <p>1. Information We Collect
+We may collect the following types of information:
+
+Personal Information: Name, email address, phone number, business name, address, and other contact details provided through forms or inquiries.
+
+Business Information: Trade documents, contracts, shipping details, and financial information necessary for consulting services.
+
+Usage Data: IP address, browser type, pages visited, and interaction data collected via cookies and analytics tools.</p>
+
+<p>2. How We Use Your Information
+We use your information to:
+
+Provide and manage consulting services
+
+Respond to inquiries and client requests
+
+Improve website performance and user experience
+
+Comply with legal obligations and regulations
+
+Communicate updates, service offerings, or company news (only if you opt in)</p>
+
+<p>3. Sharing Your Information
+We do not sell, rent, or trade your personal information. We may share information with:
+
+Trusted third-party service providers who assist with logistics, legal, or financial services under confidentiality agreements
+
+Government or regulatory authorities, if legally required
+
+Internal employees or agents who need access to perform company-related services</p>
+
+<p>4. Data Security
+We use industry-standard security measures (SSL, data encryption, and secure storage) to protect your information. While we take all reasonable steps, no online data transmission is 100% secure, and we cannot guarantee absolute protection.</p>
+
+<p>5. Cookies and Tracking Technologies
+Our website uses cookies to improve user experience, analyze traffic, and enhance performance. You may disable cookies in your browser settings, though some features may not function properly.</p>
+
+<p>6. Your Rights
+You have the right to:
+
+Access the personal data we hold about you
+
+Request correction or deletion of your information
+
+Withdraw consent for data processing (where applicable)
+
+To exercise these rights, please contact us using the details below.</p>
+
+<p>7. Third-Party Links
+Our website may contain links to third-party websites. We are not responsible for their privacy practices or content. Please review their privacy policies separately.</p>
+
+<p>8. Policy Updates
+We may update this Privacy Policy from time to time. Changes will be posted on this page with a revised "15 July 2025" </p>
+
 
                     </div>
 
                 </div>
 
-               
+
             </div>
         </div>
     </section>
@@ -199,13 +259,13 @@
         </div>
     </div> --}}
 
-<div id="form-loader" style="display: none !important; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+    <div id="form-loader"
+        style="display: none !important; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
     background-color: rgba(0,0,0,0.4); z-index: 9999; display: flex; justify-content: center; align-items: center;">
-    <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
-        <span class="visually-hidden">Loading...</span>
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
     </div>
-</div>
-
 @endsection
 @section('script_content')
     <script>
@@ -269,7 +329,7 @@
                         processData: false,
                         contentType: false,
                         beforeSend: function() {
-                         $('#form-loader').show();
+                            $('#form-loader').show();
                             $(form).find('input[type="submit"]').prop('disabled', true);
                         },
                         success: function(response) {
@@ -283,7 +343,7 @@
                             });
                         },
                         error: function(error) {
-                           $('#form-loader').hide();
+                            $('#form-loader').hide();
                             console.log("error" + error);
                             Swal.fire({
                                 icon: "error",
@@ -294,7 +354,7 @@
                             });
                         },
                         complete: function() {
-                         $('#form-loader').hide();
+                            $('#form-loader').hide();
                             form.reset();
                             $(form).find('input[type="submit"]').prop('disabled', false);
                         }
