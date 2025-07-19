@@ -31,7 +31,7 @@
 
     <div class="row pt-4 pb-4">
       
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-5 col-md-6">
         <div class="footer-holder">
           <h3> Services </h3>
           <ul>
