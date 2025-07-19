@@ -31,7 +31,7 @@
 
     <div class="row pt-4 pb-4">
       
-      <div class="col-lg-2 col-md-6">
+      <div class="col-lg-4 col-md-6">
         <div class="footer-holder">
           <h3> Services </h3>
           <ul>
@@ -58,7 +58,7 @@
       </div>
     
    
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-4 col-md-6">
         <div class="footer-holder">
           <h3> About Us </h3>
           <p>Elha-Enterprises LLC is a U.S.-based import and export consulting company dedicated to empowering businesses to expand globally with confidence and compliance. With a strong foundation in international trade laws, market intelligence, and logistics management, we provide end-to-end solutions that streamline cross-border transactions.</p>
