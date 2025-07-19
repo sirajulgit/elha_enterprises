@@ -22,7 +22,7 @@
           <i class="fa fa-envelope-o"></i>
           <div>
             <strong>Mail</strong>
-            <p> {{$settings['contact_email']}} </p>
+            <p> <a href="mailto:{{ $settings['contact_email'] }}"> {{$settings['contact_email']}}</a> </p>
           </div>
         </li>
       </ul>
