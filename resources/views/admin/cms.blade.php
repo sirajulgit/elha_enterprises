@@ -75,6 +75,20 @@
 
                                     <input type="hidden" name="id[]" value="{{ $items['youtube_link']['id'] }}" />
                                 </div>
+                                <div class="form-group col-md-6">
+                                    <label for="tiktok_link">Tiktok Link</label>
+                                    <input type="url" name="details[]" class="form-control" id="tiktok_link"
+                                        value="{{ $items['tiktok_link']['details'] }}">
+
+                                    <input type="hidden" name="id[]" value="{{ $items['tiktok_link']['id'] }}" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="linkedin_link">Linkedin Link</label>
+                                    <input type="url" name="details[]" class="form-control" id="linkedin_link"
+                                        value="{{ $items['linkedin_link']['details'] }}">
+
+                                    <input type="hidden" name="id[]" value="{{ $items['linkedin_link']['id'] }}" />
+                                </div>
 
 
                             </div>

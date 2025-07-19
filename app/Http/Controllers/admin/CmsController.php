@@ -43,6 +43,12 @@ class CmsController extends Controller
             elseif ($item['type'] == "youtube_link") {
                 $items["youtube_link"] = $item;
             }
+            elseif ($item['type'] == "tiktox_link") {
+                $items["tiktox_link"] = $item;
+            }
+            elseif ($item['type'] == "linkedin_link") {
+                $items["linkedin_link"] = $item;
+            }
         }
 
         // dd($items);
