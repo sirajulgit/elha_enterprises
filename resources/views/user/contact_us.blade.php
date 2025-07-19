@@ -57,9 +57,9 @@
           
            <div class="col-lg-8">
                     <div class="contact-form">
-                        <div class="mb-4">
+                        {{-- <div class="mb-4">
                             <h3 class="heading"> Get A Quote</h3>
-                        </div>
+                        </div> --}}
                         <form id="contact_form" method="POST">
                             @csrf
 
