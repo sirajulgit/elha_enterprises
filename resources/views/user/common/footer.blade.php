@@ -56,16 +56,7 @@
           </ul>
         </div>
       </div>
-    <div class="col-lg-4 col-md-6">
-        <div class="footer-holder">
-          <h3> Newsletter </h3>
-          <p> Subscribe our newsletter to get our latest update & news </p>
-          <div class="submit-area d-flex mt-4">
-            <input class="form-control" type="email" placeholder="Enter Your Email Id">
-            <input class="foot-submit" type="submit" value="Submit">
-          </div>
-        </div>
-      </div>
+    
    
       <div class="col-lg-3 col-md-6">
         <div class="footer-holder">
