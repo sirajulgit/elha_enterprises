@@ -10,8 +10,12 @@
                    <ul class="d-flex social-media">
                        <li><a href="{{ $settings['fb_link'] }}"> <i class="fa fa-facebook"></i> </a></li>
                        <li><a href="{{ $settings['twitter_link'] }}"> <i class="fa fa-twitter"></i> </a></li>
-                       <li><a href="{{ $settings['insra_link'] }}"> <i class="fa fa-linkedin"></i> </a></li>
+                       <li><a href="{{ $settings['insra_link'] }}"> <i class="fa fa-instagram"></i> </a></li>
+                        <li><a href="{{ $settings['insra_link'] }}"> <i class="fa fa-linkedin"></i> </a></li>
+                       
                        <li><a href="{{ $settings['youtube_link'] }}"> <i class="fa fa-youtube-play"></i> </a></li>
+                       <li><a href="{{ $settings['youtube_link'] }}"> <i class="fa-brands fa-tiktok"></i> </a></li>
+                       
                    </ul>
                    <a class="mail-head" href="mailto:{{ $settings['contact_email'] }}"><i class="fa fa-envelope-o me-2"></i>
                        {{ $settings['contact_email'] }}</a>
