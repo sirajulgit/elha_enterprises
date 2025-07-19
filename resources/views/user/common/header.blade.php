@@ -89,7 +89,7 @@
                        <i class="bi bi-telephone-fill"></i>
                    </div>
                    <div class="text-phone me-4">
-                       <span>Call Anytime</span><br>
+                       <span>Contact number:</span><br>
                        <a href="tel:{{ $settings['contact_no'] }}"> {{ $settings['contact_no'] }} </a>
                    </div>
                </div>
