@@ -14,7 +14,7 @@
                         <li><a href="{{ $settings['insra_link'] }}"> <i class="fa fa-linkedin"></i> </a></li>
                        
                        <li><a href="{{ $settings['youtube_link'] }}"> <i class="fa fa-youtube-play"></i> </a></li>
-                       <li><a href="{{ $settings['youtube_link'] }}"> <i class="fa-brands fa-tiktok"></i> </a></li>
+                       <li><a href="{{ $settings['youtube_link'] }}"> <i class="fa fa-tiktok"></i> </a></li>
                        
                    </ul>
                    <a class="mail-head" href="mailto:{{ $settings['contact_email'] }}"><i class="fa fa-envelope-o me-2"></i>
