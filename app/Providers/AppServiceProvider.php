@@ -32,6 +32,8 @@ class AppServiceProvider extends ServiceProvider
     $fb_link_data = Cms::where('type', 'fb_link')->first();
     $insra_link_data = Cms::where('type', 'insra_link')->first();
     $youtube_link_data = Cms::where('type', 'youtube_link')->first();
+    $linkedin_link_data = Cms::where('type', 'linkedin_link')->first();
+    $tiktok_link_data = Cms::where('type', 'tiktok_link')->first();
     $contact_no_data = CmsContact::first();
 
     $items = Resource::orderBy("id", "desc")->get();
@@ -48,6 +50,8 @@ class AppServiceProvider extends ServiceProvider
         "fb_link"       => optional($fb_link_data)->details,
         "insra_link"    => optional($insra_link_data)->details,
         "youtube_link"  => optional($youtube_link_data)->details,
+        "linkedin_link"  => optional($linkedin_link_data)->details,
+        "tiktok_link"  => optional($tiktok_link_data)->details,
         "contact_no"  => optional($contact_no_data)->phone,
          "address"  => optional($contact_no_data)->address,
         "resources" => $items,
