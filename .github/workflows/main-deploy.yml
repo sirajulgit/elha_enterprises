@@ -3,7 +3,7 @@ on:
       branches:
         - main
 
-name: 🚀 Deploy website on push
+name: 🚀 Deploy website on push to main
 
 jobs:
     job1:
@@ -13,13 +13,13 @@ jobs:
         - name: PHP artisan using ssh
           uses: appleboy/ssh-action@master
           with:
-            host: ${{ secrets.SSH_HOST }}
-            username: ${{ secrets.SSH_USERNAME }}
-            password: ${{ secrets.SSH_PASSWORD }}
+            host: ${{ secrets.live_SSH_HOST }}
+            username: ${{ secrets.live_SSH_USERNAME }}
+            password: ${{ secrets.live_SSH_PASSWORD }}
             script: |
-              cd /home/elha-enterprises-dev/htdocs/dev.elha-enterprises.com/
+              cd /home/elha-enterprises/htdocs/www.elha-enterprises.com
               git pull origin main
-              cp .env.stating .env
+              cp .env.live .env
               composer install
               php artisan route:cache
               php artisan view:clear
