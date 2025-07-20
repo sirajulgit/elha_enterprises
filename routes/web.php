@@ -72,11 +72,8 @@ use App\Http\Controllers\user\DisclaimerController;
 
 // +++++++++++++++++++++++ |  User Routes  |  ++++++++++++++++++++++++++++++++++++
 Route::middleware('isGuest')->group(function () {
-    Route::get('/', function () {
-        return redirect()->route('home');
-    });
-
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    
+    Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/about-us', [AboutUsController::class, 'index'])->name('about_us');
     Route::get('/blogs', [UserBlogsController::class, 'index'])->name('blogs');
     Route::get('/blogs/{slug}', [UserBlogsController::class, 'blog_details'])->name('blog_details');
@@ -89,9 +86,9 @@ Route::middleware('isGuest')->group(function () {
     Route::get('/services/{slug}', [ServicesController::class, 'service_details'])->name('service_details');
     Route::get('/resources', [ResourcesController::class, 'index'])->name('resources');
     Route::get('/resources/{slug}', [ResourcesController::class, 'resource_details'])->name('resource_details');
-     Route::get('/privacy-policy', [PrivacyPolicyController::class, 'index'])->name('privacy_policy');
-      Route::get('/terms-conditions', [TermConditionController::class, 'index'])->name('terms_conditions');
-       Route::get('/disclaimer', [DisclaimerController::class, 'index'])->name('disclaimer');
+    Route::get('/privacy-policy', [PrivacyPolicyController::class, 'index'])->name('privacy_policy');
+    Route::get('/terms-conditions', [TermConditionController::class, 'index'])->name('terms_conditions');
+    Route::get('/disclaimer', [DisclaimerController::class, 'index'])->name('disclaimer');
     
     // Route::post('/login', [AuthController::class, 'post_login'])->name('post_user_login');
     // Route::get('/register', [AuthController::class, 'register'])->name('user_register');
