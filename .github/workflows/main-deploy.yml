@@ -13,9 +13,9 @@ jobs:
         - name: PHP artisan using ssh
           uses: appleboy/ssh-action@master
           with:
-            host: ${{ secrets.live_SSH_HOST }}
-            username: ${{ secrets.live_SSH_USERNAME }}
-            password: ${{ secrets.live_SSH_PASSWORD }}
+            host: ${{ secrets.LIVE_SSH_HOST }}
+            username: ${{ secrets.LIVE_SSH_USERNAME }}
+            password: ${{ secrets.LIVE_SSH_PASSWORD }}
             script: |
               cd /home/elha-enterprises/htdocs/www.elha-enterprises.com
               git pull origin main
